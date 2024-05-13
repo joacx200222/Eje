@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
-function Cabecera1(){
+function Cabecera2(){
     return (
         <>
         <header>
