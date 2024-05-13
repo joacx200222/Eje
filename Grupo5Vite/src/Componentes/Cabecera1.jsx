@@ -8,7 +8,7 @@ function Cabecera1(){
         <>
         <header>
             <ul id="izquierda">
-                <li id="Titulo" ><strong><Link to = "/">Tienda</Link></strong></li>
+                <li id="Titulo" ><Link to = "/"> <strong>Tienda</strong> </Link></li>
                 <li>Más vendidos</li>
                 <li>Nuevos</li>
                 <li>Ofertas</li>
