@@ -5,7 +5,7 @@ function Cabecera2(){
     return (
         <>
         <header>
-            <h3>HOLA</h3>
+            <h3>TIENDA</h3>
         </header>
         </>
     )
