@@ -1,0 +1,11 @@
+.buscador{
+    display: flex;
+}
+
+#barrabuscador{
+    padding: 8px;
+    width: calc(100% - 100px); /* Ajusta el ancho del input */
+    border-radius: 5px;
+    outline: none;
+    margin-right: 5px;
+}
