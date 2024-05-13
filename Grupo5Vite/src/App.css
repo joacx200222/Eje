@@ -43,6 +43,7 @@ li{
 header{
   display: flex;
   background-color: gray;
+  align-items: center;
 }
 
 header ul{
@@ -52,11 +53,12 @@ header ul{
 
 .CarritoCompras{
   width: 30px;
-  height: 30px;
+  height: 33px;
 }
 
 #derecha{
   margin-left: auto;
+  align-items: center;
 }
 
 
