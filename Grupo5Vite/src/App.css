@@ -41,4 +41,28 @@
   color: #888;
 }
 
+li{
+  list-style-type: none; 
+}
+header{
+  display: flex;
+}
 
+header ul{
+  display: flex;
+}
+
+
+.CarritoCompras{
+  width: 30px;
+  height: 30px;
+}
+
+#derecha{
+  top: 0;
+  right: 0;
+}
+
+#izquierda li{
+  margin-left: 20px;
+}
