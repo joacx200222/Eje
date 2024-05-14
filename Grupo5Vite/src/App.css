@@ -50,6 +50,11 @@ header ul{
   display: flex;
 }
 
+h3{
+  width: 30px;
+  height: 30px;
+  margin-left: 65px;
+}
 
 .CarritoCompras{
   width: 30px;
@@ -65,7 +70,7 @@ header ul{
 
 
 #izquierda li{
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 #derecha li{
