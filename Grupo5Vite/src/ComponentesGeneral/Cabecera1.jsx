@@ -3,10 +3,15 @@ import Carrito from '../assets/imagenes/carrito.png'
 import { Link } from "react-router-dom";
 import '../App.css'
 
+const links = [
+
+]
+
 function Cabecera1(){
     return (
         <>
         <header>
+        
             <ul id="izquierda">
                 <li id="Titulo" ><Link to = "/"> <strong>Tienda</strong> </Link></li>
                 <li>Más vendidos</li>
@@ -18,6 +23,7 @@ function Cabecera1(){
                 <li>Ayuda</li>
                 <li><Link to = "/login"><button id="Micuenta">Mi Cuenta</button></Link></li>
             </ul> 
+
         </header>
         
         </>
