@@ -1,0 +1,181 @@
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+   
+    height: 54px;
+    margin-bottom: 20px;
+    
+    position: fixed;
+    top: 0; 
+    z-index: 1; 
+    width: 100%;
+  
+  
+  }
+  
+  
+  .tienda-text {
+    width: 84px;
+    height: 29px;
+    top: 50%; 
+    left: 50px; 
+    transform: translateY(-50%); 
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+    text-align: left;
+    position: absolute; 
+    
+  }
+  
+  
+  .tituloH2-background {
+    height: 32px;
+    background-color: #D9D9D9;
+    padding: 10px; 
+    margin-top: -0px; 
+    margin-left: -50px;
+    margin-right: 150px;
+    margin-top: -130px; /* Reducir el margen superior */
+    width: 100%;
+  }
+  
+  
+  .tituloH2-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22.5px;
+    text-align: left;  
+    margin-left: 20px; 
+    line-height: 35px; 
+    vertical-align: middle;
+    
+  }
+  
+  .left-navigation {
+    width: 228px;
+    height: 587px;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin-right: 30px;
+    margin-top: -110px; /* Reducir el margen superior */
+    margin-left: 50px; /* Agregar un margen a la izquierda */
+  }
+  
+  .left-navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .left-navigation ul li {
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .left-navigation ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  .content {
+    display: flex;
+    align-items: flex-start;
+    font-family: "Roboto", sans-serif;
+    position: relative; 
+  }
+  
+  main {
+    flex: 1;
+    padding: 20px;
+    margin-left: 40px;
+  }
+  
+  
+  body {
+    background-color: #F6F6F6;
+    margin-left: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  
+  .left-navigation h3 {
+    width: 58px;
+    height: 28px;
+    top: 121px;
+    left: 100px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    line-height: 28.13px;
+    margin-left: 20px;
+    font-weight: normal;
+    color: #000000;
+  }
+  
+  
+  #fechaInput {
+    float: right;
+    margin-right: 20px; 
+    font-family: Roboto;
+    font-size: 18px;
+    color: #000000; 
+    cursor: pointer; 
+    line-height: 35px; 
+    font-weight: normal;
+    vertical-align: middle;
+  }
+  
+  .dashboard {
+  
+  display: inline-block;
+  background-color: #D9D9D9; 
+  padding: 20px; 
+  
+  text-align: center; 
+  
+  width: 300px; 
+  height: 189px; 
+  margin-right: 150px;
+  margin-left: -50px; 
+  
+  margin-top: -55px; /* Reducir el margen superior */
+  
+  }
+  
+  .numero {
+  font-family: "Inter", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 180px;
+  text-align: center; 
+  
+  
+  }
+  
+  .numero1 {
+  font-family: "Inter", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 180px;
+  text-align: center; 
+  
+  }
+  
+  .texto {
+  
+  font-size: 19px;
+  
+  font-family: "Inter", sans-serif;
+  
+  margin-top: -30px;
+  }
+  
+  
+  
