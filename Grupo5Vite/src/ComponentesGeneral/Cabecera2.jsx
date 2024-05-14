@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import '../App.css'
 
 function Cabecera2(){
     return (
         <>
         <header>
-            <h3>TIENDA</h3>
+            <li>TIENDA</li>
         </header>
         </>
     )
