@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import LandingPage from "./Pagina/LandingPage"
-import Login from "./Componentes3/Login"
+import login from "./Pagina/login"
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="Aplicacion">
       <Routes>
         <Route path="/" element={ <LandingPage /> } />
-        <Route path="/" element={ <Login /> } />
+        <Route path="/enlaceMiCuenta" element={ <login /> } />
       </Routes>
     </div>
   )
