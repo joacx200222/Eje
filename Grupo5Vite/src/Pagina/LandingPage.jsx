@@ -1,10 +1,10 @@
 import '../App.css'
 import '../css/BuscadorPrincipal.css'
 import '../css/body.css'
-import Cabecera1 from '../Componentes/Cabecera1'
-import Pie from '../Componentes/Pie'
-import Body from '../Components/Alumno1/PrincipalBody'
-import Buscador from '../Components/Alumno1/Buscador'
+import Cabecera1 from '../ComponentesGeneral/Cabecera1'
+import Pie from '../ComponentesGeneral/Pie'
+import Body from '../Componentes1/PrincipalBody'
+import Buscador from '../Componentes1/Buscador'
 
 function LandingPage() {
 
