@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 
+
 }
 
 .PrincipalBody1{
@@ -10,6 +11,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 20px;
+
 
 }
 
@@ -31,3 +33,5 @@
 hr{
     border-width: 5px;
 }
+
+
