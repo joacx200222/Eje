@@ -1,6 +1,8 @@
+
 html, body{
   margin: 0;
 }
+/*
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -36,6 +38,8 @@ html, body{
 .read-the-docs {
   color: #888;
 }
+*/
+
 
 li{
   list-style-type: none; 
