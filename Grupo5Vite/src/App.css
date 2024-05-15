@@ -40,6 +40,12 @@ html, body{
 }
 */
 
+#izquierda a {
+  text-decoration: none; /* Esto elimina el subrayado */
+  color: black;
+  font-size: 20px;
+  margin-bottom: 0;
+}
 
 li{
   list-style-type: none; 
