@@ -14,7 +14,7 @@ function Cabecera1(){
         <header>
         
             <ul id="izquierda">
-                <li id="Titulo" ><Link to = "/"> <strong>Tienda</strong> </Link></li>
+                <li className='title' id="Titulo" ><Link to = "/"> <strong>Tienda</strong> </Link></li>
                 <li>Más vendidos</li>
                 <li>Nuevos</li>
                 <li>Ofertas</li>
