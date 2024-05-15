@@ -1,0 +1,173 @@
+[
+    {
+        "id": 1,
+        "Nombre": "JugueteA",
+        "Fabricante": "HASBRO",
+        "Serie": "Avengers Endgame",
+        "cantidadDisponible": 40,
+        "Precio": 88.99,
+        "descripcion": "From The voltron series...",
+        "Caracteristicas": [
+            18,
+            "PVC",
+            "Voltron",
+            "Articulado",
+            15,
+            "Combinable"
+        ]
+
+    },
+    {
+        "id": 2,
+        "Nombre": "JugueteB",
+        "Fabricante": "HASBRO",
+        "Serie": "SERIE B",
+        "cantidadDisponible": 25,
+        "Precio": 45.90,
+        "descripcion": "Con este juguete podrás hacer volar tu imaginación",
+        "Caracteristicas": [
+            7,
+            "Aleación",
+            "Serie 2",
+            "No Articulado",
+            4,
+            "Combinable"
+        ]        
+    },
+    {
+        "id": 3,
+        "Nombre": "JugueteC",
+        "Fabricante": "PANINI",
+        "Serie": "SERIE C",
+        "cantidadDisponible": 30,
+        "Precio": 32.50,
+        "descripcion": "ES HORA DE...",
+        "Caracteristicas": [
+            19,
+            "Plastico",
+            "Serie 3",
+            "No Articulado",
+            13,
+            "No Combinable"
+        ]        
+    },
+    {
+        "id": 4,
+        "Nombre": "JugueteD",
+        "Fabricante": "MATTEL",
+        "Serie": "SERIE D",
+        "cantidadDisponible": 10,
+        "Precio": 123.90,
+        "descripcion": "ASDSAD",
+        "Caracteristicas": [
+            40,
+            "PVC",
+            "Serie 4",
+            "Articulado",
+            2,
+            "Combinable"
+        ]        
+    },
+    {
+        "id": 5,
+        "Nombre": "JugueteE",
+        "Fabricante": "MATTEL",
+        "Serie": "SERIE E",
+        "cantidadDisponible": 8,
+        "Precio": 30.00,
+        "descripcion": "JUGUETE E QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            10,
+            "PVC",
+            "Serie 5",
+            "Articulado",
+            3,
+            "Combinable"
+        ]        
+    },
+    {
+        "id": 6,
+        "Nombre": "JugueteF",
+        "Fabricante": "MATTEL",
+        "Serie": "SERIE F",
+        "cantidadDisponible": 123,
+        "Precio": 50.00,
+        "descripcion": "JUGUETE F QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            20,
+            "Plastico",
+            "Serie 6",
+            "Articulado",
+            30,
+            "Combinable"
+        ]     
+    },
+    {
+        "id": 7,
+        "Nombre": "JugueteG",
+        "Fabricante": "HASBRO",
+        "Serie": "SERIE G",
+        "cantidadDisponible": 40,
+        "Precio": 15.00,
+        "descripcion": "JUGUETE G QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            10,
+            "PVC",
+            "Serie 5",
+            "Articulado",
+            3,
+            "Combinable"
+        ]     
+    },
+    {
+        "id": 8,
+        "Nombre": "JugueteH",
+        "Fabricante": "PANINI",
+        "Serie": "SERIE H",
+        "cantidadDisponible": 90,
+        "Precio": 15.00,
+        "descripcion": "JUGUETE H QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            15,
+            "Plastico",
+            "Serie 8",
+            "Articulado",
+            12,
+            "No Combinable"
+        ]     
+    },
+    {
+        "id": 9,
+        "Nombre": "JugueteI",
+        "Fabricante": "TIGRE",
+        "Serie": "SERIE I",
+        "cantidadDisponible": 8,
+        "Precio": 30.00,
+        "descripcion": "JUGUETE I QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            5,
+            "Plastico",
+            "Serie 8",
+            "Articulado",
+            6,
+            "Combinable"
+        ]     
+    },
+    {
+        "id": 10,
+        "Nombre": "JugueteJ",
+        "Fabricante": "PANINI",
+        "Serie": "SERIE J",
+        "cantidadDisponible": 8,
+        "Precio": 30.00,
+        "descripcion": "JUGUETE J QUE VOLARA TU MENTE...",
+        "Caracteristicas": [
+            10,
+            "PVC",
+            "Serie 5",
+            "Articulado",
+            3,
+            "Combinable"
+        ]     
+    }
+]
