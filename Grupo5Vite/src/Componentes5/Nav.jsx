@@ -1,5 +1,5 @@
-import React from 'react';
-import '../Dashboard.css';
+import React from 'react'
+import '../css/Dashboard.css'
 
 function Nav() {
     return (
