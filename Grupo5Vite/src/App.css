@@ -102,3 +102,20 @@ ul li{
   margin-right: 30px;
   
 }
+
+.containerLandingPage {
+  display: flex;
+}
+
+
+.containerCabecera3 {
+  padding: 20px;
+}
+
+.containerCabecera3 .box {
+  background-color: #d9d9d9;
+}
+
+.containerCabecera3 .box h3 {
+  padding: 10px;
+}
