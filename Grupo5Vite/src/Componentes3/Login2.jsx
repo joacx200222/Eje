@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Login(){
+function Login2(){
     return (
         <div>
             <h1>Ingreso para usuarios registrados</h1>
@@ -16,4 +16,4 @@ function Login(){
     )
 }
 
-export default Login;
+export default Login2;
