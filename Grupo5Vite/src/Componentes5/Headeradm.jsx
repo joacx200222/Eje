@@ -4,11 +4,10 @@ import '../css/Dashboard.css'
 function Headeradm(){
     return (
         <>
-        <div className="content">
+        
         <header>
-        <div className="tienda-text">TIENDA</div>
+        <h1 className ="tienda">TIENDA</h1>
         </header>
-        </div>
         </>
     )
 }

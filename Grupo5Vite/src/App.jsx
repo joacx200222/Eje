@@ -8,6 +8,7 @@ import OrdenesRecientes from "./Pagina/OrdenesRecientes";
 import Login from "./Componentes8/Login"
 import Registro from "./Componentes8/Registro"
 import LoginError from "./Componentes8/LoginError"
+import PaginaProducto from "./Pagina/PáginaProducto";
 
 import './App.css'
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/AdminDashBoard" element={<AdminDashBoard/>} />
         <Route path="/RegistroDatos" element={<RegistroDatos/>} />        
         <Route path="/OrdenesRecientes" element={<OrdenesRecientes />}/>
+        <Route path="/PaginaProducto" element={<PaginaProducto />}/>
       </Routes>
     </div>
   )
