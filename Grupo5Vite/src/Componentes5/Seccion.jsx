@@ -5,7 +5,7 @@ function Seccion() {
     return (
         <main>
             <article className="tituloH2-background">
-                <h2 className="tituloH2-text">Dashboar</h2>
+                <h2 className="tituloH2-text">Dashboard</h2>
                 <p className="otro-texto">Cambiar Fecha o Periodo</p>
             </article>
             </main>
