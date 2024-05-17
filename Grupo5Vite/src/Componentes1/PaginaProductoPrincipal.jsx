@@ -1,23 +1,46 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import "../css/PaginaProducto.css"
 
 function PaginaProductoPrincipal(){
     return(
         <>
-        <br></br>
+        <br></br><br></br>
         <h4>Título del producto: Puede ser bastante largo</h4>
-        <br></br>
         <p><h4 id="Subtitulo">Por: "" - Serie: ""</h4></p>
 
         <hr></hr>
 
-        <nav className='derecha'>
-            <div id="arriba_derecha">
-                <h4>Disponible</h4>
-                <p>S/...</p>
+        <div className='ProductoContenido'>
+            <nav id="arriba_derecha" className='ProductoContenidoE'>
+                <h4 id="DisponibleTitulo"> Disponible</h4>
+                <p id="Precio">S/...</p>
                 <button type='button' id="AnadirCarritoBoton">Añadir al Carrito</button>
+                <p id="textoCantidad">Cantidad</p>
+                <p>Cantidad exacta</p>
+                <p>Ver métodos de envío Disponibles</p>
+                
+            </nav>
+            <div id= 'Detallado' className='ProductoContenidoE'>
+                <h4>Descripción</h4>
+                <p id="Detalletexto">Detalle...</p>
             </div>
-        </nav>
+
+            <div id='Caractericticas' className='ProductoContenidoE'>
+                <h4>Características del producto:</h4>
+                    <ul>
+                        <li>Mide...</li>
+                        <ol>Hecho en ...</ol>
+                        <ol>De la serie ...</ol>
+                        <ol>Articulado...</ol>
+                        <ol>Mide...</ol>
+                        <ol>... piezas distintas</ol>
+                        <ol>... con otras figuras</ol>
+                    </ul>
+            </div>
+
+        </div>
+
         </>
     )
 }
