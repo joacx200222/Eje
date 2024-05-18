@@ -1,14 +1,17 @@
 import { Routes, Route } from "react-router-dom"
-import LandingPage from "./Pagina/LandingPage"
+
 import CarritoCompras from "./Componentes2/CarritoCompras";
-import CambiarContra from "./Pagina/CambiarContra";
-import AdminDashBoard from "./Pagina/AdminDashBoard";
-import RegistroDatos from "./Pagina/DatosRegistro";
-import OrdenesRecientes from "./Pagina/OrdenesRecientes";
 import Login from "./Componentes8/Login"
 import Registro from "./Componentes8/Registro"
 import LoginError from "./Componentes8/LoginError"
-import PaginaProducto from "./Pagina/PáginaProducto";
+
+import LandingPage from "./PaginasUsuario/LandingPage"
+import CambiarContra from "./PaginasUsuario/CambiarContra";
+import AdminDashBoard from "./PaginasAdmin/AdminDashBoard";
+import RegistroDatos from "./PaginasUsuario/DatosRegistro";
+import OrdenesRecientes from "./PaginasUsuario/OrdenesRecientes";
+import PaginaProducto from "./PaginasUsuario/PáginaProducto";
+import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
 
 import './App.css'
 
@@ -26,6 +29,7 @@ function App() {
         <Route path="/RegistroDatos" element={<RegistroDatos/>} />        
         <Route path="/OrdenesRecientes" element={<OrdenesRecientes />}/>
         <Route path="/PaginaProducto" element={<PaginaProducto />}/>
+        <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
       </Routes>
     </div>
   )

@@ -24,9 +24,4 @@ function AdminDashBoard (){
     </>
     )
 }
-<<<<<<< HEAD
-export default AdminDashBoard
-=======
-
-export default AdminDashBoard
->>>>>>> 1cd6604b73235e0a31228ea619ecfa93108d3dc5
+export default AdminDashBoard;

@@ -1,28 +1,26 @@
 import React from 'react';
 import '../css/Dashboard.css';
 
-function Seccion () {
+function Seccion() {
     return (
-<<<<<<< HEAD
-        <div className="content">
-        <h2 className="tituloH2-background">
-            <span className="tituloH2-text">Dashboard</span>
-            <span id="fechaInput">Cambiar Fecha o Periodo</span>
-        </h2>
-        </div>
-    )
-=======
         <main>
             <article className="tituloH2-background">
                 <h2 className="tituloH2-text">Dashboard</h2>
                 <p className="otro-texto">Cambiar Fecha o Periodo</p>
             </article>
-            </main>
-    );
->>>>>>> 1cd6604b73235e0a31228ea619ecfa93108d3dc5
+        </main>
+        
+    )
 }
 
 export default Seccion;
+//Esto estaba puesto como alternativa?
+/* <div className="content">
+        <h2 className="tituloH2-background">
+            <span className="tituloH2-text">Dashboard</span>
+            <span id="fechaInput">Cambiar Fecha o Periodo</span>
+        </h2>
+        </div>*/
 
 {/* 
 // Seccion.js
