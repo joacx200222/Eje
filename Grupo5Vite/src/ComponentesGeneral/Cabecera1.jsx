@@ -18,7 +18,7 @@ function Cabecera1(){
                 <li>Ofertas</li>
             </ul>
             <ul id="derecha">
-                <li><Link to = "/carritocom pras"><img src={Carrito} className="CarritoCompras" alt="CarritodeCompras"/></Link></li>
+                <li><Link to = "/carritocompras"><img src={Carrito} className="CarritoCompras" alt="CarritodeCompras"/></Link></li>
                 <li>Ayuda</li>
                 <li><Link to = "/login"><button id="Micuenta">Mi Cuenta</button></Link></li>
             </ul> 

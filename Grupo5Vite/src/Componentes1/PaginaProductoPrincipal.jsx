@@ -5,9 +5,11 @@ import "../css/PaginaProducto.css"
 function PaginaProductoPrincipal(){
     return(
         <>
-        <br></br><br></br>
-        <h4>Título del producto: Puede ser bastante largo</h4>
-        <p><h4 id="Subtitulo">Por: "" - Serie: ""</h4></p>
+        <div>
+            <h4>Título del producto: Puede ser bastante largo</h4>
+            <h4 id="Subtitulo">Por: "" - Serie: ""</h4>
+        </div>
+        
 
         <hr></hr>
 
@@ -21,8 +23,10 @@ function PaginaProductoPrincipal(){
                 <p>Ver métodos de envío Disponibles</p>
                 
             </nav>
+
             <div id= 'Detallado' className='ProductoContenidoE'>
                 <h4>Descripción</h4>
+                <h4>hola</h4>
                 <p id="Detalletexto">Detalle...</p>
             </div>
 

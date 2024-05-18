@@ -8,9 +8,7 @@ function PaginaProducto(){
         <>
         <div>
             <Cabecera1/>
-            <br></br>
             <PaginaProd/>
-            <br></br>
             <Pie/>
         </div>
         </>
