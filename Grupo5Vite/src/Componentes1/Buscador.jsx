@@ -1,8 +1,27 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React from 'react';
+import {useEffect, useState} from 'react';
+import axios from "axios";
+import "bootstrap/dist/css/boostrap.min.css"
 
 
 function Buscador(){
+
+    const [usuarios,setUsuarios] = UseState([]);
+    const [tablaUsuarios, setTablaUsuarios] = useState([]);
+    const [busqueda, setBusqueda] = useState("");
+
+    const peticionesGet= async()=>{
+        await axios.get("../Data/Artículos.json")
+        .then(response=>{
+            console.log(response.data);
+        }).catch(error=>{
+            console.log(error);
+        })
+    }
+
+    useEffect(()=>{
+        peticionesGet();
+    },[])
 
     return(
     <>
