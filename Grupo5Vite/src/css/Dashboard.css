@@ -1,74 +1,64 @@
-      
-       body {
-        background-color: #F6F6F6;
-      
-       
-       }
-     
 
-       header {
-         background-color: #FFFFFF;
-         color: #000000;
-         padding: 5px;
-         width: 100vw;
-         
-      
-       
-         
-     }
+body {
+  background-color: #F6F6F6;           
+}
+
+/*Tienda*/
+header { 
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 5px;
+  width: 100vw;
+}
     
-    .tienda {
-        text-align: center;
-        text-align: left; 
-        margin-left: 40px;
-        font-size: 1.6em; 
-        margin-top: 35px;
-    }
+.tienda {
+  text-align: center;
+  text-align: left; 
+  margin-left: 40px;
+  font-size: 1.6em; 
+  margin-top: 35px;
+}
        
-       aside {
+aside {
+  width: 228px;
+  height: 587px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  margin-right: 30px;
+  margin-left: 35px; 
+  margin-top: 40px; 
+  float: left;
+}
+        
+.left-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+       
+.left-navigation ul li {
+  margin-left: 40px;
+  margin-bottom: 30px;
+  color: #000000;
+}
+       
+.left-navigation ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+}
+       
+main {         
+  margin-left: 320px; 
+  min-height: calc(100vh - 50px); /* Cambia de % a vh */
+}
 
-           width: 228px;
-           height: 587px;
-           background-color: #FFFFFF;
-           padding: 10px;
-           margin-right: 30px;
-           
-           margin-left: 35px; 
-           margin-top: 40px; 
-           float: left;
-       }
-       
-       
-       .left-navigation ul {
-           list-style: none;
-           padding: 0;
-       }
-       
-       .left-navigation ul li {
-           margin-left: 40px;
-           margin-bottom: 30px;
-           color: #000000;
-       }
-       
-       .left-navigation ul li a {
-           text-decoration: none;
-           color: #000000;
-           font-family: "Roboto", sans-serif;
-       }
-       
-       main {
-           
-           margin-left: 320px; 
-           min-height: calc(100vh - 50px); /* Cambia de % a vh */
-       }
-
-       html, body {
-         height: 100%;
-         margin: 0;
-         padding: 0;
-     }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
  
- .left-navigation h3 {
+.left-navigation h3 {
    width: 58px;
    height: 28px;
    top: 121px;
@@ -95,7 +85,7 @@
  margin-right: 150px;
  }
 
- .tituloH2-background {
+.tituloH2-background {
    background-color: #D9D9D9;
    margin-top: 40px;
    height: 50px;
@@ -115,85 +105,74 @@
 }
 
 
- .numero {
- font-family: "Inter", sans-serif;
- font-size: 64px;
- font-weight: 400;
- margin-top: 25px;
- text-align: center; 
- }
-
- .numero1 {
-   font-family: "Inter", sans-serif;
- font-size: 44px;
- font-weight: 400;
- margin-top: 45px;
- text-align: center; 
- 
- }
- 
- .texto {
- 
- font-size: 19px;
- 
- font-family: "Inter", sans-serif;
- 
- text-align: center;
- margin-top: -60px;
- }
-
- .texto1 {
- 
-    font-size: 19px;
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    margin-top: -30px;
-  }
-
-
- .contenedor {
-   display: flex; /* Utiliza el modelo de flexbox */
-  
+.numero {
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  margin-top: 25px;
+  text-align: center; 
 }
 
-   .cuadro {
-   width: 327px; /* Anchura relativa para los cuadros */
-   height: 189px;
-   background-color: #D9D9D9;
+.numero1 {
+  font-family: "Inter", sans-serif;
+  font-size: 44px;
+  font-weight: 400;
+  margin-top: 45px;
+  text-align: center; 
+ 
+}
+ 
+.texto {
+  font-size: 19px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top: -60px;
+}
 
-   margin-top: 15px;
-   margin-right: 70px; /* Espacio entre los cuadros */
+.texto1 {
+  font-size: 19px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.contenedor {
+  display: flex; /* Utiliza el modelo de flexbox */ 
+}
+
+.cuadro {
+  width: 327px; /* Anchura relativa para los cuadros */
+  height: 189px;
+  background-color: #D9D9D9;
+  margin-top: 15px;
+  margin-right: 70px; /* Espacio entre los cuadros */
 }
 
 .cuadro1 {
    width: 327px; /* Anchura relativa para los cuadros */
    height: 189px;
    background-color: #D9D9D9;
-
    margin-top: 15px;
    margin-right: 70px; /* Espacio entre los cuadros */
 }
 
 .otro-texto {
-   position: absolute;
-   top: 15px; /* Ajusta la posición vertical según sea necesario */
-   right: 10px;
-   margin-top: 0; /* Ajusta el margen superior si es necesario */
-   font-family: "Roboto", sans-serif;
-   font-weight: 400px;
+    position: absolute;
+    top: 15px; /* Ajusta la posición vertical según sea necesario */
+    right: 10px;
+    margin-top: 0; /* Ajusta el margen superior si es necesario */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400px;
     height: 54px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
     position: fixed;
     top: 0; 
     z-index: 1; 
     width: 100%;
+}
   
   
-  }
-  
-  
-  .tienda-text {
+.tienda-text {
     width: 84px;
     height: 29px;
     top: 50%; 
@@ -204,12 +183,11 @@
     font-weight: 700;
     line-height: 28.13px;
     text-align: left;
-    position: absolute; 
-    
-  }
+    position: absolute;     
+}
   
   
-  .tituloH2-background {
+.tituloH2-background {
     height: 32px;
     background-color: #D9D9D9;
     padding: 10px; 
@@ -219,12 +197,11 @@
     margin-top: -130px; /* Reducir el margen superior */
     width: 80%;
     display: flexbox;
-    margin-left: 350px;
-    
-  }
+    margin-left: 350px;    
+}
   
   
-  .tituloH2-text {
+.tituloH2-text {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -232,11 +209,10 @@
     text-align: left;  
     margin-left: 20px; 
     line-height: 35px; 
-    vertical-align: middle;
-    
-  }
+    vertical-align: middle;   
+}
   
-  .left-navigation {
+.left-navigation {
     width: 228px;
     height: 587px;
     background-color: #FFFFFF;
@@ -246,50 +222,50 @@
     margin-left: 50px; /* Agregar un margen a la izquierda */
     margin-top: 100px;
     display: flexbox;
-  }
+}
   
-  .left-navigation ul {
+.left-navigation ul {
     list-style: none;
     padding: 0;
-  }
+}
   
-  .left-navigation ul li {
+.left-navigation ul li {
     margin-bottom: 10px;
     margin-left: 40px;
     margin-bottom: 30px;
     color: #000000;
-  }
+}
   
-  .left-navigation ul li a {
+.left-navigation ul li a {
     text-decoration: none;
     color: #000000;
     font-family: "Roboto", sans-serif;
-  }
+}
   
   
-  .content {
+.content {
     display: flex;
     align-items: flex-start;
     font-family: "Roboto", sans-serif;
     position: relative; 
-  }
+}
   
-  main {
+main {
     flex: 1;
     padding: 20px;
     margin-left: 40px;
-  }
+}
   
   
-  body {
+body {
     background-color: #F6F6F6;
     margin-left: 0;
     padding: 0;
     font-family: "Roboto", sans-serif;
-  }
+}
   
   
-  .left-navigation h3 {
+.left-navigation h3 {
     width: 58px;
     height: 28px;
     top: 121px;
@@ -300,10 +276,10 @@
     margin-left: 20px;
     font-weight: normal;
     color: #000000;
-  }
+}
   
   
-  #fechaInput {
+#fechaInput {
     float: right;
     margin-right: 20px; 
     font-family: Roboto;
@@ -313,9 +289,9 @@
     line-height: 35px; 
     font-weight: normal;
     vertical-align: middle;
-  }
+}
   
-  .dashboard {
+.dashboard {
   display: inline-block;
   background-color: #D9D9D9; 
   padding: 20px; 
@@ -325,40 +301,29 @@
   margin-right: 150px;
   margin-left: -50px; 
   margin-top: -55px; /* Reducir el margen superior */
-  }
+}
   
-  .numero {
+.numero {
   font-family: "Inter", sans-serif;
   font-size: 80px;
   font-weight: 400;
   line-height: 180px;
   text-align: center; 
+}
   
-  
-  }
-  
-  .numero1 {
+.numero1 {
   font-family: "Inter", sans-serif;
   font-size: 50px;
   font-weight: 400;
   line-height: 180px;
   text-align: center; 
+}
   
-  }
-  
-  .texto {
-  
-  font-size: 19px;
-  
+.texto { 
+  font-size: 19px; 
   font-family: "Inter", sans-serif;
-  
   margin-top: -30px;
-  }
-
-   
-
-
-
+}
 
 html, body {
    height: 100%;
@@ -370,7 +335,6 @@ main {
    min-height: calc(100% - 50px); /* 50px es la altura estimada del footer */
 }
 
-
 .footerAdm {
    background-color: #e1e1e1;
    display: flex;
@@ -379,13 +343,35 @@ main {
    margin-top: 400px; 
 }
  
- .quintofooter{
+.quintofooter{
    display: flex;
    margin-left: auto;
- }
+}
  
- .quintofooter li{
-   margin-right: 30px;
-   
- }
+.quintofooter li{
+   margin-right: 30px;  
+}
 
+#Micuenta{
+  background-color: black;
+}
+
+.buscador{
+  margin-top: 1%;
+}
+
+#barrabuscador{
+  height: 40px;
+  width: 1650px;
+}
+
+#buscarProductos{
+  background-color: gray;
+  width: 140px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: large;
+  margin-left: 10px;
+}

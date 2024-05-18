@@ -10,15 +10,11 @@ function UsuariosRegistrados (){
     return (
     <>
         <div>
-
             <Headeradm/>
             <Nav/>
             <Seccion/>
-            
+            <div>USUARIOS REGISTRADOS</div>
             <Footer/>
-            
-            
-
         </div>
     </>
     )

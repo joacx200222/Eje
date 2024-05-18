@@ -9,10 +9,13 @@ function Buscador(){
         <div className='buscador'>
             <input type="text" id="barrabuscador" nombre="barrabuscador" placeholder='Busca productos por nombre...'></input>
             <br></br>
-            <button type='button'>BUSCAR</button>
+            <input type="button" value="Buscar" id='buscarProductos'/>
+            
         </div>
         
     </>
 )}
 
 export default Buscador
+
+/*<button type='button'>BUSCAR</button>*/ 

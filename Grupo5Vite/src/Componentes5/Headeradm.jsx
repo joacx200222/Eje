@@ -3,8 +3,7 @@ import '../css/Dashboard.css'
 
 function Headeradm(){
     return (
-        <>
-        
+        <>       
         <header>
         <h1 className ="tienda">TIENDA</h1>
         </header>

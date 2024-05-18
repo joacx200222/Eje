@@ -12,6 +12,8 @@ import RegistroDatos from "./PaginasUsuario/DatosRegistro";
 import OrdenesRecientes from "./PaginasUsuario/OrdenesRecientes";
 import PaginaProducto from "./PaginasUsuario/PáginaProducto";
 import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
+import Ordenes from "./PaginasAdmin/Ordenes";
+import Productos from "./PaginasAdmin/Productos";
 
 import './App.css'
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/OrdenesRecientes" element={<OrdenesRecientes />}/>
         <Route path="/PaginaProducto" element={<PaginaProducto />}/>
         <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
+        <Route path="/Ordenes" element={<Ordenes />}/>
+        <Route path="/Productos" element={<Productos />}/>
       </Routes>
     </div>
   )
