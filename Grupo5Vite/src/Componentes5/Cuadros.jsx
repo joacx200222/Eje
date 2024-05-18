@@ -3,21 +3,28 @@ import '../css/Dashboard.css'
 
 function Cuadros(){
     return (
+
         <>
-            <div className="dashboard">
-                <div className="numero">68</div>
-                <div className="texto">Órdenes del día de hoy</div>
-            </div>
-            
-            <div className="dashboard">
-                <div className="numero">12</div>
-                <div className="texto">Usuarios nuevos</div>
-            </div>
-            
-            <div className="dashboard">
-                <div className="numero1">S/ 13,500.00</div>
-                <div className="texto">Ingresos de hoy</div>
-            </div>
+    <main>
+    <article>
+    <div className="contenedor">
+        <div className="cuadro">
+            <p className="numero">68</p>
+            <p className="texto">Órdenes del día de hoy</p>
+        </div>
+        <div className="cuadro">
+            <p className="numero">12</p>
+            <p className="texto">Usuarios nuevos</p>
+
+        </div>
+        <div className="cuadro1">
+            <p className="numero1">S/ 13,500.00</p>
+            <p className="texto1">Ingresos de hoy</p>
+        </div>
+    </div>
+    
+    </article>
+    </main>
         </>
     )
 }

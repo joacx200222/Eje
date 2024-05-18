@@ -12,6 +12,7 @@ function LandingPage() {
       <>
         <div>
             <Cabecera1/>
+            <br></br>
             <Buscador/>
             <Body/>
             <br></br>
