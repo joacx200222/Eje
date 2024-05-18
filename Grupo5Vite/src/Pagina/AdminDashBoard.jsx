@@ -1,3 +1,4 @@
+import React from 'react'
 import Cuadros from '../Componentes5/Cuadros'
 import Headeradm from '../Componentes5/Headeradm'
 import Nav from '../Componentes5/Nav'
@@ -19,5 +20,4 @@ function AdminDashBoard (){
     </>
     )
 }
-
 export default AdminDashBoard
