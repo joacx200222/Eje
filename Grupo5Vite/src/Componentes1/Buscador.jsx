@@ -8,7 +8,8 @@ function Buscador(){
     const [objeto, setobjeto] = useState("");
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError] = useState(null);
-
+    const [rpta, setRpta] = useState([]);
+ 
     useEffect(() => {
         fetch(data)
         .then(resultado => resultado.json())
@@ -24,6 +25,28 @@ function Buscador(){
         )
     }, []);
 
+
+    function buscar(cadena){
+        console.log(cadena)
+
+        let lista = []
+        let i=0
+
+        objeto.forEach(element => {
+            element.Buscador.filter((objeto) => {
+                let m = modelo['num']
+                if( m.includes(cadena)){
+                    i = i + 1
+                    lista.push(<li key={i}>{element.detalle} - {m} <img src={modelo['imagen']} className='juguete'></img> </li>)
+                }
+            })
+        })
+        
+
+        setRpta(lista)
+    }
+
+    
 
     return(
     <>
