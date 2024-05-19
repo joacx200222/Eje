@@ -8,7 +8,6 @@ import LandingPage from "./PaginasUsuario/LandingPage"
 import CambiarContra from "./PaginasUsuario/CambiarContra";
 import AdminDashBoard from "./PaginasAdmin/AdminDashBoard";
 import RegistroDatos from "./PaginasUsuario/DatosRegistro";
-import OrdenesRecientes from "./PaginasUsuario/OrdenesRecientes";
 import PaginaProducto from "./PaginasUsuario/PáginaProducto";
 import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
 import Ordenes from "./PaginasAdmin/Ordenes";
@@ -20,6 +19,10 @@ import Findepedido from "./Componentes2/Findepedido";
 import ProductosAdm from "./PaginasAdmin/ProductosAdm";
 import AgregarProducto from "./PaginasAdmin/AgregarProducto";
 import VerProducto from "./PaginasAdmin/VerProducto";
+import DetalleOrden from "./PaginasUsuario/DetalleOrden";
+import Series from "./PaginasAdmin/Series";
+import AddSerie from "./PaginasAdmin/AddSerie";
+
 import './App.css'
 
 function App() {
@@ -34,7 +37,6 @@ function App() {
         <Route path="/CambiarContra" element={<CambiarContra/>} />
         <Route path="/AdminDashBoard" element={<AdminDashBoard/>} />
         <Route path="/RegistroDatos" element={<RegistroDatos/>} />        
-        <Route path="/OrdenesRecientes" element={<OrdenesRecientes />}/>
         <Route path="/PaginaProducto" element={<PaginaProducto />}/>
         <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
         <Route path="/Ordenes" element={<Ordenes />}/>
@@ -46,6 +48,11 @@ function App() {
         <Route path="/ProductosAdm" element={<ProductosAdm/>}/>
         <Route path="/AgregarProducto" element={<AgregarProducto/>}/>
         <Route path="/VerProducto" element={<VerProducto/>}/>
+        <Route path="/DetalleOrden" element={<DetalleOrden />}/>
+        <Route path="/Series" element={<Series />} />
+        <Route path="/AddSerie" element={<AddSerie />} />
+
+
       </Routes>
     </div>
   )

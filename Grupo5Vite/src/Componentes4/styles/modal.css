@@ -1,0 +1,63 @@
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modalContent {
+    background-color: #fefefe;
+    width: fit-content;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 50%;
+  }
+
+  .header {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    background: #d9d9d9;
+  }
+
+  .header h3 {
+    width: fit-content;
+    margin: 0;
+  }
+
+  .searchButton{
+    border: 1px solid black;
+  }
+
+  .searchContainer{
+    width: '100%';
+    margin-top: 10px;
+    display: flex;
+  }
+
+
+
+  .modalSearch {
+    padding: 10px;  
+    width: 100em;
+    border-radius: 10px;
+  }
+
+  
+
+table {
+    width: 100%;
+}
+  
+
+.closeButton {
+    background-color: red;
+    padding: 1;
+}

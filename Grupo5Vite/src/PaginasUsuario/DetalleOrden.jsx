@@ -2,8 +2,9 @@ import Cabecera2 from "../ComponentesGeneral/Cabecera2";
 import Cabecera3 from "../ComponentesGeneral/Cabecera3";
 import Pie from "../ComponentesGeneral/Pie";
 
+function DetalleOrden() {
 
-function OrdenesRecientes() {
+
     return (
         <div style={{
             height: '90dvh',
@@ -12,45 +13,51 @@ function OrdenesRecientes() {
             <div style={{
                 marginTop: '100px',
             }}>
-                <h2 style={{border: '1px solid black', textAlign: 'start'}}>   
-                    Detalles de Orden Nro 131124141141
-                </h2>
+                <div style={{
+                    marginLeft: '20px',
+                }}>
+                    <h2 style={{textAlign: 'start'}}>   
+                        Detalles de Orden Nro 131124141141
+                    </h2>
+                </div>
+                
                 <Cabecera3 title={'Datos de Compra'}/>
               
                 <div style={{
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gap: '20px',
-                    padding: '20px',
+                    marginLeft: '20px',
                 }}>
-                    <div style={{border: '1px solid black', width: '100%'}}>
-                        <h3 style={{width: 'fit-content'}}>Direccion de envio</h3>
-                        <ul>
-                            <li>
-                            Jiron Huaralchan 12144 Departamento 922
-                            </li>
-                            <li>
-                                Jesus Maria, lima
-                            </li>
-                            <li>
-                                Lima
-                            </li>
-                            <li>
-                                Peru
-                            </li>
-                        </ul>
+                    <div style={{background: '#FFFFFF', padding: '10px',
+                        borderRadius: '8px',
+                    }}>
+                        <h2 >Direccion de envio</h2>
+                        <div>
+                            <p>Jiron Huaralchan 12144 Departamento 922</p>
+                            <p>Jesus Maria, lima</p>
+                            <p> Lima</p>
+                            <p>Peru</p>
+                        </div>
 
                     </div>
-                    <div style={{border: '1px solid black'}}>
-                        <h3>Pago</h3>
-                        <ul>
-                            <li>
-                                Pago con Codigo QR
-                            </li>
-                            <li>
-                                Pago con tarjeta de credito 
-                            </li>
-                        </ul>
+                    <div style={{background: '#FFFFFF', padding: '10px',
+                        borderRadius: '8px',
+                    }}>
+                        <h2>Pago</h2>
+                        <div>
+                            <div>
+                                <input type="radio" name="tipoPago" />
+                                <label htmlFor="codigo">Pago con codigo QR</label>
+                            </div>
+                           
+                            <div>
+                                <input type="radio" name="tipoPago" checked/>
+                                <label htmlFor="tarjeta">Pago con Tarjeta de Credito</label>
+                            </div>
+                        </div>
+                        
+                        <p>Tarjeta de Credito que termina en: ****8859</p>
                     </div>
                 </div>
 
@@ -59,13 +66,22 @@ function OrdenesRecientes() {
                 <div style={{
                     display: 'flex',
                     padding: '10px',
-                    background: '#FFFFFF'
+                    marginLeft: '20px',
+                    marginRight: '20px',
+                    background: '#FFFFFF',
                 }}>
-                    <div>
-                        <p>Economico Aereo - S/10.00</p>
+                    <div style={{
+                        padding: '10px'
+                    }}>
+                        <input type="radio" name="tipoEnvio" />
+                        <label htmlFor="codigo">Economico Areo - S/ 10.00</label>
                     </div>
-                    <div>
-                        <p>Envio prioritario (5 a 10 días) - S/17.00</p>
+                    <div style={{
+                        padding: '10px',
+                        marginLeft: '10px',
+                    }}>
+                    <input type="radio" name="tipoEnvio" />
+                        <label htmlFor="tarjeta">Envio prioritario(5 a 10 dias) - S/17.00</label>
                     </div>
                 </div>
             </div>
@@ -75,10 +91,12 @@ function OrdenesRecientes() {
                     display: 'grid',
                     gridTemplateColumns: '1fr 1fr',
                     gap: '20px',
-                    padding: '20px',
+                    margin: '20px',
                 }}>
-                    <div style={{border: '1px solid black', width: '100%'}}>
-                        <h3 style={{width: 'fit-content'}}>Items en Pedido</h3>
+                    <div style={{background: '#FFFFFF', padding: '10px',
+                        borderRadius: '8px',
+                    }}>
+                        <h2>Items en Pedido</h2>
                         <div>
                             <div style={{
                                 display: 'grid',
@@ -96,15 +114,17 @@ function OrdenesRecientes() {
                         </div>
 
                     </div>
-                    <div style={{border: '1px solid black'}}>
-                        <h3 style={{width: 'fit-content'}}>Resumen de Orden</h3>
+                    <div style={{background: '#FFFFFF', padding: '10px',
+                        borderRadius: '8px',
+                    }}>
+                        <h2 >Resumen de Orden</h2>
                             <div style={{
                                 margin: 'auto',
                                 width: '50%',
                                 padding: '10px',
                                 textAlign: 'center'
-
                             }}>
+
                                 <div style={{display: 'flex', justifyContent: 'space-around'}}>
                                     <p>Subtotal: </p> <p>S/ 100.00</p>
                                 </div>
@@ -117,7 +137,7 @@ function OrdenesRecientes() {
                                 <div style={{display: 'flex', justifyContent: 'space-around'}}>
                                     <p>Total: </p> <p>S/ 135.00</p>
                                 </div>
-                                
+
                                     <button>Cancelar Pedido</button>
                             </div>
                     </div>
@@ -127,4 +147,4 @@ function OrdenesRecientes() {
     )
 }
 
-export default OrdenesRecientes;
+export default DetalleOrden;
