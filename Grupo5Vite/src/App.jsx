@@ -14,7 +14,7 @@ import PaginaProducto from "./PaginasUsuario/PáginaProducto";
 import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
 import Ordenes from "./PaginasAdmin/Ordenes";
 import Productos from "./PaginasAdmin/Productos";
-import Checkout from "./Componentes2/Checkout";
+import Checkout from "./Componentes2/checkout";
 import './App.css'
 
 function App() {
