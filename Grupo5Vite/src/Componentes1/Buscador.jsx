@@ -25,6 +25,7 @@ function Buscador(){
             <button type='button'>BUSCAR</button>
         </div>
         
+        
     </>
 )}
 

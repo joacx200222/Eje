@@ -4,21 +4,27 @@
 .wrapperL{
     color: white;
     margin-top: 250px;
+    margin-left: 700px;
+    height: 45vh;
 }
 
 .wrapperL h4{
     color: black;
     font-weight: normal;
+    margin-left: 60px;
+
 }
 
-.forgot-passwordL a{
+.forgot-passwordL p{
     color: black;
     text-decoration:underline;
+    margin-left: 100px;
 }
 
 .registerL a{
     text-decoration: underline;
     color: black;
+    margin-left: 50px;
 }
 
 p{
@@ -46,6 +52,7 @@ p{
   height:64px;
   font-family: "Roboto", sans-serif;
   background-color: black;
+  margin-left: 1px;
 }
 
 ::placeholder{

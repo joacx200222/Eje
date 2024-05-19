@@ -1,21 +1,23 @@
-import Cuadros from '../Componentes5/Dashboard/Cuadros'
+
 import Headeradm from '../Componentes5/Dashboard/Headeradm'
 import Nav from '../Componentes5/Dashboard/Nav'
-import Footer from '../Componentes5/ProductosAdm/footerAdm'
-import Seccion from '../Componentes5/Dashboard/Seccion'
 
+import Footer from '../Componentes5/ProductosAdm/footerAdm'
+
+import SeccionDetalle from '../Componentes5/DetalleProducto/SeccionDetalle'
+import DetalleProducto from '../Componentes5/DetalleProducto/DetalleProducto'
 import '../css/Dashboard.css'
 
-function AdminDashBoard (){
+function VerProducto (){
     return (
     <>
    
 
             <Headeradm/>
             <Nav/>
-            <Seccion/>
-            <Cuadros/>
-            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <SeccionDetalle/>
+            <DetalleProducto/>
+            <br /><br />
             <Footer/>
             
 
@@ -24,4 +26,4 @@ function AdminDashBoard (){
     )
 }
 
-export default AdminDashBoard
+export default VerProducto

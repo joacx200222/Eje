@@ -1,0 +1,44 @@
+.wrapperRC{
+    color: white;
+    margin-top: 250px;
+    margin-left: 700px;
+    height: 45vh;
+}
+
+.input-boxRC input{
+    background-color: white;
+    border-radius: 5px;
+    height: 64px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 360px;
+    border: 1px solid #000000;
+    color: #000000;
+    font-family: "Roboto", sans-serif;
+
+}
+
+.wrapperRC h4{
+    color: black;
+    font-weight: normal;
+    margin-left: 50px;
+
+}
+
+.wrapperRC button{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    width:360px;
+    height:64px;
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    margin-left: 1px;
+  }
+
+  .return-login p{
+    margin-left: 120px;
+    text-decoration: underline;
+
+  }
