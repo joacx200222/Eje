@@ -19,7 +19,7 @@ function Login(){
                 <form action="">
                     <h4>Ingreso para clientes registrados</h4>
                     <div className='input-boxL'>
-                        <input type='text' placeholder='email' required/>
+                        <input type='email' placeholder='email' required/>
                     </div>
                     <div className='input-boxL'>
                         <input type='password' placeholder='password' required/>
