@@ -1,5 +1,5 @@
 import React from 'react'
-import Headeradm from '../Componentes5/Dashboard/Headeradm'
+import HeaderAdmin from '../Componentes6/Dashboard/HeaderAdmin'
 import Nav from '../Componentes5/Dashboard/Nav'
 import Seccion from '../Componentes5/Dashboard/Seccion'
 import Footer from '../Componentes5/ProductosAdm/footerAdm'
@@ -10,7 +10,7 @@ function UsuariosRegistrados (){
     return (
     <>
         <div>
-            <Headeradm/>
+            <HeaderAdmin/>
             <Nav/>
             <Seccion/>
             <div>USUARIOS REGISTRADOS</div>
