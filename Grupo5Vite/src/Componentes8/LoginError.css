@@ -4,15 +4,19 @@
 .wrapperLE{
     color: white;
     margin-top: 250px;
+    margin-left: 700px;
+    height: 45vh;
 }
 
 .wrapperLE h4{
     color: black;
     font-weight: normal;
+    margin-left: 60px;
 }
 
 .incorrect-pwd p{
     color: black;
+    margin-left: 70px;
 }
 
 p{
@@ -40,6 +44,7 @@ p{
   height:64px;
   font-family: "Roboto", sans-serif;
   background-color: black;
+  margin-left: 1px;
 }
 
 ::placeholder{

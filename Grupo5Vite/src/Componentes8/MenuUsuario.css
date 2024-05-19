@@ -1,0 +1,103 @@
+.wrapperMU{
+    width: 228px;
+    height: 587px;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    gap: 0px;
+    opacity: 0px;
+    background-color: white;
+ 
+
+}
+
+.my-accountMU p{
+    width: 100px;
+    position: absolute;
+    left: 50px;
+    top: 100px;
+   
+    
+}
+
+.my-accountMU{
+    width: 200px;
+    height: 28px;
+    gap: 0px;
+    opacity: 0px;
+    size: 10px;
+ 
+
+}
+
+.my-account-details{
+    position: absolute;
+    top: 150px;
+    left: 60px;
+}
+
+.wrapper-details{
+    position: absolute;
+    top: 76px;
+}
+
+.wrapper-header{
+    width: 1106px;
+    height: 45px;
+    top: 0px;
+    left: 304px;
+    gap: 0px;
+    opacity: 0px;
+    position: absolute;
+    background-color: gray;
+
+}
+
+.wrapper-header-filtro p{
+    position: absolute;
+    width: 299px;
+    height: 23px;
+    top: 0px;
+    right: 10px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.wrapper-ordenes{
+    position: absolute;
+    width: 1105px;
+    left: 305px;
+    top: 50px;
+}
+
+hr{
+    border: none;
+}
+
+.wrapper-datos p{
+    font-size: small;
+
+}
+
+.wrapper-orden{
+    position: absolute;
+    left: 800px;
+
+}
+
+.wrapper-orden p{
+    position: absolute;
+    bottom: 65px;
+    width: 1000px;
+}
+
+.ver-detalle{
+    position: absolute;
+    left: 1000px;
+}
+
+.ver-detalle p{
+    position: absolute;
+    bottom: 65px;
+    width: 1000px;
+}
