@@ -34,8 +34,8 @@ function App() {
         <Route path="/OrdenesRecientes" element={<OrdenesRecientes />}/>
         <Route path="/PaginaProducto" element={<PaginaProducto />}/>
         <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
-        <Route path="/Ordenes" element={<Ordenes />}/>
         <Route path="/Productos" element={<Productos />}/>
+        <Route path="/Ordenes" element={<Ordenes />}/>       
         <Route path="/Checkoutv" element={ <Checkoutv /> } />
         <Route path="/MenuUsuario" element={<MenuUsuario/>}/>
         <Route path="/recuperarcontraseña" element={<RecuperarContraseña/>}/>

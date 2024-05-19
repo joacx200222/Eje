@@ -1,7 +1,10 @@
 import React from 'react'
 import HeaderAdmin from '../Componentes6/Dashboard/HeaderAdmin'
 import Nav from '../Componentes5/Dashboard/Nav'
-import Seccion from '../Componentes5/Dashboard/Seccion'
+import SeccionUsuariosReg from '../Componentes6/Dashboard/SeccionUsuariosReg'
+import BuscadorUsuarios from '../Componentes6/Dashboard/BuscadorUsuarios'
+import TablaUsuariosReg from '../Componentes6/Dashboard/TablaUsuariosReg'
+import Paginacion from '../Componentes5/ProductosAdm/Paginacion'
 import Footer from '../Componentes5/ProductosAdm/footerAdm'
 
 import '../css/Dashboard.css'
@@ -12,8 +15,11 @@ function UsuariosRegistrados (){
         <div>
             <HeaderAdmin/>
             <Nav/>
-            <Seccion/>
-            <div>USUARIOS REGISTRADOS</div>
+            <SeccionUsuariosReg/>
+            <BuscadorUsuarios/>
+            <TablaUsuariosReg/>
+            <Paginacion/>
+            <br /><br />
             <Footer/>
         </div>
     </>
