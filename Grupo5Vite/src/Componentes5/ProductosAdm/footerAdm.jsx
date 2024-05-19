@@ -1,9 +1,10 @@
 import React from 'react'
-import '../App.css'
-import Facebook from '../assets/imagenes/facebook.png'
-import Instagram from '../assets/imagenes/instagram.png'
-import Twitter from '../assets/imagenes/twitter.png'
-import Youtube from '../assets/imagenes/youtube.png'
+import '../../App.css'
+
+import Facebook from '../../assets/imagenes/facebook.png'
+import Instagram from '../../assets/imagenes/instagram.png'
+import Twitter from '../../assets/imagenes/twitter.png'
+import Youtube from '../../assets/imagenes/youtube.png'
 
 
 function footerAdm(){
@@ -11,6 +12,7 @@ function footerAdm(){
     return(
         <>
         <footer className= "footerAdm">
+            
            
             <ul className='primerfooter'>
                 <li id="LaTienditaDelAbuelo"><strong>LA TIENDITA DEL ABUELO</strong></li>

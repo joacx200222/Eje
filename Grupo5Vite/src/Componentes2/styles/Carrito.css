@@ -2,22 +2,30 @@
     background-color: #D9D9D9;
     border: 1px solid black;
     margin:  auto; /* Esto centrará el div horizontalmente */
+
+}
+
+.compra{
     margin-left: 60px;
     margin-right: 60px;
-    padding: auto;
-
 }
 
 
 
-h2{
-    margin-left: 60px;
-
-}
-
-p{
+.ItemsAV{
     margin-left: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
 
 }
+.totalcarritoAV{
+    display: flex;
+}
+
+.totalAV{
+    margin-left: auto;
+}
+
+
+
+

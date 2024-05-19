@@ -58,6 +58,8 @@ header{
 
 header ul{
   display: flex;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 h3{
