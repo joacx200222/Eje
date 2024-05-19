@@ -9,9 +9,9 @@ function Nav() {
                 <h3>Admin</h3>
                 <ul>
                     <li><Link to="/AdminDashBoard">Dashboard</Link></li>
-                    <li><Link to="/">Usuarios registrados</Link></li>
+                    <li><Link to="/UsuariosRegistrados">Usuarios registrados</Link></li>
                     <li><Link to="/ProductosAdm">Productos</Link></li>
-                    <li><Link to="/">Órdenes</Link></li>
+                    <li><Link to="/Ordenes">Órdenes</Link></li>
                     <li><Link to="/">Productos más vendidos</Link></li>
                     <li><Link to={"/Series"}>Series</Link></li>
                 </ul>

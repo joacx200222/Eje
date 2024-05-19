@@ -1,10 +1,38 @@
 [
     {
         "id": 1,
-        "Nombre": "",
-        "Apellido": "",
-        "Correo": "",
-        "FechaDeRegistro": "",
-        "Estado": ""
+        "nombre": "Antonio",
+        "apellido": "Lopez Caro",
+        "correo": "correo@sanchez.com",
+        "fechaRegistro": "11/02/2022 ",
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
+    },
+    {
+        "id": 12333,
+        "nombre": "Ana",
+        "apellido": "Sanchez",
+        "correo": "anita123@hotmail.com",
+        "fechaRegistro": "11/02/2022 ",
+        "estado": "Inactivo",
+        "acciones": "Ver | Activar"
+    },
+    {
+        "id": 12334,
+        "nombre": "Ana",
+        "apellido": "Sanchez",
+        "correo": "anita123@hotmail.com",
+        "fechaRegistro": "11/02/2022 ",
+        "estado": "Inactivo",
+        "acciones": "Ver | Activar"
+    }, 
+    {
+        "id": 2,
+        "nombre": "Antonio",
+        "apellido": "Lopez Caro",
+        "correo": "correo@sanchez.com",
+        "fechaRegistro": "11/02/2022 ",
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
     }
 ]
