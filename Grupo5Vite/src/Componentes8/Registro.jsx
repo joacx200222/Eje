@@ -85,7 +85,7 @@ function Registro(){
                     </div>
                     <div>
                         <div className='input-boxR'>
-                            <input type='text' placeholder='Correo' 
+                            <input type='email' placeholder='Correo' 
                             value={correo}
                             onChange={
                                 (e) => setCorreo(e.target.value)
