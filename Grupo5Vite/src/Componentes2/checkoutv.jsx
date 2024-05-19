@@ -1,6 +1,7 @@
 import React from 'react';
 import Pie from '../ComponentesGeneral/Pie';
 import Cabecera2 from '../ComponentesGeneral/Cabecera2';
+import { Link } from "react-router-dom";
 import "./styles/checkout.css"
 function Checkoutv(){
     return(
@@ -98,6 +99,26 @@ function Checkoutv(){
                 <div className='segundocheckouAV'>
 
                     <p><strong>Resumen de Orden</strong></p>
+                
+                
+                <div className='ordenAV'>
+                    <ul>
+                        <li>Subtotal:</li>
+                        <li>Envío:</li>
+                        <li>Impuestos: </li>
+                        <li>Total: </li>
+                    </ul>
+                    <ul>
+                        <li>s/159</li>
+                        <li>s/89</li>
+                        <li>s/69</li>
+                        <li>s/329</li>
+                    </ul>
+
+                </div>
+                
+                    
+                    <center><button className='botoncheckAV2'><Link to = "/pedidocompleto"> <strong>Completar Orden</strong> </Link> </button></center>
                     
                 </div>
             </div>
