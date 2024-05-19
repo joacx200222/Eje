@@ -21,15 +21,15 @@ function CarritoCompras(){
                     <p className='totalAV'>Total: $</p>
                 </div>
 
-                
+                <div>
+                    <button className='botoncheckAV'><Link to = "/Checkoutv"> <strong>Checkout</strong> </Link> </button>
+                </div>
 
                 <div className='recta'>
                     <p className='ItemsAV'><strong>Guardado para despúes</strong></p>
                 </div>
 
-                <div>
-                    <button className='botoncheckAV'><Link to = "/Checkoutv"> <strong>Checkout</strong> </Link> </button>
-                </div>
+                
                 
 
             </div>

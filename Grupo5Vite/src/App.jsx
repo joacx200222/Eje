@@ -16,6 +16,7 @@ import Productos from "./PaginasAdmin/Productos";
 import Checkoutv from "./Componentes2/checkoutv";
 import MenuUsuario from "./Componentes8/MenuUsuario";
 import RecuperarContraseña from "./Componentes8/RecuperarContraseña";
+import Findepedido from "./Componentes2/Findepedido";
 
 import './App.css'
 
@@ -39,6 +40,7 @@ function App() {
         <Route path="/Checkoutv" element={ <Checkoutv /> } />
         <Route path="/MenuUsuario" element={<MenuUsuario/>}/>
         <Route path="/recuperarcontraseña" element={<RecuperarContraseña/>}/>
+        <Route path="/pedidocompleto" element={<Findepedido/>}/>
       </Routes>
     </div>
   )

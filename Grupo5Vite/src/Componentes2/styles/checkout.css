@@ -78,4 +78,17 @@
     color: white;
 }
 
+.botoncheckAV2{
+    background-color: black;
+    color: white;
+    display: block;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
 
+.ordenAV{
+    display: flex;
+    justify-content: center;
+
+}
