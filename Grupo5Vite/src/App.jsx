@@ -4,7 +4,6 @@ import CarritoCompras from "./Componentes2/CarritoCompras";
 import Login from "./Componentes8/Login"
 import Registro from "./Componentes8/Registro"
 import LoginError from "./Componentes8/LoginError"
-
 import LandingPage from "./PaginasUsuario/LandingPage"
 import CambiarContra from "./PaginasUsuario/CambiarContra";
 import AdminDashBoard from "./PaginasAdmin/AdminDashBoard";
@@ -14,7 +13,6 @@ import PaginaProducto from "./PaginasUsuario/PáginaProducto";
 import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
 import Ordenes from "./PaginasAdmin/Ordenes";
 import Productos from "./PaginasAdmin/Productos";
-import Checkout from "./Componentes2/checkout";
 import './App.css'
 
 function App() {
@@ -34,7 +32,6 @@ function App() {
         <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
         <Route path="/Ordenes" element={<Ordenes />}/>
         <Route path="/Productos" element={<Productos />}/>
-        <Route path="/Checkout" element={<Checkout />}/>
       </Routes>
     </div>
   )

@@ -3,12 +3,22 @@ import Pie from '../ComponentesGeneral/Pie';
 import Cabecera2 from '../ComponentesGeneral/Cabecera2';
 
 
-function Checkout(){
-    <section>
+function Checkoutv(){
+    
+    
+    <body>
     <Cabecera2/>
 
+
+
+    <h3>hola</h3>
+
+
     <Pie/>
-    </section>
+
+    </body>
+
+    
     
 }
-export default Checkout;
+export default Checkoutv;
