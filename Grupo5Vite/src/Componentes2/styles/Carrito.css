@@ -26,6 +26,20 @@
     margin-left: auto;
 }
 
+.botoncheckAV {
+    background-color: black;
+    color: white;
+    margin-left: auto;
+    display: block;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.botoncheckAV a {
+    color: white;
+    text-decoration: none;
+}
 
 
 

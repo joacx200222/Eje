@@ -6,7 +6,9 @@ function Cabecera2(){
     return (
         <>
         <header>
-            <li>TIENDA</li>
+        <ul id="izquierda">
+            <li className='title' id="Titulo" ><Link to = "/"> <strong>Tienda</strong> </Link></li>
+        </ul>        
         </header>
         </>
     )

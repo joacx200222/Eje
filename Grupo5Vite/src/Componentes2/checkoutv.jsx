@@ -16,14 +16,6 @@ function Checkoutv(){
             </div>
             
             <div className='lineaAV'>
-
-
-
-
-
-
-
-
             <div className='primercheckouAV'>
         
                 <p><strong>Dirección de envio</strong></p>
@@ -51,11 +43,11 @@ function Checkoutv(){
                 <p><strong>Dirección de envio</strong></p>
                 <form action="" className='formdecheckout'>
                     <div class="inputcheckAV2">
-                        <input type="checkbox" name='linea1' />
+                        <input type="checkbox" name='pagoqr' />
                         <label htmlFor="">Pago con código QR</label>
                     </div>
                     <div class="inputcheckAV2">
-                        <input type="checkbox" name='linea1'/>
+                        <input type="checkbox" name='pagotarjeta'/>
                         <label htmlFor="">Pago con tarjeta de crédito</label>
                     </div>
                     <div class="inputcheckAV">
@@ -75,29 +67,50 @@ function Checkoutv(){
                     
                 </form>
             </div>
-
-
-
-
-
-
-
-
             </div>
-            
-
-
-
-
-
-
-
-
-            
             <div className='recta'>
                 <p className='ItemsAV'><strong>Método de Envío</strong></p>
             </div>
+
+        <div className='rectav2'>
+            <div class="inputcheckAV2">
+                        <input type="checkbox" name='economico' />
+                        <label htmlFor="">Económico Aéreo - S/10.00</label>
+                    </div>
+                    <div class="inputcheckAV2">
+                        <input type="checkbox" name='prioritario'/>
+                        <label htmlFor="">Envío prioritario (5 a 10 días) - S/ 17.00</label>
+            </div>
+            
+        </div>
+
+
+
+        <div>
+            <div className='lineaAV'>
+                <div className='primercheckouAV'>
+            
+                    <p><strong>Items en Pedido:</strong></p>
+                    <p>1x Juego de Cartas Pokemon Masters League - s/50</p>
+                    <p>2 x Juego de Cartas Magic The Gathering - s/50</p>
+                </div>
+
+                <div className='segundocheckouAV'>
+
+                    <p><strong>Resumen de Orden</strong></p>
+                    
+                </div>
+            </div>
+
+
+
+        </div>
+
+
         </section>
+        
+
+
         <Pie/>
     </body>
 

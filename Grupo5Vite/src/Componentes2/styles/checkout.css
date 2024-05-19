@@ -9,11 +9,11 @@
     box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: auto;
+    height: 467px;
 }
 .segundocheckouAV{
     display: inline-block;
-    width: 45%; 
+    width: 45%;     
     margin-right: 20px; 
     vertical-align: top; 
     background-color: #ffffff;
@@ -22,7 +22,7 @@
     box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 465.6px;
+    height: 467px;
 }
 .primercheckouAV h3{
     padding-top: auto;
@@ -63,6 +63,19 @@
 }
 
 
+.rectav2 {
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
 
+}
+
+.botoncheckAV{
+    background-color: black;
+    color: white;
+}
 
 
