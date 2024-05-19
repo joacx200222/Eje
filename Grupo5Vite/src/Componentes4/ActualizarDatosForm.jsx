@@ -4,7 +4,7 @@ function ActualizarDatosForm( ){
 
     return (
         <div className='container'>
-            <form action='#'> 
+            <form action='#' className='waza'> 
                 <div className='inputContainer'>
                     <input placeholder='Nombre' className='inputCambiar' disabled/>
                     <input placeholder='Apellido' className='inputCambiar'  />

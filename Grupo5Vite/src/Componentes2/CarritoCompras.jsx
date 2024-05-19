@@ -2,6 +2,7 @@ import React from 'react';
 import './styles/Carrito.css'
 import Cabecera1 from '../ComponentesGeneral/Cabecera1'
 import Pie from '../ComponentesGeneral/Pie';
+import { Link } from "react-router-dom";
 
 
 
@@ -27,7 +28,7 @@ function CarritoCompras(){
                 </div>
 
                 <div>
-
+                    <button className='botoncheckAV'><Link to = "/Checkoutv"> <strong>Checkout</strong> </Link> </button>
                 </div>
                 
 
