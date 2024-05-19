@@ -14,6 +14,9 @@ import UsuariosRegistrados from "./PaginasAdmin/UsuariosRegistrados";
 import Ordenes from "./PaginasAdmin/Ordenes";
 import Productos from "./PaginasAdmin/Productos";
 import Checkoutv from "./Componentes2/checkoutv";
+import MenuUsuario from "./Componentes8/MenuUsuario";
+import RecuperarContraseña from "./Componentes8/RecuperarContraseña";
+
 import './App.css'
 
 function App() {
@@ -34,6 +37,8 @@ function App() {
         <Route path="/Ordenes" element={<Ordenes />}/>
         <Route path="/Productos" element={<Productos />}/>
         <Route path="/Checkoutv" element={ <Checkoutv /> } />
+        <Route path="/MenuUsuario" element={<MenuUsuario/>}/>
+        <Route path="/recuperarcontraseña" element={<RecuperarContraseña/>}/>
       </Routes>
     </div>
   )

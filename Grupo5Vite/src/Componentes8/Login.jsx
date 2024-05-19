@@ -3,8 +3,14 @@ import './Login.css'
 import Cabecera2 from '../ComponentesGeneral/Cabecera2';
 import Pie from '../ComponentesGeneral/Pie';
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
 
 function Login(){
+
+
+
+
+
     return(
         <>
         <Cabecera2/>
@@ -20,7 +26,7 @@ function Login(){
                     </div>
                     <button type='submit'>Ingresar</button>
                     <div className='forgot-passwordL'>
-                        <p><a href='#'>Olvidé mi contraseña</a></p>
+                        <Link to="/RecuperarContraseña"><p>Olvidé mi contraseña</p></Link>
                     </div>
                     <div className='registerL'>
                     <Link to="/registro">No tengo cuenta deseo registrarme</Link>
@@ -34,3 +40,7 @@ function Login(){
 }
 
 export default Login
+
+
+
+

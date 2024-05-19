@@ -10,11 +10,13 @@
     flex-direction: column;
     color: white;
     margin-top: 100px;
+    margin-left: 700px;
 }
 
 .wrapperR h4{
     color: black;
     font-weight: normal;
+    margin-left: 150px;
 }
 
 
@@ -57,6 +59,7 @@ p{
   height:64px;
   font-family: "Roboto", sans-serif;
   background-color: black;
+  margin-left: 80px;
 }
 
 ::placeholder{
