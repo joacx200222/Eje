@@ -12,7 +12,7 @@ import Paginacion from '../Componentes5/ProductosAdm/Paginacion'
 
 import '../css/Dashboard.css'
 
-function Producto (){
+function ProductosAdm (){
     return (
     <>
    
@@ -20,7 +20,6 @@ function Producto (){
             <Headeradm/>
             <Nav/>
             <SeccionProducto/>
-            <BuscadorProducto/>
             <TablaProductos/>
             <Paginacion/>
             <br /><br />
@@ -32,4 +31,4 @@ function Producto (){
     )
 }
 
-export default Producto
+export default ProductosAdm

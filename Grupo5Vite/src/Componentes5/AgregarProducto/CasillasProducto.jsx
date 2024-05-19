@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import '../css/Dashboard.css';
+import '../../css/Dashboard.css';
 
 function CasillasProducto() {
     const fileInputRef = useRef(null);

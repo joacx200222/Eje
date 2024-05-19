@@ -1,54 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importar Link
 import '../../css/Dashboard.css';
+import datos from '../../Data/productos.json';
 
 const TablaProductos = () => {
-    const datos = [
-        {
-            id: 1,
-            detalle: 'Manga Dragon Ball Vol 1...',
-            serie: 'Dragon Ball',
-            precio: 'S/ 30.99',
-            fechaRegistro: '11/02/2022',
-            stock: 12,
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },
-        {
-            id: 1,
-            detalle: 'Manga Dragon Ball Vol 1...',
-            serie: 'Dragon Ball',
-            precio: 'S/ 30.99',
-            fechaRegistro: '11/02/2022',
-            stock: 12,
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },
-        {
-            id: 1,
-            detalle: 'Manga Dragon Ball Vol 1...',
-            serie: 'Dragon Ball',
-            precio: 'S/ 30.99',
-            fechaRegistro: '11/02/2022',
-            stock: 12,
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },
-        {
-            id: 1,
-            detalle: 'Manga Dragon Ball Vol 1...',
-            serie: 'Dragon Ball',
-            precio: 'S/ 30.99',
-            fechaRegistro: '11/02/2022',
-            stock: 12,
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },
-        
-    ];
+    const [busqueda, setBusqueda] = useState("");
+
+    const handleChange = (event) => {
+        setBusqueda(event.target.value.toLowerCase());
+    };
+
+    const resultados = datos.filter((producto) =>
+        producto.id.toString().includes(busqueda) ||
+        producto.serie.toLowerCase().includes(busqueda) ||
+        producto.detalle.toLowerCase().includes(busqueda)
+    );
 
     return (
-    
         <div className="main-content">
+            <div className="buscador-container">
+                <input
+                    type="text"
+                    className="buscador-producto"
+                    placeholder="Buscar por Id, serie o detalle..."
+                    value={busqueda}
+                    onChange={handleChange}
+                />
+            </div>
             <div className="tabla-container">
                 <table className="tabla-productos">
                     <thead>
@@ -64,7 +42,7 @@ const TablaProductos = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {datos.map((producto) => (
+                        {resultados.map((producto) => (
                             <tr key={producto.id}>
                                 <td>{producto.id}</td>
                                 <td>{producto.detalle}</td>
@@ -73,14 +51,16 @@ const TablaProductos = () => {
                                 <td>{producto.fechaRegistro}</td>
                                 <td>{producto.stock}</td>
                                 <td>{producto.estado}</td>
-                                <td>{producto.acciones}</td>
+                                <td>
+                                    <Link to={`/VerProducto`} >Ver</Link>
+                                    <Link to={`/`} >Desactivar</Link>
+                                </td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
             </div>
         </div>
-       
     );
 };
 

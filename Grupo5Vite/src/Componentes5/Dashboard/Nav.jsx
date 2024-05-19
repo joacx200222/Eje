@@ -1,28 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../css/Dashboard.css';
-import { Link } from "react-router-dom";
 
 function Nav() {
     return (
         <div className="asideCV">
-        <div className="left-navigation">
-        
-        <h3>Admin</h3>
-            <ul>
-                
-                <li><Link to = "/AdminDashBoard">Dashboard</Link></li>
-                <li><Link to = "/UsuariosRegistrados">Usuarios registrados</Link></li>
-                <li><Link to = "/Productos">Productos</Link></li>
-                <li><Link to = "/Ordenes">Ordenes</Link></li>
-                <li><a href="#">Productos más vendidos</a></li>
-                <li><a href="#">Series</a></li>
-            </ul>
-        
+            <div className="left-navigation">
+                <h3>Admin</h3>
+                <ul>
+                    <li><Link to="/AdminDashBoard">Dashboard</Link></li>
+                    <li><Link to="/">Usuarios registrados</Link></li>
+                    <li><Link to="/ProductosAdm">Productos</Link></li>
+                    <li><Link to="/">Órdenes</Link></li>
+                    <li><Link to="/">Productos más vendidos</Link></li>
+                    <li><Link to="/">Series</Link></li>
+                </ul>
             </div>
-            </div>
-
-    )
+        </div>
+    );
 }
 
 export default Nav;
-

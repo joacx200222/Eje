@@ -3,11 +3,11 @@ import '../../css/Dashboard.css';
 
 function BuscadorProducto() {
     return (
-        <main>
+      
         <div className="buscador-container">
-            <input type="text" className="buscador-producto" placeholder="Buscar por Id, serie o detalle..."/>
+            <input type="text" className="buscador-producto" placeholder=""/>
         </div>
-        </main>
+        
     );
 }
 

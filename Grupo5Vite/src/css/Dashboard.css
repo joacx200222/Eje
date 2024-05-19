@@ -499,6 +499,50 @@ opacity: 0.5;
     margin-left: 435px;
     
 }
+/* Para ver los detalles del producto */
+
+.inputNombre1 {
+    width: 642px;
+    height: 20px; 
+    background-color: white;
+    border: 1px solid #000; /* Añadir bordes a las casillas */
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.inputDesc1 {
+    width: 642px; 
+    height: 68px; 
+    background-color: white;
+    border: 1px solid #000; /* Añadir bordes a las casillas */
+    padding: 5px;
+    border-radius: 10px;
+
+}
+.inputCarac1 {
+    width: 642px; 
+    height: 116px; 
+    background-color: white;
+    border: 1px solid #000; /* Añadir bordes a las casillas */
+    padding: 5px;
+    border-radius: 10px;
+}
+.inputSerie1 {
+    width: 231px; 
+    height: 20px; 
+    background-color: white;
+    border: 1px solid #000; /* Añadir bordes a las casillas */
+    padding: 5px;
+    border-radius: 10px;
+}
+.inputResto1 {
+    width: 167px;
+    height: 20px;
+    background-color: white;
+    border: 1px solid #000; /* Añadir bordes a las casillas */
+    padding: 5px;
+    border-radius: 10px;
+}
 
 .headerCV{
   width: 100%;
@@ -535,61 +579,3 @@ opacity: 0.5;
   margin-top: -40px;
 }
 
-.tituloOrdenes{
-    background-color: #D9D9D9;
-    margin-top: 40px;
-    height: 50px;
-    width: 1550px;
-    position: relative;
-}
-
-.buscador-ordenes {
-    width: 1550px; 
-    padding: 13px;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-left: 5px;
-    font-style: italic; 
-}
-
-.tabla-ordenes {
-    background-color: white;
-    margin-top: 20px;
-    width: 1130px;
-}
-    
-    
-.tabla-ordenes th{
-    
-    font-weight: bold;
-    font-family: "Roboto", sans-serif;
-    padding: 10px;
-    text-align: center;
-}
-    
-.tabla-ordenes td {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;   
-    text-align: center;
-}
-
-.tituloUsuariosReg{
-    background-color: #D9D9D9;
-    margin-top: 40px;
-    height: 50px;
-    width: 1550px;
-    position: relative;
-}
-
-.buscador-usuarios {
-    width: 1550px; 
-    padding: 13px;
-    border: 1px solid black;
-    border-radius: 10px;
-    font-size: 16px;
-    box-sizing: border-box;
-    margin-left: 5px;
-    font-style: italic; 
-}

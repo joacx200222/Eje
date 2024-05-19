@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "detalle": "Manga Dragon Ball Vol 1...",
+        "serie": "Dragon Ball",
+        "precio": "S/ 30.99",
+        "fechaRegistro": "11/02/2022",
+        "stock": 12,
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
+    },
+    {
+        "id": 2,
+        "detalle": "Manga Sailor Moonl Vol 9...",
+        "serie": "Sailor Moon",
+        "precio": "S/ 30.99",
+        "fechaRegistro": "11/02/2022",
+        "stock": 12,
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
+    },
+    {
+        "id": 3,
+        "detalle": "Manga Dragon Ball Vol 1...",
+        "serie": "Dragon Ball",
+        "precio": "S/ 30.99",
+        "fechaRegistro": "11/02/2022",
+        "stock": 12,
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
+    },
+    {
+        "id": 4,
+        "detalle": "Manga Dragon Ball Vol 1...",
+        "serie": "Dragon Ball",
+        "precio": "S/ 30.99",
+        "fechaRegistro": "11/02/2022",
+        "stock": 12,
+        "estado": "Activo",
+        "acciones": "Ver | Desactivar"
+    }
+]
