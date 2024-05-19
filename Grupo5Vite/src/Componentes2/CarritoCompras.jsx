@@ -1,5 +1,5 @@
 import React from 'react';
-import './Carrito.css'
+import './styles/Carrito.css'
 import Cabecera1 from '../ComponentesGeneral/Cabecera1'
 import Pie from '../ComponentesGeneral/Pie';
 
@@ -27,7 +27,7 @@ function CarritoCompras(){
                 </div>
 
                 <div>
-                    
+
                 </div>
                 
 
