@@ -20,7 +20,7 @@ function UsuariosRegistrados (){
             <SeccionUsuariosReg/>
             <BuscadorUsuarios/>
             <br />
-            <TablaUsuariosReg/>
+            <TablaUsuariosFinal />
             <Paginacion/>
             <br /><br />
             <Footer/>
