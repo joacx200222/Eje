@@ -1,46 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../css/Dashboard.css';
 
 const TablaUsuariosReg = () => {
-    const datos = [
-        {
-            id: 1,
-            nombre: 'Antonio',
-            apellido: 'Lopez Caro',
-            correo: 'correo@sanchez.com',
-            fechaRegistro: '11/02/2022 ',
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },
-        {
-            id: 12333,
-            nombre: 'Ana',
-            apellido: 'Sanchez',
-            correo: 'anita123@hotmail.com',
-            fechaRegistro: '11/02/2022 ',
-            estado: 'Inactivo',
-            acciones: 'Ver | Activar'
-        },
-        {
-            id: 12334,
-            nombre: 'Ana',
-            apellido: 'Sanchez',
-            correo: 'anita123@hotmail.com',
-            fechaRegistro: '11/02/2022 ',
-            estado: 'Inactivo',
-            acciones: 'Ver | Activar'
-        }, 
-        {
-            id: 2,
-            nombre: 'Antonio',
-            apellido: 'Lopez Caro',
-            correo: 'correo@sanchez.com',
-            fechaRegistro: '11/02/2022 ',
-            estado: 'Activo',
-            acciones: 'Ver | Desactivar'
-        },         
-    ];
 
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        // Cargar los datos desde un archivo JSON local
+        fetch('usuarios.json')
+          .then((response) => response.json())
+          .then((data) => setData(data))
+          .catch((error) => console.error('Error al cargar los datos:', error));
+      }, []);
+
+    
     return (
     
         <div className="main-content">
@@ -58,8 +31,8 @@ const TablaUsuariosReg = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {datos.map((usuariosRegistrados) => (
-                            <tr>
+                        {data.map((usuariosRegistrados) => (
+                            <tr key={usuariosRegistrados.id}>
                                 <td>{usuariosRegistrados.id}</td>
                                 <td>{usuariosRegistrados.nombre}</td>
                                 <td>{usuariosRegistrados.apellido}</td>

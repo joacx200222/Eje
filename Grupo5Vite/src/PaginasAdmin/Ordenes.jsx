@@ -1,10 +1,13 @@
 import React from 'react'
 import Headeradm from '../Componentes5/Dashboard/Headeradm'
 import Nav from '../Componentes5/Dashboard/Nav'
-import Seccion from '../Componentes5/Dashboard/Seccion'
 import Footer from '../Componentes5/ProductosAdm/footerAdm'
 
 import '../css/Dashboard.css'
+import Seccion6 from '../Componentes6/Dashboard/Seccion6'
+import BuscadorOrdenes from '../Componentes6/Dashboard/BuscadorOrdenes'
+import TablaOrdenes from '../Componentes6/Dashboard/TablaOrdenes'
+import Paginacion from '../Componentes5/ProductosAdm/Paginacion'
 
 function Ordenes (){
     return (
@@ -12,8 +15,12 @@ function Ordenes (){
         <div>
             <Headeradm/>
             <Nav/>
-            <Seccion/>
-            <div>ORDENES</div>
+            <Seccion6/>
+            <BuscadorOrdenes/>
+            <br />
+            <TablaOrdenes/>
+            <Paginacion/>
+            <br /><br />
             <Footer/>
         </div>
     </>

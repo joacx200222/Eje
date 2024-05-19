@@ -3,7 +3,64 @@ import Pie from '../ComponentesGeneral/Pie';
 import Cabecera2 from '../ComponentesGeneral/Cabecera2';
 import { Link } from "react-router-dom";
 import "./styles/checkout.css"
+import { useEffect, useState } from "react"
 function Checkoutv(){
+
+    const [linea1, setLinea1] = useState( ()=> {
+        const valorGuardado = localStorage.getItem("linea1")
+        const valorInicial = JSON.parse(valorGuardado)
+        return valorInicial || ''
+    })
+
+    const [linea2, setLinea2] = useState( ()=> {
+        const valorGuardado = localStorage.getItem("linea2")
+        const valorInicial = JSON.parse(valorGuardado)
+        return valorInicial || ''
+    })
+
+    const [distrito, setDistrito] = useState( ()=> {
+        const valorGuardado = localStorage.getItem("distrito")
+        const valorInicial = JSON.parse(valorGuardado)
+        return valorInicial || ''
+    })
+
+    const [ciudad, setCiudad] = useState( ()=> {
+        const valorGuardado = localStorage.getItem("ciudad")
+        const valorInicial = JSON.parse(valorGuardado)
+        return valorInicial || ''
+    })
+
+    const [pais, setPais] = useState( ()=> {
+        const valorGuardado = localStorage.getItem("pais")
+        const valorInicial = JSON.parse(valorGuardado)
+        return valorInicial || ''
+    })
+
+    useEffect( () => {
+        //Guardar en local storage nombre
+        localStorage.setItem("linea1", JSON.stringify(linea1))
+    }, [linea1] )
+
+    useEffect( () => {
+        //Guardar en local storage nombre
+        localStorage.setItem("linea2", JSON.stringify(linea2))
+    }, [linea2] )
+
+    useEffect( () => {
+        //Guardar en local storage nombre
+        localStorage.setItem("distrito", JSON.stringify(distrito))
+    }, [distrito] )
+
+    useEffect( () => {
+        //Guardar en local storage nombre
+        localStorage.setItem("ciudad", JSON.stringify(ciudad))
+    }, [ciudad] )
+
+    useEffect( () => {
+        //Guardar en local storage nombre
+        localStorage.setItem("pais", JSON.stringify(pais))
+    }, [pais] )
+
     return(
         <body>
         <Cabecera2/>
@@ -22,19 +79,39 @@ function Checkoutv(){
                 <p><strong>Dirección de envio</strong></p>
                 <form action="" className='formdecheckout'>
                     <div class="inputcheckAV">
-                        <input type="text" name='linea1' placeholder='Linea 2' />
+                        <input type="text" name='linea1' placeholder='Linea 1' 
+                        value={linea1}
+                        onChange={
+                            (e) => setLinea1(e.target.value)
+                        }/>
                     </div>
                     <div class="inputcheckAV">
-                        <input type="text" name='linea1' placeholder='Linea 2' />
+                        <input type="text" name='linea2' placeholder='Linea 2' 
+                        value={linea2}
+                        onChange={
+                            (e) => setLinea2(e.target.value)
+                        }/>
                     </div>
                     <div class="inputcheckAV">
-                        <input type="text" name='distrito' placeholder='Distrito' />
+                        <input type="text" name='distrito' placeholder='Distrito' 
+                        value={distrito}
+                        onChange={
+                            (e) => setDistrito(e.target.value)
+                        }/>
                     </div>
                     <div class="inputcheckAV">
-                        <input type="text" name='ciudad' placeholder='Ciudad' />
+                        <input type="text" name='ciudad' placeholder='Ciudad' 
+                        value={ciudad}
+                        onChange={
+                            (e) => setCiudad(e.target.value)
+                        }/>
                     </div>
                     <div class="inputcheckAV">
-                        <input type="text" name='País' placeholder='País' />
+                        <input type="text" name='País' placeholder='País' 
+                        value={pais}
+                        onChange={
+                            (e) => setPais(e.target.value)
+                        }/>
                     </div>
                 </form>
             </div>
