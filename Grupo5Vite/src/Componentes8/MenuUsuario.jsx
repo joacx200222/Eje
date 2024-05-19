@@ -4,7 +4,6 @@ import Cabecera2 from '../ComponentesGeneral/Cabecera2';
 import Pie from '../ComponentesGeneral/Pie';
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react"
-import Data from '../Data/Artículos.json'
 import Pagination from '../Componentes5/ProductosAdm/Paginacion';
 
 function MenuUsuario(){
