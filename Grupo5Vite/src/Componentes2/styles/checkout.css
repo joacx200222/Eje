@@ -1,4 +1,68 @@
 .primercheckouAV{
-    display: flex;
-    margin-right: auto;
+    display: inline-block;
+    width: 45%; 
+    margin-right: 20px; 
+    vertical-align: top; 
+    background-color: #ffffff;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto;
 }
+.segundocheckouAV{
+    display: inline-block;
+    width: 45%; 
+    margin-right: 20px; 
+    vertical-align: top; 
+    background-color: #ffffff;
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 465.6px;
+}
+.primercheckouAV h3{
+    padding-top: auto;
+
+}
+
+
+.inputcheckAV input{
+    background-color: white;
+    border-radius: 3px;
+    height: 60px;
+    margin-bottom: 10px;
+    width: 90%;
+    border: 1px solid #000000;
+    color: #000000;
+    margin-left: 20px;
+}
+
+
+
+.datosAV{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.primercheckouAV p{
+    margin-left: 20px;
+}
+
+.datostarjetaAV {
+    display: flex; /* Mostrar los campos de tarjeta en línea */
+
+}
+.inputcheckAV2{
+    padding-left: 20px;
+}
+
+
+
+
+
