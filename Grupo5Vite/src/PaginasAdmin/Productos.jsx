@@ -1,22 +1,35 @@
-import React from 'react'
-import Headeradm from '../Componentes5/Headeradm'
-import Nav from '../Componentes5/Nav'
-import Seccion from '../Componentes5/Seccion'
-import Footer from '../Componentes5/footerAdm'
+import BuscadorProducto from '../Componentes5/ProductosAdm/BuscadorProducto'
+import Headeradm from '../Componentes5/Dashboard/Headeradm'
+import Nav from '../Componentes5/Dashboard/Nav'
+
+import Footer from '../Componentes5/ProductosAdm/footerAdm'
+
+import TablaProductos from '../Componentes5/ProductosAdm/TablaProductos'
+
+import SeccionProducto from '../Componentes5/ProductosAdm/SeccionProducto'
+
+import Paginacion from '../Componentes5/ProductosAdm/Paginacion'
 
 import '../css/Dashboard.css'
 
-function Productos (){
+function Producto (){
     return (
     <>
-        <div>
+   
+
             <Headeradm/>
             <Nav/>
-            <Seccion/>
-            <div>PRODUCTOS</div>
+            <SeccionProducto/>
+            <BuscadorProducto/>
+            <TablaProductos/>
+            <Paginacion/>
+            <br /><br />
             <Footer/>
-        </div>
+            
+
+       
     </>
     )
 }
-export default Productos;
+
+export default Producto
