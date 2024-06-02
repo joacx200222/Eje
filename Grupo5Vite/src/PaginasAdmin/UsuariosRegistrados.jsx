@@ -18,7 +18,6 @@ function UsuariosRegistrados (){
             <HeaderAdmin/>
             <Nav/>
             <SeccionUsuariosReg/>
-            <BuscadorUsuarios/>
             <br />
             <TablaUsuariosFinal />
             <Paginacion/>
