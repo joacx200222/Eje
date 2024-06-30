@@ -8,3 +8,21 @@
 	CREATE DATABASE Proyecto5;
 2024-06-29 22:24:07.379 -05 [28384] LOG:  empezando checkpoint: time
 2024-06-29 22:25:58.803 -05 [28384] LOG:  checkpoint complete: wrote 1017 buffers (6.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=110.677 s, sync=0.728 s, total=111.426 s; sync files=310, longest=0.007 s, average=0.003 s; distance=4838 kB, estimate=4838 kB; lsn=0/1A2C918, redo lsn=0/1A2C8E0
+2024-06-30 00:21:00.647 -05 [5428] ERROR:  la base de datos Â«proyecto5Â» ya existe
+2024-06-30 00:21:00.647 -05 [5428] SENTENCIA:  CREATE DATABASE "proyecto5"
+2024-06-30 00:21:00.654 -05 [5428] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-06-30 00:21:21.966 -05 [7796] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-06-30 00:24:07.976 -05 [28384] LOG:  empezando checkpoint: time
+2024-06-30 00:25:54.400 -05 [28384] LOG:  checkpoint complete: wrote 972 buffers (5.9%); 1 WAL file(s) added, 0 removed, 0 recycled; write=105.631 s, sync=0.699 s, total=106.424 s; sync files=300, longest=0.012 s, average=0.003 s; distance=4560 kB, estimate=4810 kB; lsn=0/1EA0958, redo lsn=0/1EA0920
+2024-06-30 12:57:17.797 -05 [272] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-06-30 12:57:17.802 -05 [272] LOG:  no se pudo enlazar a la dirección IPv6 «::1»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2024-06-30 12:57:17.802 -05 [272] HINT:  ¿Hay otro postmaster en ejecución en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2024-06-30 12:57:17.802 -05 [272] LOG:  no se pudo enlazar a la dirección IPv4 «127.0.0.1»: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+	
+2024-06-30 12:57:17.802 -05 [272] HINT:  ¿Hay otro postmaster en ejecución en el puerto 5432? Si no, aguarde unos segundos y reintente.
+2024-06-30 12:57:17.802 -05 [272] WARNING:  no se pudo crear el socket de escucha para «localhost»
+2024-06-30 12:57:17.802 -05 [272] FATAL:  no se pudo crear ningún socket TCP/IP
+2024-06-30 12:57:17.804 -05 [272] LOG:  el sistema de bases de datos está apagado

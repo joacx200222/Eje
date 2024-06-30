@@ -4,8 +4,9 @@ const path = require("path")
 
 const cors = require('cors')
 
-const app = express()
+const producto = require('./API/basedatos/producto.js')
 
+const app = express()
 const port = 3000
 
 app.use(express.static(path.join(__dirname, './static')));
@@ -13,6 +14,9 @@ app.use(bodyParser.json());
 
 const whitelist = ["http://localhost:5173"]
 app.use(cors(whitelist))
+
+//mapear APU
+app.use('/api/productos', producto)
 
 // Agregar el servicio de paginas web. PETICIONES LLEGAN
 app.get('/', (req, res) => {   //petición de llegada con 2 parametro (req = data que estoy enviando, res = data a devover a cliente)
@@ -24,9 +28,6 @@ app.get( '/api/usuarios', (req, res) => {
     res.json( users ) //devuelve la lista de users
 })
 
-//agregamos data
-app.post( '/api/usuarios/agregar', (req, res) => {
-    const usuario = req.body.user //user es el nombre
-    users.push(usuario)
-    res.json( "usuario agregado ")
-})
+app.listen(port, () => {
+    console.log(`Server escuchando en el port::${port}`);
+});
