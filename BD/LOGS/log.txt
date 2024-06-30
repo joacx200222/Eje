@@ -1,0 +1,10 @@
+2024-06-29 22:19:07.309 -05 [35640] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-06-29 22:19:07.313 -05 [35640] LOG:  escuchando en la dirección IPv6 «::1», port 5432
+2024-06-29 22:19:07.313 -05 [35640] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5432
+2024-06-29 22:19:07.377 -05 [15924] LOG:  el sistema de bases de datos fue apagado en 2024-06-29 22:15:54 -05
+2024-06-29 22:19:07.400 -05 [35640] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2024-06-29 22:22:27.033 -05 [5880] ERROR:  error de sintaxis en o cerca de Â«CREATEÂ» en carÃ¡cter 27
+2024-06-29 22:22:27.033 -05 [5880] SENTENCIA:  CREATE DATABASE Proyecto5
+	CREATE DATABASE Proyecto5;
+2024-06-29 22:24:07.379 -05 [28384] LOG:  empezando checkpoint: time
+2024-06-29 22:25:58.803 -05 [28384] LOG:  checkpoint complete: wrote 1017 buffers (6.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=110.677 s, sync=0.728 s, total=111.426 s; sync files=310, longest=0.007 s, average=0.003 s; distance=4838 kB, estimate=4838 kB; lsn=0/1A2C918, redo lsn=0/1A2C8E0
