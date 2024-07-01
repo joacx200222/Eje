@@ -10,6 +10,4 @@ const ruta = express.Router()
 
 
 
-
-
 module.exports = ruta

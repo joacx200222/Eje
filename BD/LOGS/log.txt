@@ -40,3 +40,10 @@
 2024-06-30 12:59:17.216 -05 [29200] FATAL:  la autentificación password falló para el usuario «proyectoWeb5»
 2024-06-30 12:59:17.216 -05 [29200] DETALLE:  No existe el rol «proyectoWeb5».
 	Connection matched file "C:/Users/ricar/OneDrive/Documentos/2024 - 1/Prog. Web/TrabajoGrupalPrograWeb/GRUPO5---PROGRA-WEB/BD/DATA/pg_hba.conf" line 117: "host    all             all             ::1/128                 password"
+2024-06-30 14:16:00.238 -05 [32396] LOG:  se recibió petición de apagado rápido
+2024-06-30 14:16:00.244 -05 [32396] LOG:  abortando transacciones activas
+2024-06-30 14:16:00.251 -05 [32396] LOG:  proceso ayudante «logical replication launcher» (PID 17556) terminó con código de salida 1
+2024-06-30 14:16:00.251 -05 [32580] LOG:  apagando
+2024-06-30 14:16:00.255 -05 [32580] LOG:  empezando checkpoint: shutdown immediate
+2024-06-30 14:16:00.273 -05 [32580] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.022 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/1EA0AB8, redo lsn=0/1EA0AB8
+2024-06-30 14:16:00.282 -05 [32396] LOG:  el sistema de bases de datos está apagado
