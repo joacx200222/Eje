@@ -251,3 +251,20 @@
 	
 2024-07-06 01:03:04.955 -05 [14844] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
 	
+2024-07-06 01:05:31.422 -05 [9796] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-06 01:05:31.426 -05 [9796] LOG:  escuchando en la dirección IPv6 «::1», port 5432
+2024-07-06 01:05:31.426 -05 [9796] LOG:  escuchando en la dirección IPv4 «127.0.0.1», port 5432
+2024-07-06 01:05:31.480 -05 [26808] LOG:  el sistema de bases de datos fue interrumpido; última vez en funcionamiento en 2024-07-06 01:00:15 -05
+2024-07-06 01:05:32.714 -05 [26808] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se está efectuando la recuperación automática
+2024-07-06 01:05:32.721 -05 [26808] LOG:  redo comienza en 0/1F040B0
+2024-07-06 01:05:32.721 -05 [26808] LOG:  largo de registro no válido en 0/1F04198: se esperaba al menos 24, se obtuvo 0
+2024-07-06 01:05:32.721 -05 [26808] LOG:  redo listo en 0/1F04160 utilización del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-07-06 01:05:32.731 -05 [33240] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-07-06 01:05:32.757 -05 [33240] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.007 s, total=0.031 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/1F04198, redo lsn=0/1F04198
+2024-07-06 01:05:32.775 -05 [9796] LOG:  el sistema de bases de datos está listo para aceptar conexiones
+2024-07-06 01:06:58.380 -05 [9360] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 01:07:40.696 -05 [28392] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 01:08:02.743 -05 [836] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
