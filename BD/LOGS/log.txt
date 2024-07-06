@@ -54,3 +54,200 @@
 2024-06-30 18:11:23.485 -05 [15780] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
 2024-06-30 18:16:23.465 -05 [23808] LOG:  empezando checkpoint: time
 2024-06-30 18:16:23.500 -05 [23808] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.007 s, total=0.038 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/1EA0BA0, redo lsn=0/1EA0B68
+2024-07-01 19:24:48.327 -05 [26264] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-01 19:24:48.339 -05 [26264] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-01 19:24:48.339 -05 [26264] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-01 19:24:48.486 -05 [20740] LOG:  el sistema de bases de datos fue interrumpido; �ltima vez en funcionamiento en 2024-06-30 18:16:23 -05
+2024-07-01 19:24:50.814 -05 [20740] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se est� efectuando la recuperaci�n autom�tica
+2024-07-01 19:24:50.827 -05 [20740] LOG:  redo comienza en 0/1EA0B68
+2024-07-01 19:24:50.827 -05 [20740] LOG:  largo de registro no v�lido en 0/1EA0C50: se esperaba al menos 24, se obtuvo 0
+2024-07-01 19:24:50.827 -05 [20740] LOG:  redo listo en 0/1EA0C18 utilizaci�n del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-07-01 19:24:50.844 -05 [29496] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-07-01 19:24:50.883 -05 [29496] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.006 s, sync=0.008 s, total=0.047 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/1EA0C50, redo lsn=0/1EA0C50
+2024-07-01 19:24:50.924 -05 [26264] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-01 19:25:29.354 -05 [27136] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-01 19:25:54.051 -05 [25920] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-01 19:27:15.021 -05 [5316] ERROR:  error de sintaxis en o cerca de «select» en carácter 21
+2024-07-01 19:27:15.021 -05 [5316] SENTENCIA:  select * from dates
+	select * from dates;
+2024-07-01 19:28:16.018 -05 [5316] ERROR:  error de sintaxis en o cerca de «usuarios» en carácter 10
+2024-07-01 19:28:16.018 -05 [5316] SENTENCIA:  select * usuarios;
+2024-07-01 19:29:50.898 -05 [29496] LOG:  empezando checkpoint: time
+2024-07-01 19:29:58.962 -05 [29496] LOG:  checkpoint complete: wrote 72 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=7.810 s, sync=0.158 s, total=8.065 s; sync files=58, longest=0.012 s, average=0.003 s; distance=284 kB, estimate=284 kB; lsn=0/1EE7F50, redo lsn=0/1EE7F18
+2024-07-01 19:34:00.736 -05 [3312] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-01 21:05:08.914 -05 [26264] LOG:  se recibi� petici�n de apagado r�pido
+2024-07-01 21:05:08.928 -05 [26264] LOG:  abortando transacciones activas
+2024-07-01 21:05:08.935 -05 [26264] LOG:  proceso ayudante �logical replication launcher� (PID 27016) termin� con c�digo de salida 1
+2024-07-01 21:05:08.935 -05 [29496] LOG:  apagando
+2024-07-01 21:05:08.939 -05 [29496] LOG:  empezando checkpoint: shutdown immediate
+2024-07-01 21:05:08.958 -05 [29496] LOG:  checkpoint complete: wrote 0 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.023 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=256 kB; lsn=0/1EE8018, redo lsn=0/1EE8018
+2024-07-01 21:05:08.967 -05 [26264] LOG:  el sistema de bases de datos est� apagado
+2024-07-05 21:20:14.400 -05 [23080] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-05 21:20:14.404 -05 [23080] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-05 21:20:14.404 -05 [23080] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-05 21:20:14.454 -05 [2724] LOG:  el sistema de bases de datos fue apagado en 2024-07-01 21:05:08 -05
+2024-07-05 21:20:14.479 -05 [23080] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-05 21:21:26.239 -05 [11116] FATAL:  no existe la base de datos �dates�
+2024-07-05 21:22:20.218 -05 [3056] ERROR:  error de sintaxis en o cerca de «cd» en carácter 1
+2024-07-05 21:22:20.218 -05 [3056] SENTENCIA:  cd proyectoWeb5
+	select * from "dates"
+	select * from "dates";
+2024-07-05 21:25:14.462 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-05 21:25:14.610 -05 [31168] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.117 s, sync=0.006 s, total=0.151 s; sync files=3, longest=0.004 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1EE8100, redo lsn=0/1EE80C8
+2024-07-06 00:12:39.762 -05 [34800] ERROR:  no existe la relación «public.Transaccions»
+2024-07-06 00:12:39.762 -05 [34800] SENTENCIA:  ALTER TABLE "public"."Transaccions" ADD COLUMN "fechaTransaccion" INTEGER REFERENCES "date" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:12:39.770 -05 [34800] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:13:27.206 -05 [8248] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:13:27.206 -05 [8248] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:13:27.213 -05 [8248] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:13:53.157 -05 [8804] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:13:53.157 -05 [8804] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:13:53.163 -05 [8804] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:14:12.571 -05 [5596] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:14:12.571 -05 [5596] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:14:12.577 -05 [5596] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:14:29.796 -05 [31096] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:14:29.796 -05 [31096] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:14:29.802 -05 [31096] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:15:14.864 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:15:15.143 -05 [31168] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.228 s, sync=0.024 s, total=0.280 s; sync files=3, longest=0.017 s, average=0.008 s; distance=1 kB, estimate=1 kB; lsn=0/1EE8788, redo lsn=0/1EE8750
+2024-07-06 00:17:14.008 -05 [19160] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:17:14.008 -05 [19160] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:17:14.014 -05 [19160] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:19:29.136 -05 [10056] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:19:51.957 -05 [10056] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:19:51.957 -05 [10056] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:19:51.964 -05 [10056] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:20:14.158 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:20:14.181 -05 [31168] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.004 s, total=0.024 s; sync files=1, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=1 kB; lsn=0/1EE8990, redo lsn=0/1EE8958
+2024-07-06 00:21:35.212 -05 [33324] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:21:35.212 -05 [33324] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:21:35.218 -05 [33324] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:22:49.378 -05 [31640] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:22:49.378 -05 [31640] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:22:49.384 -05 [31640] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:23:05.966 -05 [32272] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:23:05.966 -05 [32272] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:23:05.972 -05 [32272] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:23:15.010 -05 [3236] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccions_fkey» no puede ser implementada
+2024-07-06 00:23:15.010 -05 [3236] DETALLE:  Las columnas llave «fechaTransaccions» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:23:15.010 -05 [3236] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccions" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:23:15.016 -05 [3236] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:23:58.770 -05 [29368] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccions_fkey» no puede ser implementada
+2024-07-06 00:23:58.770 -05 [29368] DETALLE:  Las columnas llave «fechaTransaccions» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:23:58.770 -05 [29368] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccions" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:23:58.776 -05 [29368] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:24:39.972 -05 [34512] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccions_fkey» no puede ser implementada
+2024-07-06 00:24:39.972 -05 [34512] DETALLE:  Las columnas llave «fechaTransaccions» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:24:39.972 -05 [34512] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccions" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:24:39.979 -05 [34512] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:25:14.196 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:25:14.675 -05 [31168] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.436 s, sync=0.024 s, total=0.480 s; sync files=5, longest=0.012 s, average=0.005 s; distance=18 kB, estimate=18 kB; lsn=0/1EED1F8, redo lsn=0/1EED1C0
+2024-07-06 00:32:13.898 -05 [33492] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:32:13.898 -05 [33492] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:32:13.904 -05 [33492] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:35:14.689 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:35:14.714 -05 [31168] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.004 s, total=0.025 s; sync files=1, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=16 kB; lsn=0/1EED370, redo lsn=0/1EED338
+2024-07-06 00:37:23.778 -05 [24228] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:39:20.664 -05 [33960] ERROR:  ya existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-06 00:39:20.664 -05 [33960] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:39:20.670 -05 [33960] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:40:14.719 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:40:14.750 -05 [31168] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.004 s, total=0.032 s; sync files=1, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=14 kB; lsn=0/1EED4E8, redo lsn=0/1EED4B0
+2024-07-06 00:43:57.640 -05 [33744] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:43:57.640 -05 [33744] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:43:57.640 -05 [33744] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:43:57.646 -05 [33744] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:44:51.273 -05 [15996] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:44:51.273 -05 [15996] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:44:51.273 -05 [15996] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:44:51.279 -05 [15996] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:45:05.493 -05 [2532] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:45:05.493 -05 [2532] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:45:05.493 -05 [2532] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:45:05.500 -05 [2532] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:45:14.760 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:45:15.577 -05 [31168] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.770 s, sync=0.019 s, total=0.817 s; sync files=7, longest=0.004 s, average=0.003 s; distance=28 kB, estimate=28 kB; lsn=0/1EF4528, redo lsn=0/1EF44F0
+2024-07-06 00:45:42.271 -05 [11348] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:45:42.271 -05 [11348] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:45:42.271 -05 [11348] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:45:42.277 -05 [11348] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:46:45.375 -05 [16920] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:46:45.375 -05 [16920] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:46:45.375 -05 [16920] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:46:45.381 -05 [16920] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:47:18.340 -05 [16128] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «dates»
+2024-07-06 00:47:18.340 -05 [16128] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("fecha") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:47:18.346 -05 [16128] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:48:08.847 -05 [27656] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «dates»
+2024-07-06 00:48:08.847 -05 [27656] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("fecha") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:48:08.854 -05 [27656] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:50:07.200 -05 [9564] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «dates»
+2024-07-06 00:50:07.200 -05 [9564] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("fecha") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:50:07.206 -05 [9564] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:50:14.592 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:50:15.077 -05 [31168] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.446 s, sync=0.013 s, total=0.486 s; sync files=5, longest=0.004 s, average=0.003 s; distance=20 kB, estimate=27 kB; lsn=0/1EF98E8, redo lsn=0/1EF98B0
+2024-07-06 00:52:00.664 -05 [34008] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:52:00.664 -05 [34008] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:52:00.664 -05 [34008] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:52:00.671 -05 [34008] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:55:14.083 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 00:55:14.578 -05 [31168] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.446 s, sync=0.023 s, total=0.496 s; sync files=5, longest=0.012 s, average=0.005 s; distance=20 kB, estimate=26 kB; lsn=0/1EFEBE0, redo lsn=0/1EFEBA8
+2024-07-06 00:58:06.048 -05 [33668] ERROR:  la restricción de llave foránea «transaccions_fechaTransaccion_fkey» no puede ser implementada
+2024-07-06 00:58:06.048 -05 [33668] DETALLE:  Las columnas llave «fechaTransaccion» y «id» son de tipos incompatibles: timestamp with time zone y integer
+2024-07-06 00:58:06.048 -05 [33668] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:58:06.055 -05 [33668] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:58:35.507 -05 [17176] ERROR:  no existe la relación «public.Transaccions»
+2024-07-06 00:58:35.507 -05 [17176] SENTENCIA:  ALTER TABLE "public"."Transaccions" ADD COLUMN "nombreUsuario" VARCHAR(255) REFERENCES "usuarios" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:58:35.513 -05 [17176] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:58:55.104 -05 [32056] ERROR:  ya existe la columna «nombreUsuario» en la relación «transaccions»
+2024-07-06 00:58:55.104 -05 [32056] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "nombreUsuario" VARCHAR(255) REFERENCES "usuarios" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 00:58:55.110 -05 [32056] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:59:18.525 -05 [28712] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 00:59:45.399 -05 [1788] ERROR:  no existe la relación «transaccions» en carácter 15
+2024-07-06 00:59:45.399 -05 [1788] SENTENCIA:  select * from "transaccions";
+2024-07-06 00:59:47.165 -05 [1788] ERROR:  no existe la relación «transaccions» en carácter 15
+2024-07-06 00:59:47.165 -05 [1788] SENTENCIA:  select * from "transaccions";
+2024-07-06 01:00:14.581 -05 [31168] LOG:  empezando checkpoint: time
+2024-07-06 01:00:15.062 -05 [31168] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.430 s, sync=0.023 s, total=0.481 s; sync files=5, longest=0.011 s, average=0.005 s; distance=21 kB, estimate=26 kB; lsn=0/1F040E8, redo lsn=0/1F040B0
+2024-07-06 01:01:02.058 -05 [32624] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 01:01:15.617 -05 [32060] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 01:02:09.663 -05 [9316] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 01:03:04.955 -05 [14844] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
