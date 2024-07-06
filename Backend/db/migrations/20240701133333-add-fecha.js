@@ -16,7 +16,7 @@ module.exports = {
         type: Sequelize.DATE,
         references: {
           model: "dates", // name of Target model
-          key: "id", // key in Target model that we're referencing
+          key: "fecha", // key in Target model that we're referencing
         },
         onUpdate: "CASCADE",
         onDelete: "SET NULL",
