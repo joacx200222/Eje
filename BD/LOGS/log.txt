@@ -295,3 +295,66 @@
 2024-07-06 01:14:01.954 -05 [33240] LOG:  empezando checkpoint: shutdown immediate
 2024-07-06 01:14:01.990 -05 [33240] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.015 s, total=0.039 s; sync files=5, longest=0.004 s, average=0.003 s; distance=23 kB, estimate=31 kB; lsn=0/1F11DC8, redo lsn=0/1F11DC8
 2024-07-06 01:14:01.999 -05 [9796] LOG:  el sistema de bases de datos est� apagado
+2024-07-06 15:41:52.776 -05 [33096] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-06 15:41:52.781 -05 [33096] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-06 15:41:52.781 -05 [33096] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-06 15:41:52.832 -05 [29196] LOG:  el sistema de bases de datos fue apagado en 2024-07-06 01:14:01 -05
+2024-07-06 15:41:52.857 -05 [33096] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-06 15:44:09.706 -05 [21848] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «dates»
+2024-07-06 15:44:09.706 -05 [21848] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("fecha") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 15:44:09.713 -05 [21848] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 15:46:52.834 -05 [26980] LOG:  empezando checkpoint: time
+2024-07-06 15:46:53.329 -05 [26980] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.445 s, sync=0.025 s, total=0.498 s; sync files=6, longest=0.012 s, average=0.005 s; distance=19 kB, estimate=19 kB; lsn=0/1F16DD8, redo lsn=0/1F16DA0
+2024-07-06 15:49:07.763 -05 [35868] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «dates»
+2024-07-06 15:49:07.763 -05 [35868] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "fechaTransaccion" TIMESTAMP WITH TIME ZONE REFERENCES "dates" ("fecha") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 15:49:07.769 -05 [35868] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 15:51:52.333 -05 [26980] LOG:  empezando checkpoint: time
+2024-07-06 15:51:52.811 -05 [26980] LOG:  checkpoint complete: wrote 5 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.429 s, sync=0.023 s, total=0.479 s; sync files=5, longest=0.011 s, average=0.005 s; distance=20 kB, estimate=20 kB; lsn=0/1F1BF50, redo lsn=0/1F1BF18
+2024-07-06 15:52:21.386 -05 [17868] ERROR:  la restricción de llave foránea «transaccions_ProductoNombre_fkey» no puede ser implementada
+2024-07-06 15:52:21.386 -05 [17868] DETALLE:  Las columnas llave «ProductoNombre» y «id» son de tipos incompatibles: character varying y integer
+2024-07-06 15:52:21.386 -05 [17868] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "ProductoNombre" VARCHAR(255) REFERENCES "products" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 15:52:21.392 -05 [17868] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 15:56:24.701 -05 [28076] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-06 15:56:24.701 -05 [28076] SENTENCIA:  ALTER TABLE "dates" ADD CONSTRAINT "unique_fecha_constraint" UNIQUE ("fecha");
+2024-07-06 15:56:24.707 -05 [28076] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 15:56:52.826 -05 [26980] LOG:  empezando checkpoint: time
+2024-07-06 15:56:56.208 -05 [26980] LOG:  checkpoint complete: wrote 31 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.285 s, sync=0.070 s, total=3.382 s; sync files=27, longest=0.003 s, average=0.003 s; distance=105 kB, estimate=105 kB; lsn=0/1F36748, redo lsn=0/1F36710
+2024-07-06 15:57:49.758 -05 [26956] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-06 15:57:49.758 -05 [26956] SENTENCIA:  ALTER TABLE "dates" ADD CONSTRAINT "unique_fecha_constraint" UNIQUE ("fecha");
+2024-07-06 15:57:49.764 -05 [26956] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 15:59:32.602 -05 [8728] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-06 15:59:32.602 -05 [8728] SENTENCIA:  ALTER TABLE "dates" ADD CONSTRAINT "unique_fecha_constraint" UNIQUE ("fecha");
+2024-07-06 15:59:32.608 -05 [8728] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:00:05.750 -05 [36524] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «products»
+2024-07-06 16:00:05.750 -05 [36524] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "ProductoNombre" VARCHAR(255) REFERENCES "products" ("nombre") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 16:00:05.756 -05 [36524] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:00:18.999 -05 [18780] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «products»
+2024-07-06 16:00:18.999 -05 [18780] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "ProductoNombre" VARCHAR(255) REFERENCES "products" ("nombre") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 16:00:19.006 -05 [18780] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:00:28.156 -05 [34408] ERROR:  no hay restricción unique que coincida con las columnas dadas en la tabla referida «products»
+2024-07-06 16:00:28.156 -05 [34408] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "ProductoNombre" VARCHAR(255) REFERENCES "products" ("nombre") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 16:00:28.162 -05 [34408] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:01:52.222 -05 [26980] LOG:  empezando checkpoint: time
+2024-07-06 16:01:54.944 -05 [26980] LOG:  checkpoint complete: wrote 25 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.622 s, sync=0.068 s, total=2.723 s; sync files=24, longest=0.011 s, average=0.003 s; distance=110 kB, estimate=110 kB; lsn=0/1F520F0, redo lsn=0/1F520B8
+2024-07-06 16:02:37.089 -05 [35468] ERROR:  la restricción de llave foránea «transaccions_nombreUsuario_fkey» no puede ser implementada
+2024-07-06 16:02:37.089 -05 [35468] DETALLE:  Las columnas llave «nombreUsuario» y «id» son de tipos incompatibles: character varying y integer
+2024-07-06 16:02:37.089 -05 [35468] SENTENCIA:  ALTER TABLE "public"."transaccions" ADD COLUMN "nombreUsuario" VARCHAR(255) REFERENCES "usuarios" ("id") ON DELETE SET NULL ON UPDATE CASCADE;
+2024-07-06 16:02:37.095 -05 [35468] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:05:29.844 -05 [31108] ERROR:  la relación «unique_nombre_constraint» ya existe
+2024-07-06 16:05:29.844 -05 [31108] SENTENCIA:  ALTER TABLE "usuarios" ADD CONSTRAINT "unique_nombre_constraint" UNIQUE ("nombre");
+2024-07-06 16:05:29.850 -05 [31108] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:05:47.217 -05 [20160] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-06 16:06:52.957 -05 [26980] LOG:  empezando checkpoint: time
+2024-07-06 16:06:56.682 -05 [26980] LOG:  checkpoint complete: wrote 34 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.604 s, sync=0.092 s, total=3.725 s; sync files=30, longest=0.007 s, average=0.004 s; distance=130 kB, estimate=130 kB; lsn=0/1F72948, redo lsn=0/1F72910
