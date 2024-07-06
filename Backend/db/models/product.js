@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.transaccion, {as:'transaccion', foreignKey:'productoNombre'})
+      this.hasMany(models.transaccions, {as:'transaccion', foreignKey:'productoNombre'})
     }
   }
   product.init({
@@ -31,3 +31,5 @@ module.exports = (sequelize, DataTypes) => {
   });
   return product;
 };
+
+

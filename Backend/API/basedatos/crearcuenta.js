@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../Backend/db/models/index.js');
+const db = require('../../db/models/index.js');
 const Usuario = db.usuario; 
 const ruta = express.Router();
 

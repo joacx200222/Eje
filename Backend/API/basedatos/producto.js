@@ -1,5 +1,5 @@
 const express = require('express');
-const db = require('../Backend/db/models/index.js');
+const db = require('../../db/models/index.js');
 const Product = db.product; // Ensure this model name is accurate
 const ruta = express.Router();
 

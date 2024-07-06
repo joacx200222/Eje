@@ -6,7 +6,7 @@ const cors = require('cors')
 
 const producto = require('./API/basedatos/producto.js')
 
-const dashboard = require('./API/basedatos/admin/adminProducto.js')
+//const dashboard = require('./API/basedatos/admin/adminProducto.js')
 
 const app = express()
 const port = 3000
@@ -22,7 +22,7 @@ app.use('/api/productos', producto)
 
 // API admin
 
-app.use('/api/dashboard', dashboard)
+//app.use('/api/dashboard', dashboard)
 
 // Agregar el servicio de paginas web. PETICIONES LLEGAN
 app.get('/', (req, res) => {   //petición de llegada con 2 parametro (req = data que estoy enviando, res = data a devover a cliente)

@@ -3,114 +3,65 @@ import './Registro.css'
 import Pie from '../ComponentesGeneral/Pie';
 import Cabecera2 from '../ComponentesGeneral/Cabecera2';
 import { useEffect, useState } from "react"
+import axios from 'axios';
 
-function Registro(){
+const Registro=()=>{
 
-    const [nombre, setNombre] = useState( ()=> {
-        const valorGuardado = localStorage.getItem("nombre")
-        const valorInicial = JSON.parse(valorGuardado)
-        return valorInicial || ''
-    })
+const [DataRegistro, setDataRegistro] = useState({
+    nombre: '',
+    apellido: '',
+    correo: '',
+    pwd: '',
+    cpwd: '',
+});
 
-    const [apellido, setApellido] = useState( ()=> {
-        const valorGuardado = localStorage.getItem("apellido")
-        const valorInicial = JSON.parse(valorGuardado)
-        return valorInicial || ''
-    })
 
-    const [correo, setCorreo] = useState( ()=> {
-        const valorGuardado = localStorage.getItem("correo")
-        const valorInicial = JSON.parse(valorGuardado)
-        return valorInicial || ''
-    })
+const alCambiar = async (e) => {
+    const {name, value} = e.target;
+    setDataRegistro({
+        ...DataRegistro,
+        [name]: value
+    });
+};
+const alSubmit = async (e) => {
+    e.preventDefault();
+    try{
+        const respuesta = await axios.post('http://localhost:5173/register', DataRegistro);
+        console.log(respuesta.data)
+    }catch(error){
+        console.error('Error al registrar usuario', error)
+    }
+};
 
-    const [pwd, setPwd] = useState( ()=> {
-        const valorGuardado = localStorage.getItem("pwd")
-        const valorInicial = JSON.parse(valorGuardado)
-        return valorInicial || ''
-    })
 
-    const [cpwd, setCpwd] = useState( ()=> {
-        const valorGuardado = localStorage.getItem("cpwd")
-        const valorInicial = JSON.parse(valorGuardado)
-        return valorInicial || ''
-    })
 
-    useEffect( () => {
-        //Guardar en local storage nombre
-        localStorage.setItem("nombre", JSON.stringify(nombre))
-    }, [nombre] )
-
-    useEffect( () => {
-        //Guardar en local storage apellido
-        localStorage.setItem("apellido", JSON.stringify(apellido))
-    }, [apellido] )
-
-    useEffect( () => {
-        //Guardar en local storage correo
-        localStorage.setItem("correo", JSON.stringify(correo))
-    }, [correo] )
-
-    useEffect( () => {
-        //Guardar en local storage pwd
-        localStorage.setItem("pwd", JSON.stringify(pwd))
-    }, [pwd] )
-
-    useEffect( () => {
-        //Guardar en local storage pwd
-        localStorage.setItem("cpwd", JSON.stringify(cpwd))
-    }, [cpwd] )
     
-    return(
+  return(
         <>
         <Cabecera2/>
         <div>
             <div className='wrapperR'>
-                <form action="">
+                <form onSubmit={alSubmit}>
                     <h4>Registra una cuenta nueva</h4>
                     <div className='input-boxR'>
-                        <input type='text' placeholder='Nombre' 
-                        value={nombre}
-                        onChange={
-                            (e) => setNombre(e.target.value)
-                        } required/>
+                        <input type='text' name='nombre' placeholder='Nombre' value={DataRegistro.nombre} onChange={alCambiar} required/>
                     </div>
                     <div className='input-boxR'>
-                        <input type='text' placeholder='Apellido' 
-                        value={apellido}
-                        onChange={
-                            (e) => setApellido(e.target.value)
-                        }
-                        required/>
+                        <input type='text' name='apellido' placeholder='Apellido' value={DataRegistro.apellido} onChange={alCambiar} required/>
                     </div>
                     <div>
                         <div className='input-boxR'>
-                            <input type='email' placeholder='Correo' 
-                            value={correo}
-                            onChange={
-                                (e) => setCorreo(e.target.value)
-                            }
-                            required/>
+                            <input type='email' name='correo' placeholder='Correo' value={DataRegistro.correo} onChange={alCambiar} required/>
                         </div>
                     </div>
                     <div>
                         <div className='input-boxR'>
-                            <input type='password' placeholder='Password' 
-                            value={pwd}
-                            onChange={
-                                (e) => setPwd(e.target.value)
-                            }
-                            required/>
+                            <input type='password' name='pwd' placeholder='Password' value={DataRegistro.pwd} onChange={alCambiar} required/>
                         </div>
                     </div>
                     <div>
                         <div className='input-boxR'>
-                            <input type='password' placeholder='Confim Password' 
-                            value={cpwd}
-                            onChange={
-                                (e) => setCpwd(e.target.value)
-                            }
-                            required/>
+                            <input type='password' name='cpwd' placeholder='Confim Password' value={DataRegistro.cpwd} onChange={alCambiar} required/>
                         </div>
                     </div>
                     
