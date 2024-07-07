@@ -71,73 +71,62 @@ export default PrincipalBody
 */
 
 import React, { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
 
-function PrincipalBody() {
-  const [productos, setProductos] = useState([]);
+const Producto = ({ id }) => {
+  const [producto, setProducto] = useState(null);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    const fetchProductos = async () => {
+    const fetchProducto = async () => {
       try {
-        const response = await fetch('http://localhost:3080/api/basedatos/producto');
+        const response = await fetch(`http://localhost:3080/api/productos/findAllxId/${id}`);
         if (!response.ok) {
           const errorData = await response.json();
           throw new Error(`Error: ${errorData.message}`);
         }
         const data = await response.json();
-        setProductos(data);
+        setProducto(data);
       } catch (error) {
-        console.error('Error al obtener productos:', error);
+        console.error('Error al obtener producto:', error);
         setError(error.message);
       }
     };
 
-    fetchProductos();
-  }, []);
+    fetchProducto();
+  }, [id]);
+
+  if (error) {
+    return <div className={`div${id}`}><p className="error">{error}</p></div>;
+  }
+
+  if (!producto) {
+    return <div className={`div${id}`}><p>Cargando...</p></div>;
+  }
 
   return (
-    <>
-      {error && <p className="error">{error}</p>}
-      <ul className='PrincipalBody'>
-        {productos.slice(0, 3).map((producto, index) => (
-          <ul key={producto.id}>
-            <li>
-              <img 
-                src={producto.imagen} 
-                className={`ImagenItem${index + 1}`} 
-                alt={`imagenitem${index + 1}`} 
-                width={370} 
-                height={370} 
-              />
-            </li>
-            <li>
-              <p>Colección de items {index + 1}: Especiales para regresar al colegio</p>
-            </li>
-            <li>
-              <h6><p><Link to="/">learn more</Link></p></h6>
-            </li>
-          </ul>
-        ))}
-      </ul>
-      <br /><br />
-      <ul className='PrincipalBody1'>
-        {productos.slice(3).map((producto, index) => (
-          <ul key={producto.id}>
-            <li>
-              <img 
-                src={producto.imagen} 
-                className={`ImagenItem${index + 4}`} 
-                alt={`imagenitem${index + 4}`} 
-              />
-            </li>
-            <li><p>{producto.nombre}</p></li>
-            <li><h6><p><Link to="/">learn more</Link></p></h6></li>
-          </ul>
-        ))}
-      </ul>
-    </>
+    <div className={`div${id}`}>
+      <img 
+        src={producto.imagen} 
+        className={`ImagenItem${id}`} 
+        alt={`imagenitem${id}`} 
+        width={370} 
+        height={370} 
+      />
+      <p>{producto.nombre}</p>
+    </div>
   );
-}
+};
 
-export default PrincipalBody;
+const CargarProductos = () => {
+  const ids = [1, 2, 3]; // IDs de productos que deseas obtener
+
+  return (
+    <div className="PrincipalBody">
+      {ids.map(id => (
+        <Producto key={id} id={id} />
+      ))}
+    </div>
+  );
+};
+
+export default CargarProductos;

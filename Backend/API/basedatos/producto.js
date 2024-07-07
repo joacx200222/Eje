@@ -57,4 +57,6 @@ ruta.get('/findAllxId/:idProducto', async (req, res) => {
     }
 });
 
+
+
 module.exports = ruta;
