@@ -1,71 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../css/Dashboard.css';
+import ordenes from '../../Data/ordenes.json';
 
 const TablaOrdenes = () => {
-    const datos = [
-        {
-            id: 1,
-            usuario: 'Juan Sanchez',
-            fechaOrden: '11/03/2023',
-            total: 'S/ 125.00',
-            correo: 'altavista@123.com',
-            estado: 'Entregado',
-            acciones: 'Ver'
-        },
-        {
-            id: 1,
-            usuario: 'Juan Sanchez',
-            fechaOrden: '11/03/2023',
-            total: 'S/ 125.00',
-            correo: 'altavista@123.com',
-            estado: 'Entregado',
-            acciones: 'Ver'
-        },
-        {
-            id: 1,
-            usuario: 'Juan Sanchez',
-            fechaOrden: '11/03/2023',
-            total: 'S/ 125.00',
-            correo: 'altavista@123.com',
-            estado: 'Entregado',
-            acciones: 'Ver'
-        },        
-    ];
+  const [textoBusqueda, setTextoBusqueda] = useState('');
 
-    return (
-    
-        <div className="main-content">
-            <div className="tabla-container">
-                <table className="tabla-ordenes">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Usuario</th>
-                            <th>Fecha de orden</th>
-                            <th>Total</th>
-                            <th>Correo</th>
-                            <th>Estado</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {datos.map((orden) => (
-                            <tr>
-                                <td>{orden.id}</td>
-                                <td>{orden.usuario}</td>
-                                <td>{orden.fechaOrden}</td>
-                                <td>{orden.total}</td>
-                                <td>{orden.correo}</td>
-                                <td>{orden.estado}</td>
-                                <td>{orden.acciones}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-       
-    );
+  const manejarCambio = (event) => {
+    setTextoBusqueda(event.target.value);
+  };
+
+  const ordenesFiltradas = ordenes.filter(ordenes =>
+    `${ordenes.usuario} ${ordenes.id} ${ordenes.total}`.toLowerCase().includes(textoBusqueda.toLowerCase())
+  );
+
+  return (
+    <div className="main-content">
+      <div className="buscador-container">
+        <input
+          type="text"
+          placeholder="Buscar orden..."
+          value={textoBusqueda}
+          onChange={manejarCambio}
+          className="buscador-ordenes"
+        />
+      </div>
+      <div className="tabla-container">
+        <table className="tabla-ordenes">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Usuario</th>
+              <th>Fecha de orden</th>
+              <th>Total</th>
+              <th>Correo</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            {ordenesFiltradas.map(ordenes => (
+              <tr key={ordenes.id}>
+                <td>{ordenes.id}</td>
+                <td>{ordenes.usuario}</td>
+                <td>{ordenes.fechaOrden}</td>
+                <td>{ordenes.total}</td>
+                <td>{ordenes.correo}</td>
+                <td>{ordenes.estado}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 };
+
 
 export default TablaOrdenes;
