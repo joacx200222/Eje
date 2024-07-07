@@ -143,4 +143,13 @@ ruta.put("/updateUser", async (req, res) => {
   }
 });
 
+ruta.get('/findAllusuarios', async (req, res) => {
+  try {
+    const usuarios = await db.usuario.findAll();
+    res.json(usuarios);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 module.exports = ruta;
