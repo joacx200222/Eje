@@ -71,6 +71,29 @@ ruta.post('/register', async (req, res) => {
     }
   });
 
+  ruta.post('/cambiarPassword', async (req, res) => {
+    const { correo } = req.body;
+  
+    try {
+      // Verificar si el usuario existe
+      const usuario = await db.usuario.findOne({ where: { correo } });
+  
+      if (!usuario) {
+        return res.status(404).json({ msg: 'Usuario no encontrado' });
+      }
+  
+      // Cambiar la contraseña a "1235"
+      usuario.contraseña = "1235";
+      await usuario.save();
+  
+      res.status(200).json({ msg: 'Contraseña cambiada exitosamente' });
+    } catch (error) {
+      console.error('Error al cambiar la contraseña:', error);
+      res.status(500).json({ msg: 'Error del servidor' });
+    }
+  });
+  
+
 module.exports = ruta
 
 
