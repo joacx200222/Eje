@@ -30,7 +30,7 @@ function CarritoCompras() {
                         <p>Cantidad: {producto.cantidad}</p>
                         <p>Precio total: S/ {producto.precio * producto.cantidad}</p>
                         <button onClick={() => eliminarDelCarrito(index)}>Eliminar</button>
-                        <button onClick={() => moverAGuardadoParaDespues(index)}>Guardar para después</button>
+                        <button onClick={() => moverAGuardadoParaDespues(index)} className='AVFIRMA'>Guardar para después</button>
                     </div>
                 </div>
             ))}
