@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 
 // Agregamos API's
 app.get("/api/usuarios", (req, res) => {
-  res.json(users); //devuelve la lista de users
+  res.json(usuarios); //devuelve la lista de users
 });
 
 app.listen(port, () => {

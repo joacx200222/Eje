@@ -71,7 +71,7 @@ export default PrincipalBody
 */
 
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
+import { Link } from 'react-router-dom';
 
 const Producto = ({ id }) => {
   const [producto, setProducto] = useState(null);
@@ -106,7 +106,7 @@ const Producto = ({ id }) => {
 
   return (
     <div className={`div${id}`}>
-      <Link to={`/producto/${id}`}> {/* Modifica esta lÃnea para usar Link */}
+      <Link to={`/producto/${id}`}>
         <img 
           src={producto.imagen} 
           className={`ImagenItem${id}`} 
@@ -121,7 +121,11 @@ const Producto = ({ id }) => {
 };
 
 const CargarProductos = () => {
+<<<<<<< HEAD
   const ids = [1, 2, ,9,8,7,6,5,4,3]; // IDs de productos que deseas obtener
+=======
+  const ids = [1, 2, 3];
+>>>>>>> 97ebad2256887fcc5b35a7795b39bc8008e17966
 
   return (
     <div className="PrincipalBody">

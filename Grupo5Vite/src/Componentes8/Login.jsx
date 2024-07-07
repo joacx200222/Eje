@@ -53,7 +53,6 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch(
         "http://localhost:3080/api/basedatos/login",
