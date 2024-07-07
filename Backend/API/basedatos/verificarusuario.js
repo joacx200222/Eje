@@ -4,6 +4,7 @@ const usuario = "../Backend/db/models/usuario.js";
 const Usuario = db.usuario;
 const sequelize = require("sequelize");
 const ruta = express.Router();
+const Orden = db.transaccions;
 
 ruta.get("/findAllxId/:idUser", async (req, res) => {
   id = req.params.idUser;
@@ -148,6 +149,16 @@ ruta.get('/findAllusuarios', async (req, res) => {
     const usuarios = await db.usuario.findAll();
     res.json(usuarios);
   } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+ruta.get('/api/basedatos/findAllOrdenes', async (req, res) => {
+  try {
+    const ordenes = await Orden.findAll();
+    res.json(ordenes);
+  } catch (error) {
+    console.error('Error al obtener órdenes:', error); // Log the error for debugging
     res.status(500).json({ error: error.message });
   }
 });
