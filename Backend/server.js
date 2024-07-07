@@ -4,13 +4,13 @@ const path = require("path")
 
 const cors = require('cors')
 
-const producto = require('./API/basedatos/producto.js')
+//const producto = require('./API/basedatos/producto.js')
 
 const usuario = require('./API/basedatos/verificarusuario.js')
 
-const dashboard = require('./API/basedatos/admin/adminProducto.js')
+//const dashboard = require('./API/basedatos/admin/adminProducto.js')
 
-const productoAdmin = require('./API/basedatos/admin/adminProducto.js')
+//const productoAdmin = require('./API/basedatos/admin/adminProducto.js')
 
 const app = express()
 const port = 3080
@@ -22,13 +22,13 @@ const whitelist = ["http://localhost:5173"]
 app.use(cors(whitelist))
 
 //mapear APU
-app.use('/api/productos', producto)
+//app.use('/api/productos', producto)
 
 app.use('/api/basedatos', usuario)
 
 // API admin
-app.use('/api/productos', dashboard)
-app.use('/api/productos', productoAdmin)
+//app.use('/api/productos', dashboard)
+//app.use('/api/productos', productoAdmin)
 
 
 
