@@ -16,7 +16,6 @@ function Ordenes (){
             <Headeradm/>
             <Nav/>
             <Seccion6/>
-            <BuscadorOrdenes/>
             <br />
             <TablaOrdenes/>
             <Paginacion/>

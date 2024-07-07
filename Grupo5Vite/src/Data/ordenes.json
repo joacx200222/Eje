@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "usuario": "Antonio",
+        "fechaOrden": "09-07-2010",
+        "total": 125,
+        "correo": "antonioc@hotmail.com ",
+        "estado": "En proceso"
+    },
+    {
+        "id": 2,
+        "usuario": "Lucia",
+        "fechaOrden": "10-02-2020",
+        "total": 200,
+        "correo": "luu98@hotmail.com ",
+        "estado": "Entregado"
+    },
+    {
+        "id": 3,
+        "usuario": "Romina",
+        "fechaOrden": "09-07-2010",
+        "total": 78,
+        "correo": "romii89@hotmail.com ",
+        "estado": "Entregado"
+    }, 
+    {
+        "id": 4,
+        "usuario": "Soledad",
+        "fechaOrden": "09-07-2010",
+        "total": 40,
+        "correo": "sol12@hotmail.com ",
+        "estado": "En proceso"
+    }
+]
