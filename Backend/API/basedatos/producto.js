@@ -69,6 +69,31 @@ ruta.get("/findAllxId/:idProducto", async (req, res) => {
   }
 });
 
+// Ruta para obtener productos por nombre (o parte de él)
+ruta.get("/findByName/:nombreProducto", async (req, res) => {
+  const nombre = req.params.nombreProducto;
+  console.log("Consulta de productos por nombre");
+  try {
+    const products = await Product.findAll({
+      where: {
+        nombre: {
+          [Sequelize.Op.like]: `%${nombre}%` // Utiliza el operador `like` para buscar coincidencias parciales
+        }
+      }
+    });
+    if (products.length > 0) {
+      console.log(products);
+      res.status(200).json(products);
+    } else {
+      res.status(404).json({ msg: "No se encontraron productos con ese nombre" });
+    }
+  } catch (error) {
+    console.error("Error al buscar productos por nombre:", error);
+    res.status(500).json({ message: "Internal server error" });
+  }
+});
+
+
 ruta.get("/all", async (req, res) => {
   try {
     const productos = await Product.findAll();
