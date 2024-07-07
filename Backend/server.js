@@ -7,7 +7,7 @@ const cors = require('cors')
 //const producto = require('./API/basedatos/producto.js')
 
 const usuario = require('./API/basedatos/verificarusuario.js')
-
+const producto = require ('./API/basedatos/producto.js')
 //const dashboard = require('./API/basedatos/admin/adminProducto.js')
 
 //const productoAdmin = require('./API/basedatos/admin/adminProducto.js')
@@ -25,6 +25,7 @@ app.use(cors(whitelist))
 //app.use('/api/productos', producto)
 
 app.use('/api/basedatos', usuario)
+app.use('/api/productos', producto)
 
 // API admin
 //app.use('/api/productos', dashboard)
