@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     movilidad: DataTypes.BOOLEAN,
     piezas: DataTypes.INTEGER,
     combinable: DataTypes.BOOLEAN,
-    imagen: DataTypes.BLOB
+    imagen: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'product',
