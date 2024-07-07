@@ -5,16 +5,6 @@ const Usuario = db.usuario;
 const sequelize = require("sequelize");
 const ruta = express.Router();
 
-ruta.get('/api/usuarios', async (req, res) => {
-  try {
-      const usuarios = await Usuario.findAll();
-      res.json(usuarios);
-  } catch (error) {
-      console.error('Error al obtener usuarios:', error); // Log the error for debugging
-      res.status(500).json({ message: 'Internal server error' });
-  }
-});
-
 ruta.get("/findAllxId/:idUser", async (req, res) => {
   id = req.params.idUser;
   console.log("Consulta de peliculas por PK !");
