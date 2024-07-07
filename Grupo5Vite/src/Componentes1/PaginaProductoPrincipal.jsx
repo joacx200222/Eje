@@ -8,6 +8,8 @@ function PaginaProductoPrincipal() {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
     const [error, setError] = useState('');
+    const [cantidad, setCantidad] = useState(1);
+    const [mostrarEnvios, setMostrarEnvios] = useState(false);
 
     useEffect(() => {
         const fetchProducto = async () => {
@@ -28,6 +30,18 @@ function PaginaProductoPrincipal() {
         fetchProducto();
     }, [id]);
 
+    const handleCantidadChange = (newCantidad) => {
+        if (newCantidad < 1) return;
+        setCantidad(newCantidad);
+    };
+
+    const toggleEnvios = () => {
+        setMostrarEnvios(!mostrarEnvios);
+    };
+    const cerrarEnvios = () => {
+        setMostrarEnvios(false);
+    };
+
     if (error) {
         return <p className="error">{error}</p>;
     }
@@ -37,44 +51,59 @@ function PaginaProductoPrincipal() {
     }
     
     return (
-        
-        <>  <Cabecera1/>
+        <>  
+            <Cabecera1 />
             <div>
-                <h4>Título del producto: {producto.nombre}</h4>
+                <h4 className='ProductoAvTi'>Título del producto: {producto.nombre}</h4>
                 <h4 id="Subtitulo" >Por: {producto.fabricante} - Serie: {producto.serie}</h4>
+                <div style={{ borderTop: "2px solid black", width: "100%" }}></div>
             </div>
             <hr />
+    
+            
             <div className='ProductoContenido'>
                 <nav id="arriba_derecha" className='ProductoContenidoE'>
                     <h4 id="DisponibleTitulo">Disponible</h4>
-                    <p id="Precio">S/{producto.precio}</p>
+                    <p id="Precio">S/{producto.precio * cantidad}</p>
+                    
                     <button type='button' id="AnadirCarritoBoton">Añadir al Carrito</button>
                     <p id="textoCantidad">Cantidad</p>
-                    <p>Cantidad exacta</p>
-                    <p>Ver métodos de envío disponibles</p>
+                    <div id="cantidadControl">
+                        <button onClick={() => handleCantidadChange(cantidad - 1)}>-</button>
+                        <input type="number" value={cantidad} onChange={(e) => handleCantidadChange(Number(e.target.value))} />
+                        <button onClick={() => handleCantidadChange(cantidad + 1)}>+</button>
+                    </div>
+                    
+                    <p onClick={toggleEnvios} style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}>
+                        Ver métodos de envío disponibles
+                    </p>
+                    <div id="overlay" className={mostrarEnvios ? "visible" : ""}></div>
+                    <div id="metodosEnvio" className={mostrarEnvios ? "visible" : ""}>
+                        <button onClick={cerrarEnvios} className="close-btn">x</button>
+                        <p>Económico Aéreo - S/10.00</p>
+                        <p>Envío prioritario (5 a 10 días) - S/17.00</p>
+                    </div>
                 </nav>
                 <img src={producto.imagen} alt={`Imagen de ${producto.nombre}`} className="ImagenProductoAV" />
                 <div id='Detallado' className='ProductoContenidoE'>
                     <h4>Descripción</h4>
-                    <li className='DescAv'>Fabricado por {producto.fabricante} con serie {producto.serie} - {producto.nombre} </li>
+                    <li className='DescAv'>Fabricado por {producto.fabricante} con serie {producto.serie} - {producto.nombre}</li>
                     <p id="Detalletexto">{producto.descripcion}</p>
                 </div>
-                <div id='Caracteristicas' className='ProductoContenidoE ProductoAV1' >
+                <div id='Caracteristicas' className='ProductoContenidoE ProductoAV1'>
                     <h4 className='h4nuevoAV'>Características del producto:</h4>
                     <li>Precio: S/{producto.precio}</li>
                     <li>Material: {producto.material}</li>
-                    <li>Tamano: {producto.tamano} cm</li>
-                    <li>Fabricante:{producto.fabricante}</li>
-
+                    <li>Tamaño: {producto.tamano} cm</li>
+                    <li>Fabricante: {producto.fabricante}</li>
                     <ul>
                         {producto.caracteristicas && producto.caracteristicas.split(',').map((caracteristica, index) => (
                             <li key={index}>{caracteristica}</li>
                         ))}
                     </ul>
                 </div>
-                
             </div>
-            <Pie/>
+            <Pie />
         </>
     );
 }
