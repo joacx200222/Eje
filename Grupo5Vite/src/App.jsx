@@ -21,6 +21,7 @@ import AgregarProducto from "./PaginasAdmin/AgregarProducto";
 import VerProducto from "./PaginasAdmin/VerProducto";
 import DetalleOrden from "./PaginasUsuario/DetalleOrden";
 import Series from "./PaginasAdmin/Series";
+import PaginaProductoPrincipal from './Componentes1/PaginaProductoPrincipal';
 import AddSerie from "./PaginasAdmin/AddSerie";
 
 import './App.css'
@@ -49,6 +50,7 @@ function App() {
         <Route path="/AgregarProducto" element={<AgregarProducto/>}/>
         <Route path="/VerProducto" element={<VerProducto/>}/>
         <Route path="/DetalleOrden" element={<DetalleOrden />}/>
+        <Route path="/producto/:id" element={<PaginaProductoPrincipal />} />
         <Route path="/Series" element={<Series />} />
         <Route path="/AddSerie" element={<AddSerie />} />
 

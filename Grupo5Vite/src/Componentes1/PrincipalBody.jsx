@@ -71,6 +71,7 @@ export default PrincipalBody
 */
 
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
 
 const Producto = ({ id }) => {
   const [producto, setProducto] = useState(null);
@@ -105,13 +106,15 @@ const Producto = ({ id }) => {
 
   return (
     <div className={`div${id}`}>
-      <img 
-        src={producto.imagen} 
-        className={`ImagenItem${id}`} 
-        alt={`imagenitem${id}`} 
-        width={370} 
-        height={370} 
-      />
+      <Link to={`/producto/${id}`}> {/* Modifica esta lÃnea para usar Link */}
+        <img 
+          src={producto.imagen} 
+          className={`ImagenItem${id}`} 
+          alt={`imagenitem${id}`} 
+          width={370} 
+          height={370} 
+        />
+      </Link>
       <p>{producto.nombre}</p>
     </div>
   );
