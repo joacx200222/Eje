@@ -6,10 +6,12 @@ const cors = require('cors')
 
 const producto = require('./API/basedatos/producto.js')
 
+const usuario = require('./API/basedatos/verificarusuario.js')
+
 //const dashboard = require('./API/basedatos/admin/adminProducto.js')
 
 const app = express()
-const port = 3000
+const port = 3080
 
 app.use(express.static(path.join(__dirname, './static')));
 app.use(bodyParser.json());
@@ -19,6 +21,8 @@ app.use(cors(whitelist))
 
 //mapear APU
 app.use('/api/productos', producto)
+
+app.use('/api/basedatos', usuario)
 
 // API admin
 
