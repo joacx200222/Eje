@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class product extends Model {
     /**
@@ -11,25 +9,40 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      this.hasMany(models.transaccions, {as:'transaccion', foreignKey:'productoNombre'})
+      this.belongsTo(models.series, {
+        foreignKey: "serie",
+        as: "serie",
+      });
+      this.hasMany(models.transaccions, {
+        as: "transaccion",
+        foreignKey: "productoNombre",
+      });
     }
   }
-  product.init({
-    nombre: DataTypes.STRING,
-    fabricante: DataTypes.STRING,
-    precio: DataTypes.FLOAT,
-    serie: DataTypes.STRING,
-    tamano: DataTypes.FLOAT,
-    material: DataTypes.STRING,
-    movilidad: DataTypes.BOOLEAN,
-    piezas: DataTypes.INTEGER,
-    combinable: DataTypes.BOOLEAN,
-    imagen: DataTypes.BLOB
-  }, {
-    sequelize,
-    modelName: 'product',
-  });
+  product.init(
+    {
+      nombre: DataTypes.STRING,
+      fabricante: DataTypes.STRING,
+      precio: DataTypes.FLOAT,
+      serie: DataTypes.INTEGER,
+      tamano: DataTypes.FLOAT,
+      material: DataTypes.STRING,
+      movilidad: DataTypes.BOOLEAN,
+      piezas: DataTypes.INTEGER,
+      combinable: DataTypes.BOOLEAN,
+      imagen: DataTypes.BLOB,
+    },
+    {
+      sequelize,
+      modelName: "product",
+    },
+  );
+
+  product.associate = function (models) {
+    // Asociaciones
+    product.hasMany(models.Series, {
+      foreignKey: "productoId",
+    });
+  };
   return product;
 };
-
-
