@@ -84,4 +84,11 @@
 .itemCarrito{
     position: relative;
     display: flex;
+    margin-top: 10px;
+}
+.totalcarritoAV{
+    margin-left: 88%;
+}
+.CambioAV{
+    margin-left: 20px;
 }

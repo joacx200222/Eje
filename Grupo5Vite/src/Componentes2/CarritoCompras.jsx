@@ -23,7 +23,7 @@ function CarritoCompras() {
             {carrito.map((producto, index) => (
                 <div key={index} className="itemCarrito">
                     <img className= "imagenAvNuevo"src={producto.imagen} alt={`Imagen de ${producto.nombre}`} />
-                    <div>
+                    <div className='CambioAV'>
                         <p><strong>{producto.nombre}</strong></p>
                         <p>Por: {producto.fabricante} - Serie: {producto.serie}</p>
                         <p>S/ {producto.precio}</p>
