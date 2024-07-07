@@ -1,4 +1,5 @@
-import React, { createContext, useState, useContext } from 'react';
+// App.jsx
+import React, { createContext, useState } from 'react';
 import { Routes, Route } from "react-router-dom";
 import CarritoCompras from "./Componentes2/CarritoCompras";
 import Login from "./Componentes8/Login";
@@ -31,13 +32,24 @@ const CarritoContext = createContext();
 // Componente proveedor del carrito
 const CarritoProvider = ({ children }) => {
     const [carrito, setCarrito] = useState([]);
+    const [guardadoParaDespues, setGuardadoParaDespues] = useState([]);
 
     const agregarAlCarrito = (producto) => {
         setCarrito((prevCarrito) => [...prevCarrito, producto]);
     };
 
+    const eliminarDelCarrito = (index) => {
+        setCarrito((prevCarrito) => prevCarrito.filter((_, i) => i !== index));
+    };
+
+    const moverAGuardadoParaDespues = (index) => {
+        const producto = carrito[index];
+        setCarrito((prevCarrito) => prevCarrito.filter((_, i) => i !== index));
+        setGuardadoParaDespues((prevGuardado) => [...prevGuardado, producto]);
+    };
+
     return (
-        <CarritoContext.Provider value={{ carrito, agregarAlCarrito }}>
+        <CarritoContext.Provider value={{ carrito, agregarAlCarrito, eliminarDelCarrito, moverAGuardadoParaDespues, guardadoParaDespues }}>
             {children}
         </CarritoContext.Provider>
     );
@@ -48,26 +60,26 @@ const App = () => {
         <CarritoProvider>
             <div className="Aplicacion">
                 <Routes>
-                    <Route path="/" element={ <LandingPage/> } />
+                    <Route path="/" element={<LandingPage />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/loginerror" element={<LoginError />} />
                     <Route path="/registro" element={<Registro />} />
                     <Route path="/carritocompras" element={<CarritoCompras />} />
-                    <Route path="/CambiarContra" element={<CambiarContra/>} />
-                    <Route path="/AdminDashBoard" element={<AdminDashBoard/>} />
-                    <Route path="/RegistroDatos" element={<RegistroDatos/>} />        
-                    <Route path="/PaginaProducto" element={<PaginaProducto />}/>
-                    <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />}/>
-                    <Route path="/Ordenes" element={<Ordenes />}/>
-                    <Route path="/Productos" element={<Productos />}/>
-                    <Route path="/Checkoutv" element={ <Checkoutv /> } />
-                    <Route path="/MenuUsuario" element={<MenuUsuario/>}/>
-                    <Route path="/recuperarcontraseña" element={<RecuperarContraseña/>}/>
-                    <Route path="/pedidocompleto" element={<Findepedido/>}/>
-                    <Route path="/ProductosAdm" element={<ProductosAdm/>}/>
-                    <Route path="/AgregarProducto" element={<AgregarProducto/>}/>
-                    <Route path="/VerProducto" element={<VerProducto/>}/>
-                    <Route path="/DetalleOrden" element={<DetalleOrden />}/>
+                    <Route path="/CambiarContra" element={<CambiarContra />} />
+                    <Route path="/AdminDashBoard" element={<AdminDashBoard />} />
+                    <Route path="/RegistroDatos" element={<RegistroDatos />} />
+                    <Route path="/PaginaProducto" element={<PaginaProducto />} />
+                    <Route path="/UsuariosRegistrados" element={<UsuariosRegistrados />} />
+                    <Route path="/Ordenes" element={<Ordenes />} />
+                    <Route path="/Productos" element={<Productos />} />
+                    <Route path="/Checkoutv" element={<Checkoutv />} />
+                    <Route path="/MenuUsuario" element={<MenuUsuario />} />
+                    <Route path="/recuperarcontraseña" element={<RecuperarContraseña />} />
+                    <Route path="/pedidocompleto" element={<Findepedido />} />
+                    <Route path="/ProductosAdm" element={<ProductosAdm />} />
+                    <Route path="/AgregarProducto" element={<AgregarProducto />} />
+                    <Route path="/VerProducto" element={<VerProducto />} />
+                    <Route path="/DetalleOrden" element={<DetalleOrden />} />
                     <Route path="/producto/:id" element={<PaginaProductoPrincipal />} />
                     <Route path="/Series" element={<Series />} />
                     <Route path="/AddSerie" element={<AddSerie />} />
@@ -75,7 +87,7 @@ const App = () => {
             </div>
         </CarritoProvider>
     );
-}
+};
 
 export { CarritoContext };
 export default App;

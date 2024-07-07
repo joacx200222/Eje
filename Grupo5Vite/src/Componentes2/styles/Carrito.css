@@ -78,4 +78,10 @@
 }
 
 
-
+.imagenAvNuevo{
+    width: 30%;
+}
+.itemCarrito{
+    position: relative;
+    display: flex;
+}
