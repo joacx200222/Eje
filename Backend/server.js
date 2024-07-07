@@ -10,6 +10,7 @@ const usuario = require("./API/basedatos/verificarusuario.js");
 const seriesRoute = require("./API/basedatos/seriesAPI.js");
 const rutaProductos = require("./API/basedatos/producto.js");
 
+
 //const dashboard = require('./API/basedatos/admin/adminProducto.js')
 
 //const productoAdmin = require('./API/basedatos/admin/adminProducto.js')
