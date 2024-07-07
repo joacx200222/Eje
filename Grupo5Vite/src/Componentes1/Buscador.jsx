@@ -1,64 +1,66 @@
-import React from 'react';
-import {useEffect, useState} from 'react';
-import data from "../Data/articulos.json"
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 
-
-function Buscador(){
-
-    const [objeto, setobjeto] = useState("");
+function Buscador() {
+    const [searchTerm, setSearchTerm] = useState("");
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError] = useState(null);
-    const [rpta, setRpta] = useState([]);
- 
-    useEffect(() => {
-        fetch(data)
-        .then(resultado => resultado.json())
-        .then(
-            (resultado) => {
-                setIsLoaded(true);
-                setobjeto(resultado);
-            },
-            (error) => {
-                setIsLoaded(true);
-                setError(error);
+    const [results, setResults] = useState([]);
+    const history = useHistory();
+
+    const buscar = async (cadena) => {
+        setIsLoaded(false);
+        try {
+            const response = await fetch(`/api/productos/findByName/${cadena}`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-        )
-    }, []);
+            const data = await response.json();
+            setResults(data);
+            setIsLoaded(true);
+        } catch (error) {
+            setError(error);
+            setIsLoaded(true);
+        }
+    };
 
+    useEffect(() => {
+        if (searchTerm) {
+            buscar(searchTerm);
+        }
+    }, [searchTerm]);
 
-    function buscar(cadena){
-        console.log(cadena)
+    const handleProductClick = (productId) => {
+        history.push(`/product/${productId}`);
+    };
 
-        let lista = []
-        let i=0
+    return (
+        <>
+            <div className='buscador'>
+                <input
+                    type="text"
+                    id="barrabuscador"
+                    name="barrabuscador"
+                    placeholder='Busca productos por nombre...'
+                    value={searchTerm}
+                    onChange={(evento) => setSearchTerm(evento.target.value)}
+                />
+                <button onClick={() => buscar(searchTerm)}>Buscar</button>
+            </div>
+            {error && <div>Error: {error.message}</div>}
+            {!isLoaded ? (
+                <div>Cargando...</div>
+            ) : (
+                <div>
+                    {results.map((product) => (
+                        <div key={product.id} onClick={() => handleProductClick(product.id)} style={{ cursor: 'pointer' }}>
+                            {product.nombre}
+                        </div>
+                    ))}
+                </div>
+            )}
+        </>
+    );
+}
 
-        objeto.forEach(element => {
-            element.Buscador.filter((objeto) => {
-                let m = modelo['num']
-                if( m.includes(cadena)){
-                    i = i + 1
-                    lista.push(<li key={i}>{element.detalle} - {m} <img src={modelo['imagen']} className='juguete'></img> </li>)
-                }
-            })
-        })
-        
-
-        setRpta(lista)
-    }
-
-    
-
-    return(
-    <>
-        <div className='buscador'>
-            <input type="text" id="barrabuscador" nombre="barrabuscador" placeholder='Busca productos por nombre...' 
-            value={objeto} onChange={(evento) => setobjeto(evento.target.value)}></input>
-            <br></br>
-            <button type='button'>BUSCAR</button>
-        </div>
-        
-        
-    </>
-)}
-
-export default Buscador
+export default Buscador;
