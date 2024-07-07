@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import "../css/PaginaProducto.css";
 import Cabecera1 from '../ComponentesGeneral/Cabecera1';
 import Pie from '../ComponentesGeneral/Pie';
+import { CarritoContext } from '../App';
 
 function PaginaProductoPrincipal() {
     const { id } = useParams();
@@ -10,6 +11,8 @@ function PaginaProductoPrincipal() {
     const [error, setError] = useState('');
     const [cantidad, setCantidad] = useState(1);
     const [mostrarEnvios, setMostrarEnvios] = useState(false);
+    const [popupVisible, setPopupVisible] = useState(false); // Nuevo estado para el popup
+    const { agregarAlCarrito } = useContext(CarritoContext);
 
     useEffect(() => {
         const fetchProducto = async () => {
@@ -38,8 +41,17 @@ function PaginaProductoPrincipal() {
     const toggleEnvios = () => {
         setMostrarEnvios(!mostrarEnvios);
     };
+
     const cerrarEnvios = () => {
         setMostrarEnvios(false);
+    };
+
+    const handleAgregarAlCarrito = () => {
+        agregarAlCarrito({ ...producto, cantidad });
+        setPopupVisible(true);
+        setTimeout(() => {
+            setPopupVisible(false);
+        }, 4000); // Ocultar el popup después de 4 segundos
     };
 
     if (error) {
@@ -49,9 +61,9 @@ function PaginaProductoPrincipal() {
     if (!producto) {
         return <p>Cargando...</p>;
     }
-    
+
     return (
-        <>  
+        <>
             <Cabecera1 />
             <div>
                 <h4 className='ProductoAvTi'>Título del producto: {producto.nombre}</h4>
@@ -59,21 +71,20 @@ function PaginaProductoPrincipal() {
                 <div style={{ borderTop: "2px solid black", width: "100%" }}></div>
             </div>
             <hr />
-    
-            
+
             <div className='ProductoContenido'>
                 <nav id="arriba_derecha" className='ProductoContenidoE'>
                     <h4 id="DisponibleTitulo">Disponible</h4>
                     <p id="Precio">S/{producto.precio * cantidad}</p>
-                    
-                    <button type='button' id="AnadirCarritoBoton">Añadir al Carrito</button>
+
+                    <button type='button' id="AnadirCarritoBoton" onClick={handleAgregarAlCarrito}>Añadir al Carrito</button>
                     <p id="textoCantidad">Cantidad</p>
                     <div id="cantidadControl">
                         <button onClick={() => handleCantidadChange(cantidad - 1)}>-</button>
                         <input type="number" value={cantidad} onChange={(e) => handleCantidadChange(Number(e.target.value))} />
                         <button onClick={() => handleCantidadChange(cantidad + 1)}>+</button>
                     </div>
-                    
+
                     <p onClick={toggleEnvios} style={{ cursor: 'pointer', color: 'blue', textDecoration: 'underline' }}>
                         Ver métodos de envío disponibles
                     </p>
@@ -103,6 +114,11 @@ function PaginaProductoPrincipal() {
                     </ul>
                 </div>
             </div>
+            {popupVisible && (
+                <div className="popup">
+                    Producto agregado al carrito!
+                </div>
+            )}
             <Pie />
         </>
     );
