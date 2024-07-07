@@ -1,3 +1,4 @@
+/*
 import React, { useState } from 'react';
 import '../../css/Dashboard.css';
 import usuarios from '../../Data/usuarios.json';
@@ -56,15 +57,35 @@ const TablaUsuarios = () => {
 
 
 export default TablaUsuarios;
+*/
 
-/*
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../css/Dashboard.css';
-import usuarios from '../../Data/usuarios.json';
-import usuariosBD from '../../Componentes8/Registro';
 
 const TablaUsuarios = () => {
   const [textoBusqueda, setTextoBusqueda] = useState('');
+  const [usuarios, setUsuarios] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchUsuarios = async () => {
+      try {
+        const response = await fetch('http://localhost:3080/api/basedatos/login');
+        if (!response.ok) {
+          throw new Error('Error en la solicitud');
+        }
+        const data = await response.json();
+        setUsuarios(data);
+        setLoading(false);
+      } catch (error) {
+        setError('Error al obtener usuarios');
+        setLoading(false);
+      }
+    };
+
+    fetchUsuarios();
+  }, []); // Dependencias vacías para que se ejecute solo una vez
 
   const manejarCambio = (event) => {
     setTextoBusqueda(event.target.value);
@@ -73,6 +94,14 @@ const TablaUsuarios = () => {
   const usuariosFiltrados = usuarios.filter(usuario =>
     `${usuario.nombre} ${usuario.apellido} ${usuario.id}`.toLowerCase().includes(textoBusqueda.toLowerCase())
   );
+
+  if (loading) {
+    return <div>Cargando...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <div className="main-content">
@@ -94,7 +123,7 @@ const TablaUsuarios = () => {
               <th>Apellido</th>
               <th>Correo</th>
               <th>Fecha registro</th>
-              <th>Estado</th>
+              <th>Activo</th>
             </tr>
           </thead>
           <tbody>
@@ -105,7 +134,7 @@ const TablaUsuarios = () => {
                 <td>{usuario.apellido}</td>
                 <td>{usuario.correo}</td>
                 <td>{usuario.fechaRegistro}</td>
-                <td>{usuario.estado}</td>
+                <td>{usuario.activo ? 'Activo' : 'Inactivo'}</td>
               </tr>
             ))}
           </tbody>
@@ -115,6 +144,5 @@ const TablaUsuarios = () => {
   );
 };
 
-
 export default TablaUsuarios;
-*/
+
