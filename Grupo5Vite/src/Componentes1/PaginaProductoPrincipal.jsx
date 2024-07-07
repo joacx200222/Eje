@@ -11,7 +11,7 @@ function PaginaProductoPrincipal() {
     const [error, setError] = useState('');
     const [cantidad, setCantidad] = useState(1);
     const [mostrarEnvios, setMostrarEnvios] = useState(false);
-    const [popupVisible, setPopupVisible] = useState(false); // Nuevo estado para el popup
+    const [popupVisible, setPopupVisible] = useState(false);
     const { agregarAlCarrito } = useContext(CarritoContext);
 
     useEffect(() => {
@@ -51,7 +51,7 @@ function PaginaProductoPrincipal() {
         setPopupVisible(true);
         setTimeout(() => {
             setPopupVisible(false);
-        }, 4000); // Ocultar el popup después de 4 segundos
+        }, 4000); 
     };
 
     if (error) {
