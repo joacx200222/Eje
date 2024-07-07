@@ -66,10 +66,9 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        // Aquí puedes almacenar la información del usuario si lo necesitas
         localStorage.setItem('usuario', JSON.stringify(data.usuario));
         
-        // Redirigir al usuario a su página personal
+        // Redirigir al usuario a la pagina de menu usuario
         navigate('/menuUsuario');
       } else {
         setError(data.msg || 'Error al iniciar sesión');

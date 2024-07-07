@@ -120,7 +120,7 @@ const Registro = () => {
           apellido: DataRegistro.apellido,
           correo: DataRegistro.correo,
           contraseña: DataRegistro.pwd,
-          tipo: 'usuario' // Ajusta esto según tu modelo si es necesario
+          tipo: 'usuario'
         })
       });
 

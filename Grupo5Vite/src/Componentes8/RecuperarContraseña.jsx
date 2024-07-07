@@ -44,7 +44,7 @@ function RecuperarContraseña() {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3080/api/basedatos/cambiarPassword', {
+      const response = await fetch('http://localhost:3080/api/basedatos/cambiarPassword', {//mi api de cambiar pass, OJO QUE ES A 1235!!!
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -55,7 +55,7 @@ function RecuperarContraseña() {
       const data = await response.json();
 
       if (response.ok) {
-        setMensaje('Contraseña cambiada exitosamente. Revisa tu correo para más detalles.');
+        setMensaje('Contraseña cambiada exitosamente a 1235.');
         setError('');
       } else {
         setError(data.msg || 'Error al cambiar la contraseña');
