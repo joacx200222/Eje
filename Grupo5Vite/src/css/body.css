@@ -9,25 +9,12 @@
 .PrincipalBody1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 20px;
 
 
 }
 
-.PrincipalBody2{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
 
-.PrincipalBody3{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-
-}
 
 hr{
     border-width: 5px;
