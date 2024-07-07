@@ -2,6 +2,7 @@ const express = require("express");
 const db = require("../../db/models/index.js"); // Asegúrate de que esta ruta es correcta
 const Product = db.product; // `product` en minúscula si sigue el nombre del modelo definido
 const ruta = express.Router();
+const { Sequelize, Op } = require('sequelize');
 
 // Ruta para crear un nuevo producto
 ruta.post("/agregar", async (req, res) => {
@@ -69,15 +70,14 @@ ruta.get("/findAllxId/:idProducto", async (req, res) => {
   }
 });
 
-// Ruta para obtener productos por nombre (o parte de él)
-ruta.get("/findByName/:nombreProducto", async (req, res) => {
+ruta.get('/findByName/:nombreProducto', async (req, res) => {
   const nombre = req.params.nombreProducto;
   console.log("Consulta de productos por nombre");
   try {
     const products = await Product.findAll({
       where: {
         nombre: {
-          [Sequelize.Op.like]: `%${nombre}%` // Utiliza el operador `like` para buscar coincidencias parciales
+          [Op.like]: `%${nombre}%` // Utiliza el operador `like` para buscar coincidencias parciales
         }
       }
     });
@@ -88,10 +88,12 @@ ruta.get("/findByName/:nombreProducto", async (req, res) => {
       res.status(404).json({ msg: "No se encontraron productos con ese nombre" });
     }
   } catch (error) {
-    console.error("Error al buscar productos por nombre:", error);
-    res.status(500).json({ message: "Internal server error" });
+    console.error("Error al buscar productos por nombre:", error.message);
+    console.error(error.stack);
+    res.status(500).json({ message: "Internal server error", error: error.message });
   }
 });
+
 
 
 ruta.get("/all", async (req, res) => {
