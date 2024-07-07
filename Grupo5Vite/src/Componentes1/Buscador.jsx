@@ -8,26 +8,35 @@ function Buscador() {
     const [results, setResults] = useState([]);
     const history = useHistory();
 
-    const buscar = async (cadena) => {
-        setIsLoaded(false);
-        try {
-            const response = await fetch(`/api/productos/findByName/${cadena}`);
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setResults(data);
-            setIsLoaded(true);
-        } catch (error) {
-            setError(error);
-            setIsLoaded(true);
-        }
-    };
-
     useEffect(() => {
-        if (searchTerm) {
-            buscar(searchTerm);
-        }
+        let isMounted = true; // Flag to track mounted state
+
+        const buscar = async (cadena) => {
+            if (!cadena) return; // Early return if cadena is empty
+            setIsLoaded(false);
+            try {
+                const response = await fetch(`http://localhost:3080/api/productos/findbyName/${cadena}`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                if (isMounted) {
+                    setResults(data);
+                    setIsLoaded(true);
+                }
+            } catch (error) {
+                if (isMounted) {
+                    setError(error);
+                    setIsLoaded(true);
+                }
+            }
+        };
+
+        buscar(searchTerm);
+
+        return () => {
+            isMounted = false; // Set flag to false when the component unmounts
+        };
     }, [searchTerm]);
 
     const handleProductClick = (productId) => {
@@ -45,7 +54,7 @@ function Buscador() {
                     value={searchTerm}
                     onChange={(evento) => setSearchTerm(evento.target.value)}
                 />
-                <button onClick={() => buscar(searchTerm)}>Buscar</button>
+                <button onClick={() => searchTerm && buscar(searchTerm)}>Buscar</button>
             </div>
             {error && <div>Error: {error.message}</div>}
             {!isLoaded ? (
