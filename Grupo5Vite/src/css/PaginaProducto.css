@@ -49,3 +49,19 @@ ol{
     margin-left: 0;
   }
   
+.DescAv{
+    margin-left: 40px;
+}
+
+.ImagenProductoAV{
+        margin-top: -300px;
+        margin-left: 40px;
+        width: 100%; /* Ajusta según sea necesario */
+        max-width: 370px; /* Ajusta según sea necesario */
+        display: block;
+      
+    
+}
+.ProductoAV1{
+    background-color: white;
+}

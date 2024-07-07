@@ -53,11 +53,13 @@ function PaginaProductoPrincipal() {
                     <p>Cantidad exacta</p>
                     <p>Ver métodos de envío disponibles</p>
                 </nav>
+                <img src={producto.imagen} alt={`Imagen de ${producto.nombre}`} className="ImagenProductoAV" />
                 <div id='Detallado' className='ProductoContenidoE'>
                     <h4>Descripción</h4>
+                    <li className='DescAv'>Fabricado por {producto.fabricante} con serie {producto.serie} - {producto.nombre} </li>
                     <p id="Detalletexto">{producto.descripcion}</p>
                 </div>
-                <div id='Caracteristicas' className='ProductoContenidoE' >
+                <div id='Caracteristicas' className='ProductoContenidoE ProductoAV1' >
                     <h4 className='h4nuevoAV'>Características del producto:</h4>
                     <li>Precio: S/{producto.precio}</li>
                     <li>Material: {producto.material}</li>
