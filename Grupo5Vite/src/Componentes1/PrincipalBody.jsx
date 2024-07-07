@@ -121,11 +121,8 @@ const Producto = ({ id }) => {
 };
 
 const CargarProductos = () => {
-<<<<<<< HEAD
+
   const ids = [1, 2, ,9,8,7,6,5,4,3]; // IDs de productos que deseas obtener
-=======
-  const ids = [1, 2, 3];
->>>>>>> 97ebad2256887fcc5b35a7795b39bc8008e17966
 
   return (
     <div className="PrincipalBody">
