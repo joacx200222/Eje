@@ -77,6 +77,8 @@ const alSubmit = async (e) => {
 }
 
 export default Registro*/
+
+
 import React, { useState } from 'react';
 import './Registro.css';
 import Pie from '../ComponentesGeneral/Pie';
@@ -214,3 +216,5 @@ const Registro = () => {
 }
 
 export default Registro;
+
+

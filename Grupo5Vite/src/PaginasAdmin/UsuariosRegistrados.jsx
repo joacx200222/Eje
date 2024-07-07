@@ -11,6 +11,7 @@ import Paginacion from '../Componentes5/ProductosAdm/Paginacion'
 import Footer from '../Componentes5/ProductosAdm/footerAdm'
 import '../css/Dashboard.css'
 
+
 function UsuariosRegistrados (){
     return (
     <>

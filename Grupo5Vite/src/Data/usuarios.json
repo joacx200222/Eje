@@ -5,34 +5,30 @@
         "apellido": "Lopez Caro",
         "correo": "correo@sanchez.com",
         "fechaRegistro": "11/02/2022 ",
-        "estado": "Activo",
-        "acciones": "Ver | Desactivar"
+        "estado": "Activo"
     },
-    {
-        "id": 12333,
-        "nombre": "Ana",
-        "apellido": "Sanchez",
-        "correo": "anita123@hotmail.com",
-        "fechaRegistro": "11/02/2022 ",
-        "estado": "Inactivo",
-        "acciones": "Ver | Activar"
-    },
-    {
-        "id": 12334,
-        "nombre": "Ana",
-        "apellido": "Sanchez",
-        "correo": "anita123@hotmail.com",
-        "fechaRegistro": "11/02/2022 ",
-        "estado": "Inactivo",
-        "acciones": "Ver | Activar"
-    }, 
     {
         "id": 2,
-        "nombre": "Antonio",
-        "apellido": "Lopez Caro",
-        "correo": "correo@sanchez.com",
-        "fechaRegistro": "11/02/2022 ",
-        "estado": "Activo",
-        "acciones": "Ver | Desactivar"
+        "nombre": "Ana",
+        "apellido": "Sanchez",
+        "correo": "anita123@hotmail.com",
+        "fechaRegistro": "11/02/2023",
+        "estado": "Inactivo"
+    },
+    {
+        "id": 3,
+        "nombre": "Sonia",
+        "apellido": "Rafael",
+        "correo": "rafael2@hotmail.com",
+        "fechaRegistro": "11/10/2024",
+        "estado": "Inactivo"
+    }, 
+    {
+        "id": 4,
+        "nombre": "Lautaro",
+        "apellido": "Del Campo",
+        "correo": "lauti@outlook.com",
+        "fechaRegistro": "21/05/2023 ",
+        "estado": "Activo"
     }
 ]
