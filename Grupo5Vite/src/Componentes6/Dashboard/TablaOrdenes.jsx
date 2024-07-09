@@ -122,20 +122,17 @@ const TablaOrdenes = () => {
               <th>Direccion</th>
               <th>Cantidad</th>
               <th>Estado</th>
-              <th>Fecha</th>
-              <th>Producto</th>
-              <th>Nombre</th>
+              <th>Fecha de pedido</th>
             </tr>
           </thead>
           <tbody>
             {ordenesFiltradas.map(orden => (
               <tr key={orden.id}>
                 <td>{orden.id}</td>
-                <td>{orden.cliente}</td>
-                <td>{orden.producto}</td>
+                <td>{orden.direccion}</td>
                 <td>{orden.cantidad}</td>
-                <td>{orden.fecha}</td>
                 <td>{orden.estado}</td>
+                <td>{orden.fecha}</td>
               </tr>
             ))}
           </tbody>
