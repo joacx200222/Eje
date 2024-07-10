@@ -20,8 +20,7 @@ app.use(bodyParser.json());
 const whitelist = ["http://localhost:5173"];
 app.use(cors(whitelist));
 
-//mapear APU
-//app.use('/api/productos', producto)
+
 
 app.use("/api/basedatos", usuario);
 
@@ -30,11 +29,10 @@ app.use("/api/series", seriesRoute);
 
 app.use("/api/productos", rutaProductos);
 
+//ruta para admindashboard y productos admin
 app.use("/api/dashboard", dashboard)
 
-// API admin
-//app.use('/api/productos', dashboard)
-//app.use('/api/productos', productoAdmin)
+
 
 // Agregar el servicio de paginas web. PETICIONES LLEGAN
 app.get("/", (req, res) => {
