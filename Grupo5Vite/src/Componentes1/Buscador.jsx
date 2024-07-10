@@ -37,11 +37,11 @@ function Buscador() {
                 <button type='button' onClick={() => buscar(busqueda)}>BUSCAR</button>
             </div>
             {error && <div>Error: {error}</div>}
-            <ul>
+            <ul className='buscado'>
                 {resultados.map((producto) => (
                     <li key={producto.id}>
-                        <Link to={`/producto/${producto.id}`}> {/* Use Link to wrap the product name and image */}
-                            {producto.nombre} - <img src={producto.imagen} alt={producto.nombre} className='productoImagen'></img>
+                        <Link to={`/producto/${producto.id}`}> {}
+                            <img src={producto.imagen} alt={producto.nombre} className='productoImagen'></img> {producto.nombre} {producto.material} {producto.serie} - S/.{producto.precio} 
                         </Link>
                     </li>
                 ))}

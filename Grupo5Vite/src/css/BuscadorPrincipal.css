@@ -25,3 +25,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
+
+.buscado{
+    border: 2px solid #FF5733; 
+    padding: 10px;            
+    background-color: #FFF5E6; 
+    border-radius: 5px;       
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}

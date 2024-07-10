@@ -358,3 +358,467 @@
 	
 2024-07-06 16:06:52.957 -05 [26980] LOG:  empezando checkpoint: time
 2024-07-06 16:06:56.682 -05 [26980] LOG:  checkpoint complete: wrote 34 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.604 s, sync=0.092 s, total=3.725 s; sync files=30, longest=0.007 s, average=0.004 s; distance=130 kB, estimate=130 kB; lsn=0/1F72948, redo lsn=0/1F72910
+2024-07-10 10:58:35.935 -05 [19536] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-10 10:58:35.939 -05 [19536] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-10 10:58:35.940 -05 [19536] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-10 10:58:35.989 -05 [11424] LOG:  el sistema de bases de datos fue interrumpido; �ltima vez en funcionamiento en 2024-07-06 16:06:56 -05
+2024-07-10 10:58:37.131 -05 [11424] LOG:  el sistema de bases de datos no fue apagado apropiadamente; se est� efectuando la recuperaci�n autom�tica
+2024-07-10 10:58:37.138 -05 [11424] LOG:  redo comienza en 0/1F72910
+2024-07-10 10:58:37.138 -05 [11424] LOG:  largo de registro no v�lido en 0/1F729F8: se esperaba al menos 24, se obtuvo 0
+2024-07-10 10:58:37.138 -05 [11424] LOG:  redo listo en 0/1F729C0 utilizaci�n del sistema: CPU: usuario: 0.00 s, sistema: 0.00 s, transcurrido: 0.00 s
+2024-07-10 10:58:37.146 -05 [17288] LOG:  empezando checkpoint: end-of-recovery immediate wait
+2024-07-10 10:58:37.171 -05 [17288] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.007 s, total=0.030 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/1F729F8, redo lsn=0/1F729F8
+2024-07-10 10:58:37.189 -05 [19536] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-10 11:01:19.934 -05 [27996] ERROR:  no existe la relación «transcacions» en carácter 15
+2024-07-10 11:01:19.934 -05 [27996] SENTENCIA:  select * from "transcacions";
+2024-07-10 11:01:21.580 -05 [27996] ERROR:  no existe la relación «transcacions» en carácter 15
+2024-07-10 11:01:21.580 -05 [27996] SENTENCIA:  select * from "transcacions";
+2024-07-10 11:07:52.416 -05 [26520] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-10 11:07:57.246 -05 [27996] ERROR:  no existe la relación «transcacions» en carácter 15
+2024-07-10 11:07:57.246 -05 [27996] SENTENCIA:  select * from "transcacions";
+2024-07-10 11:08:00.614 -05 [27996] ERROR:  no existe la relación «transcacions» en carácter 15
+2024-07-10 11:08:00.614 -05 [27996] SENTENCIA:  select * from "transcacions";
+2024-07-10 11:08:37.183 -05 [17288] LOG:  empezando checkpoint: time
+2024-07-10 11:08:42.118 -05 [17288] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.808 s, sync=0.107 s, total=4.935 s; sync files=42, longest=0.012 s, average=0.003 s; distance=235 kB, estimate=235 kB; lsn=0/1FAD6A8, redo lsn=0/1FAD670
+2024-07-10 12:03:37.218 -05 [17288] LOG:  empezando checkpoint: time
+2024-07-10 12:03:37.686 -05 [17288] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.430 s, sync=0.011 s, total=0.468 s; sync files=4, longest=0.003 s, average=0.003 s; distance=6 kB, estimate=212 kB; lsn=0/1FAF148, redo lsn=0/1FAF110
+2024-07-10 12:27:35.691 -05 [9016] ERROR:  la relación «SequelizeMeta» ya existe
+2024-07-10 12:27:35.691 -05 [9016] SENTENCIA:  CREATE TABLE public."SequelizeMeta" (
+	    name character varying(255) NOT NULL
+	);
+2024-07-10 12:27:35.695 -05 [9016] ERROR:  la relación «dates» ya existe
+2024-07-10 12:27:35.695 -05 [9016] SENTENCIA:  CREATE TABLE public.dates (
+	    id integer NOT NULL,
+	    fecha timestamp with time zone,
+	    "año" integer,
+	    mes integer,
+	    dia integer,
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 12:27:35.699 -05 [9016] ERROR:  la relación «dates_id_seq» ya existe
+2024-07-10 12:27:35.699 -05 [9016] SENTENCIA:  CREATE SEQUENCE public.dates_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 12:27:35.705 -05 [9016] ERROR:  la relación «products» ya existe
+2024-07-10 12:27:35.705 -05 [9016] SENTENCIA:  CREATE TABLE public.products (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    fabricante character varying(255),
+	    precio double precision,
+	    serie character varying(255),
+	    tamano double precision,
+	    material character varying(255),
+	    movilidad boolean,
+	    piezas integer,
+	    combinable boolean,
+	    imagen bytea,
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 12:27:35.709 -05 [9016] ERROR:  la relación «products_id_seq» ya existe
+2024-07-10 12:27:35.709 -05 [9016] SENTENCIA:  CREATE SEQUENCE public.products_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 12:27:35.715 -05 [9016] ERROR:  la relación «transaccions» ya existe
+2024-07-10 12:27:35.715 -05 [9016] SENTENCIA:  CREATE TABLE public.transaccions (
+	    id integer NOT NULL,
+	    direccion character varying(255),
+	    cantidad integer,
+	    estado character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
+	    "fechaTransaccion" timestamp with time zone,
+	    "ProductoNombre" character varying(255),
+	    "nombreUsuario" character varying(255)
+	);
+2024-07-10 12:27:35.718 -05 [9016] ERROR:  la relación «transaccions_id_seq» ya existe
+2024-07-10 12:27:35.718 -05 [9016] SENTENCIA:  CREATE SEQUENCE public.transaccions_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 12:27:35.724 -05 [9016] ERROR:  la relación «usuarios» ya existe
+2024-07-10 12:27:35.724 -05 [9016] SENTENCIA:  CREATE TABLE public.usuarios (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    apellido character varying(255),
+	    correo character varying(255),
+	    "contraseña" character varying(255),
+	    tipo character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 12:27:35.727 -05 [9016] ERROR:  la relación «usuarios_id_seq» ya existe
+2024-07-10 12:27:35.727 -05 [9016] SENTENCIA:  CREATE SEQUENCE public.usuarios_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 12:27:35.737 -05 [9016] ERROR:  llave duplicada viola restricción de unicidad «SequelizeMeta_pkey»
+2024-07-10 12:27:35.737 -05 [9016] DETALLE:  Ya existe la llave (name)=(20240630232857-create-product.js).
+2024-07-10 12:27:35.737 -05 [9016] CONTEXTO:  COPY SequelizeMeta, line 1
+2024-07-10 12:27:35.737 -05 [9016] SENTENCIA:  COPY public."SequelizeMeta" (name) FROM stdin;
+2024-07-10 12:27:35.745 -05 [9016] ERROR:  no existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-10 12:27:35.745 -05 [9016] SENTENCIA:  COPY public.transaccions (id, direccion, cantidad, estado, "createdAt", "updatedAt", "fechaTransaccion", "ProductoNombre", "nombreUsuario") FROM stdin;
+2024-07-10 12:27:35.835 -05 [9016] ERROR:  no se permiten múltiples llaves primarias para la tabla «SequelizeMeta»
+2024-07-10 12:27:35.835 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public."SequelizeMeta"
+	    ADD CONSTRAINT "SequelizeMeta_pkey" PRIMARY KEY (name);
+2024-07-10 12:27:35.839 -05 [9016] ERROR:  no se permiten múltiples llaves primarias para la tabla «dates»
+2024-07-10 12:27:35.839 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT dates_pkey PRIMARY KEY (id);
+2024-07-10 12:27:35.843 -05 [9016] ERROR:  no se permiten múltiples llaves primarias para la tabla «products»
+2024-07-10 12:27:35.843 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT products_pkey PRIMARY KEY (id);
+2024-07-10 12:27:35.846 -05 [9016] ERROR:  no se permiten múltiples llaves primarias para la tabla «transaccions»
+2024-07-10 12:27:35.846 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT transaccions_pkey PRIMARY KEY (id);
+2024-07-10 12:27:35.850 -05 [9016] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-10 12:27:35.850 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT unique_fecha_constraint UNIQUE (fecha);
+2024-07-10 12:27:35.853 -05 [9016] ERROR:  la relación «unique_nombreU_constraint» ya existe
+2024-07-10 12:27:35.853 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT "unique_nombreU_constraint" UNIQUE (nombre);
+2024-07-10 12:27:35.856 -05 [9016] ERROR:  la relación «unique_nombre_constraint» ya existe
+2024-07-10 12:27:35.856 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT unique_nombre_constraint UNIQUE (nombre);
+2024-07-10 12:27:35.859 -05 [9016] ERROR:  no se permiten múltiples llaves primarias para la tabla «usuarios»
+2024-07-10 12:27:35.859 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT usuarios_pkey PRIMARY KEY (id);
+2024-07-10 12:27:35.863 -05 [9016] ERROR:  la restricción «transaccions_ProductoNombre_fkey» para la relación «transaccions» ya existe
+2024-07-10 12:27:35.863 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_ProductoNombre_fkey" FOREIGN KEY ("ProductoNombre") REFERENCES public.products(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 12:27:35.867 -05 [9016] ERROR:  no existe la columna «fechaTransaccion» referida en la llave foránea
+2024-07-10 12:27:35.867 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_fechaTransaccion_fkey" FOREIGN KEY ("fechaTransaccion") REFERENCES public.dates(fecha) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 12:27:35.870 -05 [9016] ERROR:  la restricción «transaccions_nombreUsuario_fkey» para la relación «transaccions» ya existe
+2024-07-10 12:27:35.870 -05 [9016] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_nombreUsuario_fkey" FOREIGN KEY ("nombreUsuario") REFERENCES public.usuarios(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 12:28:37.703 -05 [17288] LOG:  empezando checkpoint: time
+2024-07-10 12:28:41.518 -05 [17288] LOG:  checkpoint complete: wrote 35 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.706 s, sync=0.082 s, total=3.815 s; sync files=27, longest=0.011 s, average=0.004 s; distance=90 kB, estimate=200 kB; lsn=0/1FC5A30, redo lsn=0/1FC59F8
+2024-07-10 12:50:32.171 -05 [18408] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-10 12:50:47.314 -05 [8112] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-10 12:52:53.010 -05 [28112] LOG:  no se pudo recibir datos del cliente: An existing connection was forcibly closed by the remote host.
+	
+2024-07-10 12:53:37.566 -05 [17288] LOG:  empezando checkpoint: time
+2024-07-10 12:53:38.597 -05 [17288] LOG:  checkpoint complete: wrote 9 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.978 s, sync=0.028 s, total=1.031 s; sync files=7, longest=0.011 s, average=0.004 s; distance=15 kB, estimate=181 kB; lsn=0/1FC9720, redo lsn=0/1FC96E8
+2024-07-10 15:57:32.639 -05 [34056] ERROR:  la relación «SequelizeMeta» ya existe
+2024-07-10 15:57:32.639 -05 [34056] SENTENCIA:  CREATE TABLE public."SequelizeMeta" (
+	    name character varying(255) NOT NULL
+	);
+2024-07-10 15:57:32.646 -05 [34056] ERROR:  la relación «dates» ya existe
+2024-07-10 15:57:32.646 -05 [34056] SENTENCIA:  CREATE TABLE public.dates (
+	    id integer NOT NULL,
+	    fecha timestamp with time zone,
+	    "año" integer,
+	    mes integer,
+	    dia integer,
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.877+00'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.877+00'::timestamp with time zone NOT NULL
+	);
+2024-07-10 15:57:32.652 -05 [34056] ERROR:  la relación «dates_id_seq» ya existe
+2024-07-10 15:57:32.652 -05 [34056] SENTENCIA:  CREATE SEQUENCE public.dates_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 15:57:32.660 -05 [34056] ERROR:  la relación «products» ya existe
+2024-07-10 15:57:32.660 -05 [34056] SENTENCIA:  CREATE TABLE public.products (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    fabricante character varying(255),
+	    precio double precision,
+	    serie character varying(255),
+	    tamano double precision,
+	    material character varying(255),
+	    movilidad boolean,
+	    piezas integer,
+	    combinable boolean,
+	    imagen character varying(800),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.809+00'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.809+00'::timestamp with time zone NOT NULL
+	);
+2024-07-10 15:57:32.663 -05 [34056] ERROR:  la relación «products_id_seq» ya existe
+2024-07-10 15:57:32.663 -05 [34056] SENTENCIA:  CREATE SEQUENCE public.products_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 15:57:32.667 -05 [34056] ERROR:  la relación «transaccions» ya existe
+2024-07-10 15:57:32.667 -05 [34056] SENTENCIA:  CREATE TABLE public.transaccions (
+	    id integer NOT NULL,
+	    direccion character varying(255),
+	    cantidad integer,
+	    estado character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.9+00'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.9+00'::timestamp with time zone NOT NULL,
+	    "fechaTransaccion" timestamp with time zone,
+	    "ProductoNombre" character varying(255),
+	    "nombreUsuario" character varying(255)
+	);
+2024-07-10 15:57:32.671 -05 [34056] ERROR:  la relación «transaccions_id_seq» ya existe
+2024-07-10 15:57:32.671 -05 [34056] SENTENCIA:  CREATE SEQUENCE public.transaccions_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 15:57:32.675 -05 [34056] ERROR:  la relación «usuarios» ya existe
+2024-07-10 15:57:32.675 -05 [34056] SENTENCIA:  CREATE TABLE public.usuarios (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    apellido character varying(255),
+	    correo character varying(255),
+	    "contraseña" character varying(255),
+	    tipo character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.849+00'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.849+00'::timestamp with time zone NOT NULL
+	);
+2024-07-10 15:57:32.679 -05 [34056] ERROR:  la relación «usuarios_id_seq» ya existe
+2024-07-10 15:57:32.679 -05 [34056] SENTENCIA:  CREATE SEQUENCE public.usuarios_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 15:57:32.689 -05 [34056] ERROR:  llave duplicada viola restricción de unicidad «SequelizeMeta_pkey»
+2024-07-10 15:57:32.689 -05 [34056] DETALLE:  Ya existe la llave (name)=(20240630232857-create-product.js).
+2024-07-10 15:57:32.689 -05 [34056] CONTEXTO:  COPY SequelizeMeta, line 1
+2024-07-10 15:57:32.689 -05 [34056] SENTENCIA:  COPY public."SequelizeMeta" (name) FROM stdin;
+2024-07-10 15:57:32.698 -05 [34056] ERROR:  llave duplicada viola restricción de unicidad «products_pkey»
+2024-07-10 15:57:32.698 -05 [34056] DETALLE:  Ya existe la llave (id)=(1).
+2024-07-10 15:57:32.698 -05 [34056] CONTEXTO:  COPY products, line 1
+2024-07-10 15:57:32.698 -05 [34056] SENTENCIA:  COPY public.products (id, nombre, fabricante, precio, serie, tamano, material, movilidad, piezas, combinable, imagen, "createdAt", "updatedAt") FROM stdin;
+2024-07-10 15:57:32.702 -05 [34056] ERROR:  no existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-10 15:57:32.702 -05 [34056] SENTENCIA:  COPY public.transaccions (id, direccion, cantidad, estado, "createdAt", "updatedAt", "fechaTransaccion", "ProductoNombre", "nombreUsuario") FROM stdin;
+2024-07-10 15:57:32.709 -05 [34056] ERROR:  llave duplicada viola restricción de unicidad «usuarios_pkey»
+2024-07-10 15:57:32.709 -05 [34056] DETALLE:  Ya existe la llave (id)=(1).
+2024-07-10 15:57:32.709 -05 [34056] CONTEXTO:  COPY usuarios, line 1
+2024-07-10 15:57:32.709 -05 [34056] SENTENCIA:  COPY public.usuarios (id, nombre, apellido, correo, "contraseña", tipo, "createdAt", "updatedAt") FROM stdin;
+2024-07-10 15:57:32.792 -05 [34056] ERROR:  no se permiten múltiples llaves primarias para la tabla «SequelizeMeta»
+2024-07-10 15:57:32.792 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public."SequelizeMeta"
+	    ADD CONSTRAINT "SequelizeMeta_pkey" PRIMARY KEY (name);
+2024-07-10 15:57:32.795 -05 [34056] ERROR:  no se permiten múltiples llaves primarias para la tabla «dates»
+2024-07-10 15:57:32.795 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT dates_pkey PRIMARY KEY (id);
+2024-07-10 15:57:32.799 -05 [34056] ERROR:  no se permiten múltiples llaves primarias para la tabla «products»
+2024-07-10 15:57:32.799 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT products_pkey PRIMARY KEY (id);
+2024-07-10 15:57:32.803 -05 [34056] ERROR:  no se permiten múltiples llaves primarias para la tabla «transaccions»
+2024-07-10 15:57:32.803 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT transaccions_pkey PRIMARY KEY (id);
+2024-07-10 15:57:32.806 -05 [34056] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-10 15:57:32.806 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT unique_fecha_constraint UNIQUE (fecha);
+2024-07-10 15:57:32.810 -05 [34056] ERROR:  la relación «unique_nombreU_constraint» ya existe
+2024-07-10 15:57:32.810 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT "unique_nombreU_constraint" UNIQUE (nombre);
+2024-07-10 15:57:32.813 -05 [34056] ERROR:  la relación «unique_nombre_constraint» ya existe
+2024-07-10 15:57:32.813 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT unique_nombre_constraint UNIQUE (nombre);
+2024-07-10 15:57:32.816 -05 [34056] ERROR:  no se permiten múltiples llaves primarias para la tabla «usuarios»
+2024-07-10 15:57:32.816 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT usuarios_pkey PRIMARY KEY (id);
+2024-07-10 15:57:32.820 -05 [34056] ERROR:  la restricción «transaccions_ProductoNombre_fkey» para la relación «transaccions» ya existe
+2024-07-10 15:57:32.820 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_ProductoNombre_fkey" FOREIGN KEY ("ProductoNombre") REFERENCES public.products(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 15:57:32.824 -05 [34056] ERROR:  no existe la columna «fechaTransaccion» referida en la llave foránea
+2024-07-10 15:57:32.824 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_fechaTransaccion_fkey" FOREIGN KEY ("fechaTransaccion") REFERENCES public.dates(fecha) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 15:57:32.827 -05 [34056] ERROR:  la restricción «transaccions_nombreUsuario_fkey» para la relación «transaccions» ya existe
+2024-07-10 15:57:32.827 -05 [34056] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_nombreUsuario_fkey" FOREIGN KEY ("nombreUsuario") REFERENCES public.usuarios(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 15:58:52.632 -05 [17288] LOG:  empezando checkpoint: time
+2024-07-10 15:58:54.768 -05 [17288] LOG:  checkpoint complete: wrote 20 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.075 s, sync=0.043 s, total=2.136 s; sync files=17, longest=0.004 s, average=0.003 s; distance=67 kB, estimate=170 kB; lsn=0/1FDA660, redo lsn=0/1FDA628
+2024-07-10 16:43:27.539 -05 [19536] LOG:  se recibi� petici�n de apagado r�pido
+2024-07-10 16:43:27.545 -05 [11836] ERROR:  cancelando la sentencia debido a una petici�n del usuario
+2024-07-10 16:43:27.547 -05 [19536] LOG:  abortando transacciones activas
+2024-07-10 16:43:27.551 -05 [19536] LOG:  proceso ayudante �logical replication launcher� (PID 11836) termin� con c�digo de salida 1
+2024-07-10 16:43:27.555 -05 [17288] LOG:  apagando
+2024-07-10 16:43:27.558 -05 [17288] LOG:  empezando checkpoint: shutdown immediate
+2024-07-10 16:43:27.579 -05 [17288] LOG:  checkpoint complete: wrote 2 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.003 s, total=0.024 s; sync files=1, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=153 kB; lsn=0/1FDA710, redo lsn=0/1FDA710
+2024-07-10 16:43:27.580 -05 [17288] LOG:  no se pudo abrir el archivo temporal de estad�sticas �pg_stat/pgstat.tmp�: No such file or directory
+2024-07-10 16:43:27.587 -05 [19536] LOG:  el sistema de bases de datos est� apagado
+2024-07-10 16:45:09.796 -05 [22032] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-10 16:45:09.801 -05 [22032] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-10 16:45:09.801 -05 [22032] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-10 16:45:09.858 -05 [35928] LOG:  el sistema de bases de datos fue apagado en 2024-07-10 16:43:27 -05
+2024-07-10 16:45:09.927 -05 [22032] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-10 16:45:12.896 -05 [22032] LOG:  se recibi� petici�n de apagado r�pido
+2024-07-10 16:45:12.902 -05 [22032] LOG:  abortando transacciones activas
+2024-07-10 16:45:12.907 -05 [22032] LOG:  proceso ayudante �logical replication launcher� (PID 28476) termin� con c�digo de salida 1
+2024-07-10 16:45:12.908 -05 [36772] LOG:  apagando
+2024-07-10 16:45:12.911 -05 [36772] LOG:  empezando checkpoint: shutdown immediate
+2024-07-10 16:45:12.936 -05 [36772] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.006 s, total=0.029 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/1FDA788, redo lsn=0/1FDA788
+2024-07-10 16:45:12.937 -05 [36772] LOG:  no se pudo abrir el archivo temporal de estad�sticas �pg_stat/pgstat.tmp�: No such file or directory
+2024-07-10 16:45:12.942 -05 [22032] LOG:  el sistema de bases de datos est� apagado
+2024-07-10 17:36:18.931 -05 [12548] LOG:  iniciando PostgreSQL 16.3, compiled by Visual C++ build 1939, 64-bit
+2024-07-10 17:36:18.935 -05 [12548] LOG:  escuchando en la direcci�n IPv6 �::1�, port 5432
+2024-07-10 17:36:18.936 -05 [12548] LOG:  escuchando en la direcci�n IPv4 �127.0.0.1�, port 5432
+2024-07-10 17:36:18.988 -05 [14508] LOG:  el sistema de bases de datos fue apagado en 2024-07-10 16:45:12 -05
+2024-07-10 17:36:19.009 -05 [12548] LOG:  el sistema de bases de datos est� listo para aceptar conexiones
+2024-07-10 17:41:18.997 -05 [37284] LOG:  empezando checkpoint: time
+2024-07-10 17:41:19.026 -05 [37284] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.007 s, total=0.032 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/1FDA870, redo lsn=0/1FDA838
+2024-07-10 17:42:02.677 -05 [25788] ERROR:  error de sintaxis en o cerca de «selecto» en carácter 1
+2024-07-10 17:42:02.677 -05 [25788] SENTENCIA:  selecto * from "products";
+2024-07-10 17:42:03.790 -05 [25788] ERROR:  error de sintaxis en o cerca de «selecto» en carácter 1
+2024-07-10 17:42:03.790 -05 [25788] SENTENCIA:  selecto * from "products";
+2024-07-10 18:06:05.372 -05 [35276] ERROR:  la relación «SequelizeMeta» ya existe
+2024-07-10 18:06:05.372 -05 [35276] SENTENCIA:  CREATE TABLE public."SequelizeMeta" (
+	    name character varying(255) NOT NULL
+	);
+2024-07-10 18:06:05.378 -05 [35276] ERROR:  la relación «dates» ya existe
+2024-07-10 18:06:05.378 -05 [35276] SENTENCIA:  CREATE TABLE public.dates (
+	    id integer NOT NULL,
+	    fecha timestamp with time zone,
+	    "año" integer,
+	    mes integer,
+	    dia integer,
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 18:06:05.383 -05 [35276] ERROR:  la relación «dates_id_seq» ya existe
+2024-07-10 18:06:05.383 -05 [35276] SENTENCIA:  CREATE SEQUENCE public.dates_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 18:06:05.395 -05 [35276] ERROR:  la relación «products» ya existe
+2024-07-10 18:06:05.395 -05 [35276] SENTENCIA:  CREATE TABLE public.products (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    fabricante character varying(255),
+	    precio double precision,
+	    serie character varying(255),
+	    tamano double precision,
+	    material character varying(255),
+	    movilidad boolean,
+	    piezas integer,
+	    combinable boolean,
+	    imagen bytea,
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 18:06:05.398 -05 [35276] ERROR:  la relación «products_id_seq» ya existe
+2024-07-10 18:06:05.398 -05 [35276] SENTENCIA:  CREATE SEQUENCE public.products_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 18:06:05.403 -05 [35276] ERROR:  la relación «transaccions» ya existe
+2024-07-10 18:06:05.403 -05 [35276] SENTENCIA:  CREATE TABLE public.transaccions (
+	    id integer NOT NULL,
+	    direccion character varying(255),
+	    cantidad integer,
+	    estado character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
+	    "fechaTransaccion" timestamp with time zone,
+	    "ProductoNombre" character varying(255),
+	    "nombreUsuario" character varying(255)
+	);
+2024-07-10 18:06:05.406 -05 [35276] ERROR:  la relación «transaccions_id_seq» ya existe
+2024-07-10 18:06:05.406 -05 [35276] SENTENCIA:  CREATE SEQUENCE public.transaccions_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 18:06:05.412 -05 [35276] ERROR:  la relación «usuarios» ya existe
+2024-07-10 18:06:05.412 -05 [35276] SENTENCIA:  CREATE TABLE public.usuarios (
+	    id integer NOT NULL,
+	    nombre character varying(255),
+	    apellido character varying(255),
+	    correo character varying(255),
+	    "contraseña" character varying(255),
+	    tipo character varying(255),
+	    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL,
+	    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL
+	);
+2024-07-10 18:06:05.415 -05 [35276] ERROR:  la relación «usuarios_id_seq» ya existe
+2024-07-10 18:06:05.415 -05 [35276] SENTENCIA:  CREATE SEQUENCE public.usuarios_id_seq
+	    AS integer
+	    START WITH 1
+	    INCREMENT BY 1
+	    NO MINVALUE
+	    NO MAXVALUE
+	    CACHE 1;
+2024-07-10 18:06:05.432 -05 [35276] ERROR:  llave duplicada viola restricción de unicidad «SequelizeMeta_pkey»
+2024-07-10 18:06:05.432 -05 [35276] DETALLE:  Ya existe la llave (name)=(20240630232857-create-product.js).
+2024-07-10 18:06:05.432 -05 [35276] CONTEXTO:  COPY SequelizeMeta, line 1
+2024-07-10 18:06:05.432 -05 [35276] SENTENCIA:  COPY public."SequelizeMeta" (name) FROM stdin;
+2024-07-10 18:06:05.440 -05 [35276] ERROR:  no existe la columna «fechaTransaccion» en la relación «transaccions»
+2024-07-10 18:06:05.440 -05 [35276] SENTENCIA:  COPY public.transaccions (id, direccion, cantidad, estado, "createdAt", "updatedAt", "fechaTransaccion", "ProductoNombre", "nombreUsuario") FROM stdin;
+2024-07-10 18:06:05.448 -05 [35276] ERROR:  llave duplicada viola restricción de unicidad «usuarios_pkey»
+2024-07-10 18:06:05.448 -05 [35276] DETALLE:  Ya existe la llave (id)=(5).
+2024-07-10 18:06:05.448 -05 [35276] CONTEXTO:  COPY usuarios, line 1
+2024-07-10 18:06:05.448 -05 [35276] SENTENCIA:  COPY public.usuarios (id, nombre, apellido, correo, "contraseña", tipo, "createdAt", "updatedAt") FROM stdin;
+2024-07-10 18:06:05.530 -05 [35276] ERROR:  no se permiten múltiples llaves primarias para la tabla «SequelizeMeta»
+2024-07-10 18:06:05.530 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public."SequelizeMeta"
+	    ADD CONSTRAINT "SequelizeMeta_pkey" PRIMARY KEY (name);
+2024-07-10 18:06:05.534 -05 [35276] ERROR:  no se permiten múltiples llaves primarias para la tabla «dates»
+2024-07-10 18:06:05.534 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT dates_pkey PRIMARY KEY (id);
+2024-07-10 18:06:05.537 -05 [35276] ERROR:  no se permiten múltiples llaves primarias para la tabla «products»
+2024-07-10 18:06:05.537 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT products_pkey PRIMARY KEY (id);
+2024-07-10 18:06:05.540 -05 [35276] ERROR:  no se permiten múltiples llaves primarias para la tabla «transaccions»
+2024-07-10 18:06:05.540 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT transaccions_pkey PRIMARY KEY (id);
+2024-07-10 18:06:05.544 -05 [35276] ERROR:  la relación «unique_fecha_constraint» ya existe
+2024-07-10 18:06:05.544 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.dates
+	    ADD CONSTRAINT unique_fecha_constraint UNIQUE (fecha);
+2024-07-10 18:06:05.547 -05 [35276] ERROR:  la relación «unique_nombreU_constraint» ya existe
+2024-07-10 18:06:05.547 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT "unique_nombreU_constraint" UNIQUE (nombre);
+2024-07-10 18:06:05.550 -05 [35276] ERROR:  la relación «unique_nombre_constraint» ya existe
+2024-07-10 18:06:05.550 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.products
+	    ADD CONSTRAINT unique_nombre_constraint UNIQUE (nombre);
+2024-07-10 18:06:05.553 -05 [35276] ERROR:  no se permiten múltiples llaves primarias para la tabla «usuarios»
+2024-07-10 18:06:05.553 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.usuarios
+	    ADD CONSTRAINT usuarios_pkey PRIMARY KEY (id);
+2024-07-10 18:06:05.558 -05 [35276] ERROR:  la restricción «transaccions_ProductoNombre_fkey» para la relación «transaccions» ya existe
+2024-07-10 18:06:05.558 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_ProductoNombre_fkey" FOREIGN KEY ("ProductoNombre") REFERENCES public.products(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 18:06:05.562 -05 [35276] ERROR:  no existe la columna «fechaTransaccion» referida en la llave foránea
+2024-07-10 18:06:05.562 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_fechaTransaccion_fkey" FOREIGN KEY ("fechaTransaccion") REFERENCES public.dates(fecha) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 18:06:05.565 -05 [35276] ERROR:  la restricción «transaccions_nombreUsuario_fkey» para la relación «transaccions» ya existe
+2024-07-10 18:06:05.565 -05 [35276] SENTENCIA:  ALTER TABLE ONLY public.transaccions
+	    ADD CONSTRAINT "transaccions_nombreUsuario_fkey" FOREIGN KEY ("nombreUsuario") REFERENCES public.usuarios(nombre) ON UPDATE CASCADE ON DELETE SET NULL;
+2024-07-10 18:06:18.051 -05 [37284] LOG:  empezando checkpoint: time
+2024-07-10 18:06:20.324 -05 [37284] LOG:  checkpoint complete: wrote 21 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.189 s, sync=0.056 s, total=2.273 s; sync files=18, longest=0.012 s, average=0.004 s; distance=78 kB, estimate=78 kB; lsn=0/1FEE1A0, redo lsn=0/1FEE168
+2024-07-10 18:17:14.874 -05 [12548] LOG:  se recibi� petici�n de apagado r�pido
+2024-07-10 18:17:14.879 -05 [12548] LOG:  abortando transacciones activas
+2024-07-10 18:17:14.884 -05 [12548] LOG:  proceso ayudante �logical replication launcher� (PID 34744) termin� con c�digo de salida 1
+2024-07-10 18:17:14.885 -05 [37284] LOG:  apagando
+2024-07-10 18:17:14.888 -05 [37284] LOG:  empezando checkpoint: shutdown immediate
+2024-07-10 18:17:14.910 -05 [37284] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.003 s, total=0.025 s; sync files=1, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=70 kB; lsn=0/1FEE250, redo lsn=0/1FEE250
+2024-07-10 18:17:14.910 -05 [37284] LOG:  no se pudo abrir el archivo temporal de estad�sticas �pg_stat/pgstat.tmp�: No such file or directory
+2024-07-10 18:17:14.916 -05 [12548] LOG:  el sistema de bases de datos est� apagado

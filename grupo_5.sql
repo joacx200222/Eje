@@ -41,8 +41,8 @@ CREATE TABLE public.dates (
     "año" integer,
     mes integer,
     dia integer,
-    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.877+00'::timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.877+00'::timestamp with time zone NOT NULL
+    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.092-05'::timestamp with time zone NOT NULL
 );
 
 
@@ -85,9 +85,9 @@ CREATE TABLE public.products (
     movilidad boolean,
     piezas integer,
     combinable boolean,
-    imagen character varying(800),
-    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.809+00'::timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.809+00'::timestamp with time zone NOT NULL
+    imagen bytea,
+    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.038-05'::timestamp with time zone NOT NULL
 );
 
 
@@ -124,8 +124,8 @@ CREATE TABLE public.transaccions (
     direccion character varying(255),
     cantidad integer,
     estado character varying(255),
-    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.9+00'::timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.9+00'::timestamp with time zone NOT NULL,
+    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.119-05'::timestamp with time zone NOT NULL,
     "fechaTransaccion" timestamp with time zone,
     "ProductoNombre" character varying(255),
     "nombreUsuario" character varying(255)
@@ -167,8 +167,8 @@ CREATE TABLE public.usuarios (
     correo character varying(255),
     "contraseña" character varying(255),
     tipo character varying(255),
-    "createdAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.849+00'::timestamp with time zone NOT NULL,
-    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 23:07:36.849+00'::timestamp with time zone NOT NULL
+    "createdAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL,
+    "updatedAt" timestamp with time zone DEFAULT '2024-07-06 17:53:17.07-05'::timestamp with time zone NOT NULL
 );
 
 
@@ -239,7 +239,6 @@ COPY public."SequelizeMeta" (name) FROM stdin;
 20240701133333-add-fecha.js
 20240701133333-add-product.js
 20240701133333-add-usuario.js
-20240630235730-change-column-type.js
 \.
 
 
@@ -256,16 +255,16 @@ COPY public.dates (id, fecha, "año", mes, dia, "createdAt", "updatedAt") FROM s
 --
 
 COPY public.products (id, nombre, fabricante, precio, serie, tamano, material, movilidad, piezas, combinable, imagen, "createdAt", "updatedAt") FROM stdin;
-1	LEGO Stitch	LEGO	70	Disney	8.3	silk	f	28	t	https://lh3.googleusercontent.com/pw/AP1GczM8Ncby-M1fwAExeM89_T3a1tD9XWsjUlG9IQHFPC7xElmVrjKKEQ1-hCYlYpKQYpIdtkg6im6hiJA10pH4-JOEJh4GJhjFaoHApzx6Tc3abZDKI_4jD5-pvPh0zyHJimuVsMhivaMhL1mXSEL7OrU=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-2	Barbie Car	Mattel	25	Barbie	19.4	polyester	f	93	f	https://lh3.googleusercontent.com/pw/AP1GczOVUAa4B7s79L-t2tlud2XXtRNQnoNZ_aVK7ulXiBAJTJJ0V10k-3A31DQLX7VyYt53UUxeegMI9e62BOe1H0EMDHnI-E0Qmt5V-NErGHflOvb1MGiDH_IYUn-vIrITZLIMUb1P8b-MhCIeYx_6jUY=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-3	Godzilla Toy	Toho Co	95	Godzilla	18.8	polyester	f	44	t	https://lh3.googleusercontent.com/pw/AP1GczP7IRZKHyE0ARhB1Zj-llAjS3RCZHRvHBf9FtZIFCeExvelO3e9SodCVmLeXNNHmUIfUtfc1Dt-7QFoGM3svnbCwwv35VgMuUvN8-r33lF6Y4lcKS07qQdayCqiaacjG8_lbgwvdJm3ZQrKjZUhIAE=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-4	Woody Figure	Hasbro	38	Toy Story	28.2	cotton	f	100	f	https://lh3.googleusercontent.com/pw/AP1GczPSSLZ1TcZ30PXxNLOip9Bn1a1G5izImIOowA4yXoYd2VSd828e6RaGI31h4h4eM-OgUQZ5wYTPk6SqC0FWjfzMQu4hPrPdKncVs8K3KJ63NsMnqMUM1KkikJY7PsVB6SiFH3nAgbktdHuVUIhVqV4=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-5	Goku Figura	Bandai	95	Dragon Ball Z	9.6	cotton	f	42	t	https://lh3.googleusercontent.com/pw/AP1GczOGw1sMDd9i-Gbt7xpSOoSdMvPBBrhBrb4NFh2ruaQyCMo6AH-Ngnzxg2LFPz98K5205IWnZLsWMHkZd6bfkF530CGhlrYFikKEzTkBz51ixBwgemNaeccFwyttWi2U4szQgkejxo5wQbd6M74riv0=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-6	Mewtwo Toy	Pokemon	44	Pokemon	25.2	leather	f	14	f	https://lh3.googleusercontent.com/pw/AP1GczOrXLbnMKbXi_f2LGG3YrCmTtq5zjsIxPkT1YRcYQsH-XZEwSjOliX-pIHhVjb5GpT0otzdgEVfkq9GhpjVcyEcp6deF-I6M8ill6R-8sMG17o1u3BPKfIahZs7tz_axlvUsXfXBi8hl3Qw1ikHx8Q=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-7	Han Solo Con Cerdo	Funko	48	Star Wars	21.6	polyester	t	46	f	https://lh3.googleusercontent.com/pw/AP1GczNlPORjVnFl3De5YE3qQOVKYF8LyFkFY52HJJjSewg8Iz1bUgjI8DU0fSy44593sImCJszNjpuQGlG8XCsvlzaQc070YLj3ldXl1dnC_dINbYH8RSqFw4ybYDyGt1kQUFpvZb-5KyaJXVIUrC4agXk=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-8	Ryu Figurine	Capcom	56	Street Fighter	24.7	nylon	f	37	f	https://lh3.googleusercontent.com/pw/AP1GczNWTdCmG7iSd-kCeKMx80-lH1R7lJ_XUhBkxQellW29f15ZP3pb1FEzq63t8dxQxCMzaPASD73WBv7liVuylhVi4uLVp-luCsooCEMf9BeMZRtgpySN4Oco_fzXAb9GPm8Vf1IRdmbrRD3Fwhyo3nY=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-9	Perrito Peluche	Generic	41	Random Series	13.4	wool	f	22	t	https://lh3.googleusercontent.com/pw/AP1GczPy2reIhqiYvH99NOGeSD6Fq92WF7Fe6MjSoWBIwV-5zWhUCPVejjhPKGcWnzUBAt5lOFrFARD0U3D3Gq3D2zgpvz6msLYgr9KJtUoZfvKpqVE5v-WmpwfAKZJ6pVe9D2528gqS_Z6Nq7R1u2UMxOg=w370-h370-s-no-gm	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
-10	Garfield	Mattel	90	Another Series	10.9	wool	f	66	f	https://lh3.googleusercontent.com/pw/AP1GczMusgr48j5rp4n4aI_1OvY1iplqsiZBbFUEn91qKHmVQWyYG8rOr77q8uBScPLYAqqE6CQxZ1b4Yx9x7jCdT3o39dY5EQW0I24OV2QHUdSjxV_KJIV23Kl6ZOehjpGHTdQ5KEQkcjKJwU1yQUCAbo8=w370-h370-s-no-gm?authuser=2	2024-07-06 23:07:36.809+00	2024-07-06 23:07:36.809+00
+1	LEGO Stitch	LEGO	70	Disney	8.3	silk	f	28	t	https://lh3.googleusercontent.com/pw/AP1GczM8Ncby-M1fwAExeM89_T3a1tD9XWsjUlG9IQHFPC7xElmVrjKKEQ1-hCYlYpKQYpIdtkg6im6hiJA10pH4-JOEJh4GJhjFaoHApzx6Tc3abZDKI_4jD5-pvPh0zyHJimuVsMhivaMhL1mXSEL7OrU=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+2	Barbie Car	Mattel	25	Barbie	19.4	polyester	f	93	f	https://lh3.googleusercontent.com/pw/AP1GczOVUAa4B7s79L-t2tlud2XXtRNQnoNZ_aVK7ulXiBAJTJJ0V10k-3A31DQLX7VyYt53UUxeegMI9e62BOe1H0EMDHnI-E0Qmt5V-NErGHflOvb1MGiDH_IYUn-vIrITZLIMUb1P8b-MhCIeYx_6jUY=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+3	Godzilla Toy	Toho Co	95	Godzilla	18.8	polyester	f	44	t	https://lh3.googleusercontent.com/pw/AP1GczP7IRZKHyE0ARhB1Zj-llAjS3RCZHRvHBf9FtZIFCeExvelO3e9SodCVmLeXNNHmUIfUtfc1Dt-7QFoGM3svnbCwwv35VgMuUvN8-r33lF6Y4lcKS07qQdayCqiaacjG8_lbgwvdJm3ZQrKjZUhIAE=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+4	Woody Figure	Hasbro	38	Toy Story	28.2	cotton	f	100	f	https://lh3.googleusercontent.com/pw/AP1GczPSSLZ1TcZ30PXxNLOip9Bn1a1G5izImIOowA4yXoYd2VSd828e6RaGI31h4h4eM-OgUQZ5wYTPk6SqC0FWjfzMQu4hPrPdKncVs8K3KJ63NsMnqMUM1KkikJY7PsVB6SiFH3nAgbktdHuVUIhVqV4=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+5	Goku Figura	Bandai	95	Dragon Ball Z	9.6	cotton	f	42	t	https://lh3.googleusercontent.com/pw/AP1GczOGw1sMDd9i-Gbt7xpSOoSdMvPBBrhBrb4NFh2ruaQyCMo6AH-Ngnzxg2LFPz98K5205IWnZLsWMHkZd6bfkF530CGhlrYFikKEzTkBz51ixBwgemNaeccFwyttWi2U4szQgkejxo5wQbd6M74riv0=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+6	Mewtwo Toy	Pokemon	44	Pokemon	25.2	leather	f	14	f	https://lh3.googleusercontent.com/pw/AP1GczOrXLbnMKbXi_f2LGG3YrCmTtq5zjsIxPkT1YRcYQsH-XZEwSjOliX-pIHhVjb5GpT0otzdgEVfkq9GhpjVcyEcp6deF-I6M8ill6R-8sMG17o1u3BPKfIahZs7tz_axlvUsXfXBi8hl3Qw1ikHx8Q=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+7	Han Solo Con Cerdo	Funko	48	Star Wars	21.6	polyester	t	46	f	https://lh3.googleusercontent.com/pw/AP1GczNlPORjVnFl3De5YE3qQOVKYF8LyFkFY52HJJjSewg8Iz1bUgjI8DU0fSy44593sImCJszNjpuQGlG8XCsvlzaQc070YLj3ldXl1dnC_dINbYH8RSqFw4ybYDyGt1kQUFpvZb-5KyaJXVIUrC4agXk=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+8	Ryu Figurine	Capcom	56	Street Fighter	24.7	nylon	f	37	f	https://lh3.googleusercontent.com/pw/AP1GczNWTdCmG7iSd-kCeKMx80-lH1R7lJ_XUhBkxQellW29f15ZP3pb1FEzq63t8dxQxCMzaPASD73WBv7liVuylhVi4uLVp-luCsooCEMf9BeMZRtgpySN4Oco_fzXAb9GPm8Vf1IRdmbrRD3Fwhyo3nY=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+9	Perrito Peluche	Generic	41	Random Series	13.4	wool	f	22	t	https://lh3.googleusercontent.com/pw/AP1GczPy2reIhqiYvH99NOGeSD6Fq92WF7Fe6MjSoWBIwV-5zWhUCPVejjhPKGcWnzUBAt5lOFrFARD0U3D3Gq3D2zgpvz6msLYgr9KJtUoZfvKpqVE5v-WmpwfAKZJ6pVe9D2528gqS_Z6Nq7R1u2UMxOg=w370-h370-s-no-gm	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
+10	Garfield	Mattel	90	Another Series	10.9	wool	f	66	f	https://lh3.googleusercontent.com/pw/AP1GczMusgr48j5rp4n4aI_1OvY1iplqsiZBbFUEn91qKHmVQWyYG8rOr77q8uBScPLYAqqE6CQxZ1b4Yx9x7jCdT3o39dY5EQW0I24OV2QHUdSjxV_KJIV23Kl6ZOehjpGHTdQ5KEQkcjKJwU1yQUCAbo8=w370-h370-s-no-gm?authuser=2	2024-07-06 17:53:17.038-05	2024-07-06 17:53:17.038-05
 \.
 
 
@@ -282,10 +281,11 @@ COPY public.transaccions (id, direccion, cantidad, estado, "createdAt", "updated
 --
 
 COPY public.usuarios (id, nombre, apellido, correo, "contraseña", tipo, "createdAt", "updatedAt") FROM stdin;
-1	Sergio	Avila	sergil@yahoo.com	1234	usuario	2024-07-07 01:36:23.478+00	2024-07-07 01:36:23.478+00
-2	pepito	pepon	p@gmail.com	1235	usuario	2024-07-07 02:25:14.782+00	2024-07-07 02:28:04.053+00
-3	Pepo	Pepon	poema@gmail.com	1234	usuario	2024-07-07 14:50:31.485+00	2024-07-07 14:50:31.485+00
-4	SergioN	SergioN	ser@hotmail.com	1234	usuario	2024-07-10 15:18:07.182+00	2024-07-10 15:18:07.182+00
+5	Nani	Grupo5	juan.perez@example.com	securepassword123	usuario	2024-07-06 19:25:30.048-05	2024-07-06 19:25:30.048-05
+1	john	snown	johns@gmail.com	1235	usuario	2024-07-06 17:53:17.07-05	2024-07-06 20:59:05.52-05
+6	Jesus	Lujan	jesuslujan@gmail.com	1235	usuario	2024-07-06 20:28:02.473-05	2024-07-06 21:02:39.936-05
+2	Juan	Pérez	juan.perez@example.com	1235	usuario	2024-07-06 19:23:38.059-05	2024-07-06 21:03:48.115-05
+7	asd	asd	asd@example.com	1235	usuario	2024-07-06 21:08:40.212-05	2024-07-06 21:09:03.915-05
 \.
 
 
@@ -314,7 +314,7 @@ SELECT pg_catalog.setval('public.transaccions_id_seq', 1, false);
 -- Name: usuarios_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.usuarios_id_seq', 4, true);
+SELECT pg_catalog.setval('public.usuarios_id_seq', 7, true);
 
 
 --
