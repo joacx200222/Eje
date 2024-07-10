@@ -1,7 +1,12 @@
-import React, { useRef } from 'react';
+// VerProducto.jsx
+import React, { useEffect, useState, useRef } from 'react';
+import { useParams } from 'react-router-dom';
 import '../../css/Dashboard.css';
 
-function CasillasProducto() {
+const VerProducto = () => {
+    const { id } = useParams();
+    const [producto, setProducto] = useState(null);
+    const [error, setError] = useState("");
     const fileInputRef = useRef(null);
 
     const handleImageUploadClick = () => {
@@ -15,6 +20,33 @@ function CasillasProducto() {
             console.log('Imagen seleccionada:', file.name);
         }
     };
+
+    useEffect(() => {
+        const fetchProducto = async () => {
+            try {
+                const response = await fetch(`http://localhost:3080/api/dashboard/product/${id}`);
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(`Error: ${errorData.message}`);
+                }
+                const data = await response.json();
+                setProducto(data);
+            } catch (error) {
+                console.error('Error al obtener producto:', error);
+                setError('Error al obtener producto');
+            }
+        };
+
+        fetchProducto();
+    }, [id]);
+
+    if (error) {
+        return <div>{error}</div>;
+    }
+
+    if (!producto) {
+        return <div>Cargando...</div>;
+    }
 
     return (
         <div className="product-form-container">
@@ -33,46 +65,44 @@ function CasillasProducto() {
             <div className="right-column">
                 <div className="form-row">
                     <label htmlFor="nombre">Nombre:</label>
-                    <input type="text" id="nombre" className="inputNombre1" placeholder="Producto XYZ" />
+                    <input type="text" id="nombre" className="inputNombre1" value={producto.nombre} readOnly />
                 </div>
                 <div className="form-row">
                     <label htmlFor="descripcion">Descripción:</label>
-                    <input type="text" id="descripcion" className="inputDesc1" placeholder="Este es un producto de prueba" />
+                    <input type="text" id="descripcion" className="inputDesc1" value={producto.fabricante} readOnly />
                 </div>
                 <div className="form-row">
                     <label htmlFor="caracteristicas">Características:</label>
-                    <input type="text" id="caracteristicas" className="inputCarac1" placeholder="Característica 1, Característica 2" />
+                    <input type="text" id="caracteristicas" className="inputCarac1" 
+                        value={`Combinable: ${producto.combinable}, Movibilidad: ${producto.movilidad}`} readOnly />
                 </div>
                 <div className="form-row-inline">
                     <div className="inline-field">
                         <label htmlFor="marca">Marca:</label>
-                        <input type="text" id="marca" className="inputResto1" placeholder="Marca Ejemplo" />
+                        <input type="text" id="marca" className="inputResto1" value={producto.fabricante} readOnly />
                     </div>
                     <div className="inline-field">
                         <label htmlFor="serie">Serie:</label>
-                        <input type="text" id="serie" className="inputSerie1" placeholder="12345ABC" />
+                        <input type="text" id="serie" className="inputSerie1" value={producto.serie} readOnly />
                     </div>
                     <div className="inline-field">
                         <label htmlFor="precio">Precio:</label>
-                        <input type="text" id="precio" className="inputResto1" placeholder="$99.99" />
+                        <input type="text" id="precio" className="inputResto1" value={producto.precio} readOnly />
                     </div>
                 </div>
                 <div className="form-row-inline">
                     <div className="inline-field">
                         <label htmlFor="tipo">Tipo:</label>
-                        <input type="text" id="tipo" className="inputResto1" placeholder="Electrónico" />
+                        <input type="text" id="tipo" className="inputResto1" value={producto.material} readOnly />
                     </div>
                     <div className="inline-field">
                         <label htmlFor="stock">Stock:</label>
-                        <input type="text" id="stock" className="inputResto1" placeholder="Disponible" />
+                        <input type="text" id="stock" className="inputResto1" value={producto.piezas} readOnly />
                     </div>
-                </div>
-                <div className="form-row">
-                    <button type="button" className="save-button">Guardar</button>
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default CasillasProducto;
+export default VerProducto;
