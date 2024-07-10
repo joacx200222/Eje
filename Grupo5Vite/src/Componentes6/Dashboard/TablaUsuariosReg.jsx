@@ -156,6 +156,7 @@ const TablaUsuarios = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  
   useEffect(() => {
     const fetchUsuarios = async () => {
       try {
@@ -165,6 +166,7 @@ const TablaUsuarios = () => {
         }
         const data = await response.json();
         setUsuarios(data);
+        console.log(usuarios)
         setLoading(false);
       } catch (error) {
         setError('Error al obtener usuarios');
@@ -174,6 +176,8 @@ const TablaUsuarios = () => {
 
     fetchUsuarios();
   }, []); // Dependencias vacías para que se ejecute solo una vez
+
+  
 
   const manejarCambio = (event) => {
     setTextoBusqueda(event.target.value);
