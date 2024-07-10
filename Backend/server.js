@@ -4,16 +4,12 @@ const path = require("path");
 
 const cors = require("cors");
 
-//const producto = require('./API/basedatos/producto.js')
+
 
 const usuario = require("./API/basedatos/verificarusuario.js");
 const seriesRoute = require("./API/basedatos/seriesAPI.js");
 const rutaProductos = require("./API/basedatos/producto.js");
-
-
-//const dashboard = require('./API/basedatos/admin/adminProducto.js')
-
-//const productoAdmin = require('./API/basedatos/admin/adminProducto.js')
+const dashboard = require("./API/basedatos/admindashboard.js");
 
 const app = express();
 const port = 3080;
@@ -33,6 +29,8 @@ app.use("/api/basedatos", usuario);
 app.use("/api/series", seriesRoute);
 
 app.use("/api/productos", rutaProductos);
+
+app.use("/api/dashboard", dashboard)
 
 // API admin
 //app.use('/api/productos', dashboard)

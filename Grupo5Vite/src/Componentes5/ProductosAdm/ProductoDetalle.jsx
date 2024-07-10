@@ -1,3 +1,8 @@
+
+// Este componente ya no va
+
+/*
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import datos from '../../Data/productos.json';
@@ -25,3 +30,5 @@ const ProductoDetalle = () => {
 };
 
 export default ProductoDetalle;
+
+*/
