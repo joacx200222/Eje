@@ -1,7 +1,6 @@
 const express = require("express");
 const db = require("../../db/models/index.js"); // Asegúrate de que esta ruta es correcta
 const Product = db.product; // `product` en minúscula si sigue el nombre del modelo definido
-const transaccions = db.transaccions;
 const ruta = express.Router();
 const { Sequelize, Op } = require('sequelize');
 
@@ -109,7 +108,6 @@ ruta.get("/all", async (req, res) => {
     console.error(error);
   }
 });
-
 
 
 

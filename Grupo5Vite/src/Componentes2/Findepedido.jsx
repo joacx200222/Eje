@@ -1,73 +1,58 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
-import Cabecera2 from '../ComponentesGeneral/Cabecera2';
+import React from 'react';
 import Pie from '../ComponentesGeneral/Pie';
+import Cabecera2 from '../ComponentesGeneral/Cabecera2';
+import "./styles/pedidocompleto.css"
+import Goku from '../assets/imagenes/20357871.webp'
+import BabyYoda from '../assets/imagenes/segundaimagen.png'
+import Garfield from '../assets/imagenes/terceraimagen.png'
 
-const Producto = ({ id }) => {
-    <Cabecera2 />
-  const [producto, setProducto] = useState(null);
-  const [error, setError] = useState('');
+function Findepedido(){
+    return(
+        <body>
+        <Cabecera2/>
+            <section>
+                <div>
+                    <center><h2 className='tituloscomprasAV'>¡Muchas gracias por tu pedido!</h2></center>
+                    <center><p>Puedes ver el detalle y estado de tu pedido ingresando a tu cuenta.</p></center>
+                    <p className='interesAV'>Tambien te podria interesar</p>
+                </div>
+            <ul className='PrincipalBody1'>
+                <ul>
+                    <li><img src={Garfield} className='ImagenItem4' alt="imagenitem4"/></li>
+                    <li><p>Item 1</p></li>
+                    <li><h6><p>learn more</p></h6></li>
+                </ul>
+                <ul>
+                    <li><img src={Garfield} className='ImagenItem5' alt="imagenitem5"/></li>
+                    <li><p>Item 1</p></li>
+                    <li><h6><p>learn more</p></h6></li>
+                </ul>
+                <ul>
+                    <li><img src={Garfield} className='ImagenItem6' alt="imagenitem6"/></li>
+                    <li><p>Item 1</p></li>
+                    <li><h6><p>learn more</p></h6></li>
+                </ul>
+                <ul>
+                    <li><img src={Garfield} className='ImagenItem7' alt="imagenitem7"/></li>
+                    <li><p>Item 1</p></li>
+                    <li><h6><p>learn more</p></h6></li>
+                </ul>
+                <ul>
+                    <li><img src={Garfield} className='ImagenItem8' alt="imagenitem8"/></li>
+                    <li><p>Item 1</p></li>
+                    <li><h6><p>learn more</p></h6></li>
+                </ul>
+            </ul>
 
-  useEffect(() => {
-
-    const fetchProducto = async () => {
-      try {
-        const response = await fetch(`http://localhost:3080/api/productos/findAllxId/${id}`);
-        if (!response.ok) {
-          const errorData = await response.json();
-          throw new Error(`Error: ${errorData.message}`);
-        }
-        const data = await response.json();
-        setProducto(data);
-      } catch (error) {
-        console.error('Error al obtener producto:', error);
-        setError(error.message);
-      }
-    };
-
-    fetchProducto();
-  }, [id]);
-
-  if (error) {
-    return <div className={`div${id}`}><p className="error">{error}</p></div>;
-  }
-
-  if (!producto) {
-    return <div className={`div${id}`}><p>Cargando...</p></div>;
-  }
+            </section>
+        <Pie/>
+        </body>
+        
 
 
-  return (
-    <section>
-    <div>
-    <div className={`div${id}`}>
-      <Link to={`/producto/${id}`}> {/* Modifica esta lÃnea para usar Link */}
-        <img 
-          src={producto.imagen} 
-          className={`ImagenItem${id}`} 
-          alt={`imagenitem${id}`} 
-          width={370} 
-          height={370} 
-        />
-      </Link>
-      <p>{producto.nombre}</p>
-    </div>
-    </div>
-    </section>
-  );
-};
+    )
 
-const CargarProductos = () => {
-  const ids = [4, 5, 6, 7, 8 ,9 ]; // IDs de productos que deseas obtener
+    
 
-  return (  
-    <div><Cabecera2 /> 
-    <div className="PrincipalBody">
-      {ids.map(id => (
-        <Producto key={id} id={id} />
-      ))}
-    </div><Pie /></div>
-  );
-};
-
-export default CargarProductos;
+}
+export default Findepedido;
